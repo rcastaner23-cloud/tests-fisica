@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Ramon."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="Ramon" />
+<meta name="dc:creator" content="tron" />
+<meta name="dc:creator" content="Ram&#x00F3;n" />
+<meta name="dc:creator" content="Ramon2" />
+<meta name="dc:title" content="CAMPO Y POTENCIAL EL&#x00C9;CTRICOS" />
+
+
+
+<title>
+CAMPO Y POTENCIAL EL&#x00C9;CTRICOS
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       small;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #C0C0C0;
+	--strExBGColor:      #FFFFFF;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = ':-)';
+var IncorrectIndicator = 'X';
+var YourScoreIs = 'Tu puntuaci&#x00F3;n es: ';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Preguntas contestadas hasta este punto:';
+var ExerciseCompleted = 'Ejercicio completado.';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Respuestas correctas a la primera: ';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = false;
+var ShuffleAs = true;
+var DefaultRight = '&#x00A1;Muy bien! Acertaste.';
+var DefaultWrong = '&#x00A1;Error! Esa no era la respuesta correcta.';
+var QsToShow = 29;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Mostrar todas las preguntas';
+var ShowOneByOneCaption = 'Mostrar preguntas una a una';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('verticalmente hacia abajo.','',0,0,1);
+I[0][3][1]=new Array('cero.','',0,0,1);
+I[0][3][2]=new Array('verticalmente hacia arriba.','',0,0,1);
+I[0][3][3]=new Array('horizontalmente hacia la derecha.','',1,100,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('acelerar\u00E1 en direcci\u00F3n opuesta a <img src="http://latex.codecogs.com/gif.latex?\\vec{E}" title="\\vec{E}" />.','',0,0,1);
+I[1][3][1]=new Array('acelerar\u00E1 en direcci\u00F3n perpendicular a  <img src="http://latex.codecogs.com/gif.latex?\\vec{E}" title="\\vec{E}" />.','',0,0,1);
+I[1][3][2]=new Array('permanecer\u00E1 en reposo','',0,0,1);
+I[1][3][3]=new Array('acelerar\u00E1 en la misma direcci\u00F3n que  <img src="http://latex.codecogs.com/gif.latex?\\vec{E}" title="\\vec{E}" />.','',1,100,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('Nunca pueden cortarse.','',0,0,1);
+I[2][3][1]=new Array('La densidad de l\u00EDneas (n\u00FAmero de l\u00EDneas por unidad de \u00E1rea perpendicular a las mismas) es proporcional a la magnitud del campo.','',0,0,1);
+I[2][3][2]=new Array('Las l\u00EDneas comienzan en las cargas positivas y terminan en las cargas negativas.','',0,0,1);
+I[2][3][3]=new Array('Todas son ciertas.','',1,100,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('+Q','',1,100,1);
+I[3][3][1]=new Array('cero','',0,0,1);
+I[3][3][2]=new Array('depende de la carga de la corteza.','',0,0,1);
+I[3][3][3]=new Array('-Q','',0,0,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('depende de la carga de la corteza.','',1,100,1);
+I[4][3][1]=new Array('cero','',0,0,1);
+I[4][3][2]=new Array('+Q','',0,0,1);
+I[4][3][3]=new Array('-Q','',0,0,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('hacia el centro de la corteza en ambas regiones.','',0,0,1);
+I[5][3][1]=new Array('hacia el centro de la corteza para r < R<sub>1</sub> y es cero para r > R<sub>2</sub>','',0,0,1);
+I[5][3][2]=new Array('hacia el centro de la corteza para r < R<sub>1</sub> y es cero para r > R<sub>1</sub>.','',1,100,1);
+I[5][3][3]=new Array('hacia fuera desde el centro de la corteza en ambas regiones.','',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('El dipolo tender\u00E1 a acelerar en la misma direcci\u00F3n y sentido que el campo el\u00E9ctrico.','',0,0,1);
+I[6][3][1]=new Array('El dipolo acelerar\u00E1 en direcci\u00F3n perpendicular al campo el\u00E9ctrico','',0,0,1);
+I[6][3][2]=new Array('El dipolo no notar\u00E1 influencia alguna del campo el\u00E9ctrico.','',0,0,1);
+I[6][3][3]=new Array('El dipolo girar\u00E1 y tender\u00E1 a orientarse en la direcci\u00F3n del campo el\u00E9ctrico.','',1,100,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('es proporcional a la carga neta que hay en su interior.','',1,100,1);
+I[7][3][1]=new Array('es inversamente proporcional a la carga que hay en su interior.','',0,0,1);
+I[7][3][2]=new Array('es proporcional a la carga positiva que hay en su interior e inversamente proporcional a la carga negativa.','',0,0,1);
+I[7][3][3]=new Array('depende tanto de la carga positiva que hay en su interior como de las cargas exteriores.','',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('el campo el\u00E9ctrico es nulo en todos los puntos de la superficie.','',0,0,1);
+I[8][3][1]=new Array('no podemos decir si el campo el\u00E9ctrico ser\u00E1 nulo o no ya que no conocemos las cargas que hay en el interior de la superficie ni c\u00F3mo est\u00E1n distribuidas.','',1,100,1);
+I[8][3][2]=new Array('El campo el\u00E9ctrico ser\u00E1 nulo en todos los puntos de la superficie, si se dan unas condiciones que hacen que el campo en todos los puntos sea constante y perpendicular a la superficie.','',0,0,1);
+I[8][3][3]=new Array('Todas las otras afirmaciones son falsas.','',0,0,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('La superficie encierra una carga puntual positiva.','',0,0,1);
+I[9][3][1]=new Array('La superficie encierra en su interior \u00FAnicamente una carga puntual positiva de valor Q = 18 \u03BCC.','',0,0,1);
+I[9][3][2]=new Array('Se desconoce cu\u00E1nta carga positiva o negativa, pero s\u00ED que la carga neta en su interior es Q = 18 \u03BCC.','',1,100,1);
+I[9][3][3]=new Array('Para saber el flujo el\u00E9ctrico a trav\u00E9s de una superficie es necesario conocer la expresi\u00F3n del campo el\u00E9ctrico.','',0,0,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('El campo el\u00E9ctrico en los puntos de la superficie esf\u00E9rica y el flujo que la atraviesa son nulos.','',0,0,1);
+I[10][3][1]=new Array('El campo el\u00E9ctrico en los puntos de la superficie esf\u00E9rica no es nulo.','',1,100,1);
+I[10][3][2]=new Array('El campo el\u00E9ctrico en los puntos de la superficie esf\u00E9rica es nulo pero el flujo del campo el\u00E9ctrico es no nulo.','',0,0,1);
+I[10][3][3]=new Array('El flujo a trav\u00E9s de la superficie esf\u00E9rica depende de la carga.','',0,0,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('Como la carga neta del dipolo es cero, el campo ser\u00E1 cero.','',0,0,1);
+I[11][3][1]=new Array('El campo ser\u00E1 radial, id\u00E9ntico al de una carga puntual.','',0,0,1);
+I[11][3][2]=new Array('No se puede aplicar la ley de Gauss ya que no hay la simetr\u00EDa necesaria.','',1,100,1);
+I[11][3][3]=new Array('El flujo a trav\u00E9s de la superficie gaussiana que encierra el dipolo ser\u00E1 nulo y el campo el\u00E9ctrico creado ser\u00E1 constante.','',0,0,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('La carga neta en el interior de ambas superficies es positiva, y entre S<sub>1</sub> y S<sub>2</sub> hay carga neta positiva.','',0,0,1);
+I[12][3][1]=new Array('Entre S<sub>1</sub> y S<sub>2</sub> hay una carga neta positiva, y esa carga hace mayor el flujo a trav\u00E9s de S<sub>1</sub>.','',0,0,1);
+I[12][3][2]=new Array('Esta situaci\u00F3n es imposible que se produzca','',0,0,1);
+I[12][3][3]=new Array('Entre S<sub>1</sub> y S<sub>2</sub> hay una carga neta negativa, y esta carga hace menor el flujo a trav\u00E9s de S<sub>2</sub>.','',1,100,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('a','',0,0,1);
+I[13][3][1]=new Array('b','',0,0,1);
+I[13][3][2]=new Array('c','',1,100,1);
+I[13][3][3]=new Array('d','',0,0,1);
+I[14]=new Array();I[14][0]=100;
+I[14][1]='';
+I[14][2]='0';
+I[14][3]=new Array();
+I[14][3][0]=new Array('hacia una regi\u00F3n de mayor potencial el\u00E9ctrico.','',0,0,1);
+I[14][3][1]=new Array('hacia una regi\u00F3n de menor potencial el\u00E9ctrico.','',1,100,1);
+I[14][3][2]=new Array('se mover\u00E1 por zonas donde el potencial no var\u00EDe.','',0,0,1);
+I[14][3][3]=new Array('no se mover\u00E1 por s\u00ED sola.','',0,0,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('el campo el\u00E9ctrico es nulo en esa regi\u00F3n.','',1,100,1);
+I[15][3][1]=new Array('el campo el\u00E9ctrico es tambi\u00E9n constante en esa regi\u00F3n.','',0,0,1);
+I[15][3][2]=new Array('no se puede saber el valor del campo el\u00E9ctrico en esa regi\u00F3n.','',0,0,1);
+I[15][3][3]=new Array('todas las afirmaciones son falsas.','',0,0,1);
+I[16]=new Array();I[16][0]=100;
+I[16][1]='';
+I[16][2]='0';
+I[16][3]=new Array();
+I[16][3][0]=new Array('La densidad superficial de carga y el potencial siempre son iguales en todos los puntos.','',0,0,1);
+I[16][3][1]=new Array('El potencial es igual en todos los puntos.','',1,100,1);
+I[16][3][2]=new Array('La densidad superficial de carga es mayor en los puntos de menor curvatura.','',0,0,1);
+I[16][3][3]=new Array('El potencial es mayor en los puntos de mayor curvatura.','',0,0,1);
+I[17]=new Array();I[17][0]=100;
+I[17][1]='';
+I[17][2]='0';
+I[17][3]=new Array();
+I[17][3][0]=new Array('1','',0,0,1);
+I[17][3][1]=new Array('2','',1,100,1);
+I[17][3][2]=new Array('3','',0,0,1);
+I[17][3][3]=new Array('4','',0,0,1);
+I[18]=new Array();I[18][0]=100;
+I[18][1]='';
+I[18][2]='0';
+I[18][3]=new Array();
+I[18][3][0]=new Array('E = 0 y V = 0.','',0,0,1);
+I[18][3][1]=new Array('E = (2kQ/a<sup>2</sup>)i y V = 0','',0,0,1);
+I[18][3][2]=new Array('E = 0 y V = (2kQ/a)','',1,100,1);
+I[18][3][3]=new Array('E = (2kQ/a<sup>2</sup>)i y V = (2kQ/a)','',0,0,1);
+I[19]=new Array();I[19][0]=100;
+I[19][1]='';
+I[19][2]='0';
+I[19][3]=new Array();
+I[19][3][0]=new Array('E = 0 y V = 0.','',0,0,1);
+I[19][3][1]=new Array('E = (2kQ/a<sup>2</sup>)i y V = 0','',1,100,1);
+I[19][3][2]=new Array('E = 0 y V = (2kQ/a)','',0,0,1);
+I[19][3][3]=new Array('E = (2kQ/a<sup>2</sup>)i y V = (2kQ/a)','',0,0,1);
+I[20]=new Array();I[20][0]=100;
+I[20][1]='';
+I[20][2]='0';
+I[20][3]=new Array();
+I[20][3][0]=new Array('276.81\u00B7a','',0,0,1);
+I[20][3][1]=new Array('150.66','',1,100,1);
+I[20][3][2]=new Array('3.15 \u00D7 10<sup>5</sup>','',0,0,1);
+I[20][3][3]=new Array('(8/6)\u00B7a','',0,0,1);
+I[21]=new Array();I[21][0]=100;
+I[21][1]='';
+I[21][2]='0';
+I[21][3]=new Array();
+I[21][3][0]=new Array('\u2212400 V','',0,0,1);
+I[21][3][1]=new Array('0 V','',0,0,1);
+I[21][3][2]=new Array('400 V','',1,100,1);
+I[21][3][3]=new Array('2 \u00D7 10<sup>\u22126</sup> V','',0,0,1);
+I[22]=new Array();I[22][0]=100;
+I[22][1]='';
+I[22][2]='0';
+I[22][3]=new Array();
+I[22][3][0]=new Array('cero','',1,100,1);
+I[22][3][1]=new Array('ER/h','',0,0,1);
+I[22][3][2]=new Array('E\u03C0R\u00B2h','',0,0,1);
+I[22][3][3]=new Array('E2\u03C0Rh','',0,0,1);
+I[23]=new Array();I[23][0]=100;
+I[23][1]='';
+I[23][2]='0';
+I[23][3]=new Array();
+I[23][3][0]=new Array('Si q = 0 entonces, <b>E</b> = 0 dentro de la superficie gaussiana.','',0,0,1);
+I[23][3][1]=new Array('Si tres part\u00EDculas dentro de la superficie tienen cargas +q, +q y \u20132q entonces la integral es nula.','',1,100,1);
+I[23][3][2]=new Array('En la superficie, <b>E</b> siempre debe ser paralelo a d<b>S</b>','',0,0,1);
+I[23][3][3]=new Array('Una carga fuera de la superficie puede influir en el flujo total','',0,0,1);
+I[24]=new Array();I[24][0]=100;
+I[24][1]='';
+I[24][2]='0';
+I[24][3]=new Array();
+I[24][3][0]=new Array('4.24 N m\u00B2/C','',0,0,1);
+I[24][3][1]=new Array('9.0 \u00D7 10<sup>\u22122</sup> N m\u00B2/C','',0,0,1);
+I[24][3][2]=new Array('1.06 N m\u00B2/C','',1,100,1);
+I[24][3][3]=new Array('Nulo','',0,0,1);
+I[25]=new Array();I[25][0]=100;
+I[25][1]='';
+I[25][2]='0';
+I[25][3]=new Array();
+I[25][3][0]=new Array('Nula','',0,0,1);
+I[25][3][1]=new Array('\u22123.6 \u00D7 10<sup>\u22123</sup> N/C','',0,0,1);
+I[25][3][2]=new Array('\u22127.2 \u00D7 10<sup>\u22122</sup> N/C','',1,100,1);
+I[25][3][3]=new Array('Falta conocer la densidad de carga','',0,0,1);
+I[26]=new Array();I[26][0]=100;
+I[26][1]='';
+I[26][2]='0';
+I[26][3]=new Array();
+I[26][3][0]=new Array('2Q/rh&#949<sub>0</sub>','',0,0,1);
+I[26][3][1]=new Array('Q/&#960&#949<sub>0</sub>r(r<sup>2</sup>+h<sup>2</sup>)^(0.5)','',0,0,1);
+I[26][3][2]=new Array('Q/2&#949<sub>0</sub>','',1,100,1);
+I[26][3][3]=new Array('Se necesita la densidad de carga \u03C1 del cono.','',0,0,1);
+I[27]=new Array();I[27][0]=100;
+I[27][1]='';
+I[27][2]='0';
+I[27][3]=new Array();
+I[27][3][0]=new Array('-49 nC situada en cualquier punto','',0,0,1);
+I[27][3][1]=new Array('Cero','',0,0,1);
+I[27][3][2]=new Array('-98 nC situada en el centro.','',0,0,1);
+I[27][3][3]=new Array('-49 nC situada en el centro.','',1,100,1);
+I[28]=new Array();I[28][0]=100;
+I[28][1]='';
+I[28][2]='0';
+I[28][3]=new Array();
+I[28][3][0]=new Array('113 Nm\u00B2/C saliente','',1,100,1);
+I[28][3][1]=new Array('Cero','',0,0,1);
+I[28][3][2]=new Array('113 Nm\u00B2/C entrante','',0,0,1);
+I[28][3][3]=new Array('226 Nm\u00B2/C saliente','',0,0,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	PreloadImages('http://latex.codecogs.com/gif.latex?\\vec{E}','https://lh3.googleusercontent.com/-59BWrmnC2qk/T0aY5CI0dYI/AAAAAAAAABM/U82EYoLbtNo/s420/12D1.JPG','http://latex.codecogs.com/gif.latex?\vec{E}','https://lh6.googleusercontent.com/-CC0EEQZQeek/T0aY5xvssFI/AAAAAAAAABQ/D94IvnOIkuk/s440/12D2.JPG','https://lh4.googleusercontent.com/-RbuQEsxn3XY/T0aY8GxNJnI/AAAAAAAAABc/DxUoGJ26Fp4/s1499/12D3.JPG','https://lh5.googleusercontent.com/-3c2STQ4Lyfc/T0aY6RRhYzI/AAAAAAAAABU/alzct-T46Fk/s252/Dibujo.jpg','https://umh1228.umh.es/files/2018/09/conocarga.jpg','https://umh1228.umh.es/files/2019/09/ConoGauss.jpg');
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">CAMPO Y POTENCIAL EL&#x00C9;CTRICOS</h2>
+
+	<h3 class="ExerciseSubtitle">Si no acertases a la primera, podr&#x00E1;s intentarlo de nuevo, pero perder&#x00E1;s puntos.</h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions">Escoge la respuesta correcta para cada pregunta, haciendo click sobre la letra correspondiente.<br /></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Mostrar todas las preguntas</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Tres cargas +q, +Q, -Q se sit&#x00FA;an en los v&#x00E9;rtices de un tri&#x00E1;ngulo equil&#x00E1;tero. La fuerza neta sobre la carga +q debida a las otras dos cargas:<br /><img src="https://lh3.googleusercontent.com/-59BWrmnC2qk/T0aY5CI0dYI/AAAAAAAAABM/U82EYoLbtNo/s420/12D1.JPG" alt="cargas" title="cargas" width="200" height="205" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;verticalmente hacia abajo.</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;cero.</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;verticalmente hacia arriba.</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">?</button>&#160;&#160;horizontalmente hacia la derecha.</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">Una carga positiva que puede moverse libremente pero que inicialmente est&#x00E1; en reposo en un campo el&#x00E9;ctrico <img src="http://latex.codecogs.com/gif.latex?\vec{E}" title="\vec{E}" />:</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;acelerar&#x00E1; en direcci&#x00F3;n opuesta a <img src="http://latex.codecogs.com/gif.latex?\vec{E}" title="\vec{E}" />.</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;acelerar&#x00E1; en direcci&#x00F3;n perpendicular a <img src="http://latex.codecogs.com/gif.latex?\vec{E}" title="\vec{E}" />.</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">?</button>&#160;&#160;permanecer&#x00E1; en reposo</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">?</button>&#160;&#160;acelerar&#x00E1; en la misma direcci&#x00F3;n que <img src="http://latex.codecogs.com/gif.latex?\vec{E}" title="\vec{E}" />.</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">Con respecto a las l&#x00ED;neas de campo &#x00BF;qu&#x00E9; afirmaci&#x00F3;n es cierta?:</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;Nunca pueden cortarse.</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;La densidad de l&#x00ED;neas (n&#x00FA;mero de l&#x00ED;neas por unidad de &#x00E1;rea perpendicular a las mismas) es proporcional a la magnitud del campo.</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;Las l&#x00ED;neas comienzan en las cargas positivas y terminan en las cargas negativas.</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;Todas son ciertas.</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">Una carga puntual -Q se encuentra en el centro de una corteza conductora esf&#x00E9;rica de radio interior R<sub>1</sub> y radio exterior R<sub>2</sub>. La carga sobre la superficie interna de la corteza es:<br /><img src="https://lh6.googleusercontent.com/-CC0EEQZQeek/T0aY5xvssFI/AAAAAAAAABQ/D94IvnOIkuk/s440/12D2.JPG" alt="corteza" title="corteza" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;+Q</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;cero</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;depende de la carga de la corteza.</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;-Q</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">En la configuraci&#x00F3;n de cargas de la figura anterior, la carga sobre la superficie externa de la corteza es:</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;depende de la carga de la corteza.</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;cero</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;+Q</li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">?</button>&#160;&#160;-Q</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">En la configuraci&#x00F3;n de cargas de la figura anterior, si la corteza conductora se conecta a tierra, el campo el&#x00E9;ctrico para r &lt; R<sub>1</sub> y para r &gt; R<sub>2</sub> apunta:</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;hacia el centro de la corteza en ambas regiones.</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;hacia el centro de la corteza para r &lt; R<sub>1</sub> y es cero para r &gt; R<sub>2</sub></li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;hacia el centro de la corteza para r &lt; R<sub>1</sub> y es cero para r &gt; R<sub>1</sub>.</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">?</button>&#160;&#160;hacia fuera desde el centro de la corteza en ambas regiones.</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">Considerar un dipolo el&#x00E9;ctrico situado en el interior de un campo el&#x00E9;ctrico uniforme:</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;El dipolo tender&#x00E1; a acelerar en la misma direcci&#x00F3;n y sentido que el campo el&#x00E9;ctrico.</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;El dipolo acelerar&#x00E1; en direcci&#x00F3;n perpendicular al campo el&#x00E9;ctrico</li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;El dipolo no notar&#x00E1; influencia alguna del campo el&#x00E9;ctrico.</li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">?</button>&#160;&#160;El dipolo girar&#x00E1; y tender&#x00E1; a orientarse en la direcci&#x00F3;n del campo el&#x00E9;ctrico.</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">El n&#x00FA;mero de l&#x00ED;neas de campo que atraviesa una superficie que encierra un volumen:</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;es proporcional a la carga neta que hay en su interior.</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;es inversamente proporcional a la carga que hay en su interior.</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;es proporcional a la carga positiva que hay en su interior e inversamente proporcional a la carga negativa.</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">?</button>&#160;&#160;depende tanto de la carga positiva que hay en su interior como de las cargas exteriores.</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">Si el flujo del campo el&#x00E9;ctrico a trav&#x00E9;s de una superficie que encierra un volumen es nulo:</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;el campo el&#x00E9;ctrico es nulo en todos los puntos de la superficie.</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;no podemos decir si el campo el&#x00E9;ctrico ser&#x00E1; nulo o no ya que no conocemos las cargas que hay en el interior de la superficie ni c&#x00F3;mo est&#x00E1;n distribuidas.</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;El campo el&#x00E9;ctrico ser&#x00E1; nulo en todos los puntos de la superficie, si se dan unas condiciones que hacen que el campo en todos los puntos sea constante y perpendicular a la superficie.</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;Todas las otras afirmaciones son falsas.</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">Una superficie que encierra un volumen tiene un flujo de campo el&#x00E9;ctrico a su trav&#x00E9;s de valor &#x03A6; = 20 &#x00D7; 10<sup>5</sup> N m<sup>2</sup>/C. Se puede afirmar que:</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;La superficie encierra una carga puntual positiva.</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;La superficie encierra en su interior &#x00FA;nicamente una carga puntual positiva de valor Q = 18 &#x03BC;C.</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;Se desconoce cu&#x00E1;nta carga positiva o negativa, pero s&#x00ED; que la carga neta en su interior es Q = 18 &#x03BC;C.</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;Para saber el flujo el&#x00E9;ctrico a trav&#x00E9;s de una superficie es necesario conocer la expresi&#x00F3;n del campo el&#x00E9;ctrico.</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">Sea una superficie gaussiana esf&#x00E9;rica en las proximidades de una carga el&#x00E9;ctrica puntual. La carga puntual est&#x00E1; fuera de la superficie esf&#x00E9;rica. Es correcto afirmar que:</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;El campo el&#x00E9;ctrico en los puntos de la superficie esf&#x00E9;rica y el flujo que la atraviesa son nulos.</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;El campo el&#x00E9;ctrico en los puntos de la superficie esf&#x00E9;rica no es nulo.</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;El campo el&#x00E9;ctrico en los puntos de la superficie esf&#x00E9;rica es nulo pero el flujo del campo el&#x00E9;ctrico es no nulo.</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;El flujo a trav&#x00E9;s de la superficie esf&#x00E9;rica depende de la carga.</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">Si se utiliza la ley de Gauss para hallar el campo que crea un dipolo:</div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;Como la carga neta del dipolo es cero, el campo ser&#x00E1; cero.</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;El campo ser&#x00E1; radial, id&#x00E9;ntico al de una carga puntual.</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;No se puede aplicar la ley de Gauss ya que no hay la simetr&#x00ED;a necesaria.</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;El flujo a trav&#x00E9;s de la superficie gaussiana que encierra el dipolo ser&#x00E1; nulo y el campo el&#x00E9;ctrico creado ser&#x00E1; constante.</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">En una zona del espacio hay dos superficies que encierran un volumen, S<sub>1</sub> y S<sub>2</sub>. S<sub>2</sub> envuelve completamente a S1. El flujo a trav&#x00E9;s de ambas superficies es positivo, pero es mayor el flujo a trav&#x00E9;s de S<sub>1</sub> que de S<sub>2</sub>. Es correcto afirmar que:</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;La carga neta en el interior de ambas superficies es positiva, y entre S<sub>1</sub> y S<sub>2</sub> hay carga neta positiva.</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;Entre S<sub>1</sub> y S<sub>2</sub> hay una carga neta positiva, y esa carga hace mayor el flujo a trav&#x00E9;s de S<sub>1</sub>.</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;Esta situaci&#x00F3;n es imposible que se produzca</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;Entre S<sub>1</sub> y S<sub>2</sub> hay una carga neta negativa, y esta carga hace menor el flujo a trav&#x00E9;s de S<sub>2</sub>.</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">Una esfera conductora de radio R tiene una carga Q. El gr&#x00E1;fico que mejor indica la variaci&#x00F3;n del m&#x00F3;dulo del campo electrost&#x00E1;tico creado por la esfera es:<br /><img src="https://lh4.googleusercontent.com/-RbuQEsxn3XY/T0aY8GxNJnI/AAAAAAAAABc/DxUoGJ26Fp4/s1499/12D3.JPG" alt="graficos" title="graficos" width="600" height="130" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;a</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;b</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;c</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;d</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">Una carga positiva se deja libre desde el reposo en un campo el&#x00E9;ctrico. La carga se mover&#x00E1;:</div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;hacia una regi&#x00F3;n de mayor potencial el&#x00E9;ctrico.</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;hacia una regi&#x00F3;n de menor potencial el&#x00E9;ctrico.</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;se mover&#x00E1; por zonas donde el potencial no var&#x00ED;e.</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">?</button>&#160;&#160;no se mover&#x00E1; por s&#x00ED; sola.</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">Si el potencial electrost&#x00E1;tico es constante en toda una regi&#x00F3;n del espacio:</div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;el campo el&#x00E9;ctrico es nulo en esa regi&#x00F3;n.</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;el campo el&#x00E9;ctrico es tambi&#x00E9;n constante en esa regi&#x00F3;n.</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;no se puede saber el valor del campo el&#x00E9;ctrico en esa regi&#x00F3;n.</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">?</button>&#160;&#160;todas las afirmaciones son falsas.</li></ol></li>
+<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">En un conductor el&#x00E9;ctrico de forma arbitraria cargado y en equilibrio electrost&#x00E1;tico se cumple que:</div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">?</button>&#160;&#160;La densidad superficial de carga y el potencial siempre son iguales en todos los puntos.</li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">?</button>&#160;&#160;El potencial es igual en todos los puntos.</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">?</button>&#160;&#160;La densidad superficial de carga es mayor en los puntos de menor curvatura.</li><li id="Q_16_3"><button class="FuncButton" id="Q_16_3_Btn" onclick="CheckMCAnswer(16,3,this)">?</button>&#160;&#160;El potencial es mayor en los puntos de mayor curvatura.</li></ol></li>
+<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">&#x00BF;Qu&#x00E9; punto del campo el&#x00E9;ctrico de la figura tendr&#x00E1; mayor potencial?:<br /><img src="https://lh5.googleusercontent.com/-3c2STQ4Lyfc/T0aY6RRhYzI/AAAAAAAAABU/alzct-T46Fk/s252/Dibujo.jpg" alt="campo" title="campo" width="252" height="113" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">?</button>&#160;&#160;1</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">?</button>&#160;&#160;2</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">?</button>&#160;&#160;3</li><li id="Q_17_3"><button class="FuncButton" id="Q_17_3_Btn" onclick="CheckMCAnswer(17,3,this)">?</button>&#160;&#160;4</li></ol></li>
+<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText">Dos cargas puntuales positivas e iguales +Q se encuentran sobre el eje x. Una se encuentra en x = -a y la otra en x = +a. En el origen:</div><ol class="MCAnswers"><li id="Q_18_0"><button class="FuncButton" id="Q_18_0_Btn" onclick="CheckMCAnswer(18,0,this)">?</button>&#160;&#160;E = 0 y V = 0.</li><li id="Q_18_1"><button class="FuncButton" id="Q_18_1_Btn" onclick="CheckMCAnswer(18,1,this)">?</button>&#160;&#160;E = (2kQ/a<sup>2</sup>)i y V = 0</li><li id="Q_18_2"><button class="FuncButton" id="Q_18_2_Btn" onclick="CheckMCAnswer(18,2,this)">?</button>&#160;&#160;E = 0 y V = (2kQ/a)</li><li id="Q_18_3"><button class="FuncButton" id="Q_18_3_Btn" onclick="CheckMCAnswer(18,3,this)">?</button>&#160;&#160;E = (2kQ/a<sup>2</sup>)i y V = (2kQ/a)</li></ol></li>
+<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText">Dos cargas puntuales de igual magnitud, pero de signo opuesto se encuentran sobre el eje x; +Q se encuentra en x = -a y -Q en x = +a:</div><ol class="MCAnswers"><li id="Q_19_0"><button class="FuncButton" id="Q_19_0_Btn" onclick="CheckMCAnswer(19,0,this)">?</button>&#160;&#160;E = 0 y V = 0.</li><li id="Q_19_1"><button class="FuncButton" id="Q_19_1_Btn" onclick="CheckMCAnswer(19,1,this)">?</button>&#160;&#160;E = (2kQ/a<sup>2</sup>)i y V = 0</li><li id="Q_19_2"><button class="FuncButton" id="Q_19_2_Btn" onclick="CheckMCAnswer(19,2,this)">?</button>&#160;&#160;E = 0 y V = (2kQ/a)</li><li id="Q_19_3"><button class="FuncButton" id="Q_19_3_Btn" onclick="CheckMCAnswer(19,3,this)">?</button>&#160;&#160;E = (2kQ/a<sup>2</sup>)i y V = (2kQ/a)</li></ol></li>
+<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText">Se tiene una carga puntual de 8 nC en el centro de un cubo de arista a. El flujo el&#x00E9;ctrico (unidades S.I.) que atraviesa una de las caras del cubo vale:</div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">?</button>&#160;&#160;276.81&#x00B7;a</li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">?</button>&#160;&#160;150.66</li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">?</button>&#160;&#160;3.15 &#x00D7; 10<sup>5</sup></li><li id="Q_20_3"><button class="FuncButton" id="Q_20_3_Btn" onclick="CheckMCAnswer(20,3,this)">?</button>&#160;&#160;(8/6)&#x00B7;a</li></ol></li>
+<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText">Una esfera met&#x00E1;lica est&#x00E1; cargada con 5 &#x00D7; 10<sup>&#x2212;9</sup> C y tiene un potencial de 400 V relativo al infinito. El potencial en el centro de la esfera es:</div><ol class="MCAnswers"><li id="Q_21_0"><button class="FuncButton" id="Q_21_0_Btn" onclick="CheckMCAnswer(21,0,this)">?</button>&#160;&#160;&#x2212;400 V</li><li id="Q_21_1"><button class="FuncButton" id="Q_21_1_Btn" onclick="CheckMCAnswer(21,1,this)">?</button>&#160;&#160;0 V</li><li id="Q_21_2"><button class="FuncButton" id="Q_21_2_Btn" onclick="CheckMCAnswer(21,2,this)">?</button>&#160;&#160;400 V</li><li id="Q_21_3"><button class="FuncButton" id="Q_21_3_Btn" onclick="CheckMCAnswer(21,3,this)">?</button>&#160;&#160;2 &#x00D7; 10<sup>&#x2212;6</sup> V</li></ol></li>
+<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText">Un cono de radio de la base R y altura h se encuentra sobre una mesa horizontal. Un campo el&#x00E9;ctrico E uniforme y horizontal penetra al cono seg&#x00FA;n se indica en la figura. El flujo el&#x00E9;ctrico que atravisea el cono es:<br /><img src="https://umh1228.umh.es/files/2018/09/conocarga.jpg" alt="conocarga" title="conocarga" width="???" height="???" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img>. </div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">?</button>&#160;&#160;cero</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">?</button>&#160;&#160;ER/h</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">?</button>&#160;&#160;E&#x03C0;R&#x00B2;h</li><li id="Q_22_3"><button class="FuncButton" id="Q_22_3_Btn" onclick="CheckMCAnswer(22,3,this)">?</button>&#160;&#160;E2&#x03C0;Rh</li></ol></li>
+<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText">Consideremos la ley de Gauss <font size=4>&#x222E;</font><b>E</b>&#x00B7;d<b>s</b>. &#x00BF;Cu&#x00E1;l de las siguientes frases es cierta?:</div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">?</button>&#160;&#160;Si q = 0 entonces, <b>E</b> = 0 dentro de la superficie gaussiana.</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">?</button>&#160;&#160;Si tres part&#x00ED;culas dentro de la superficie tienen cargas +q, +q y &#x2013;2q entonces la integral es nula.</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">?</button>&#160;&#160;En la superficie, <b>E</b> siempre debe ser paralelo a d<b>S</b></li><li id="Q_23_3"><button class="FuncButton" id="Q_23_3_Btn" onclick="CheckMCAnswer(23,3,this)">?</button>&#160;&#160;Una carga fuera de la superficie puede influir en el flujo total</li></ol></li>
+<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText">Tenemos un c&#x00ED;rculo de 3 cm de di&#x00E1;metro que est&#x00E1; sobre el plano xz. Si el c&#x00ED;rculo est&#x00E1; inmerso en un campo el&#x00E9;ctrico <b>E</b> = (1500<b>i</b> + 1500<b>j</b> &#x2212; 1500<b>k</b>) N/C, el flujo el&#x00E9;ctrico que atraviesa el c&#x00ED;rculo es:</div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">?</button>&#160;&#160;4.24 N m&#x00B2;/C</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">?</button>&#160;&#160;9.0 &#x00D7; 10<sup>&#x2212;2</sup> N m&#x00B2;/C</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">?</button>&#160;&#160;1.06 N m&#x00B2;/C</li><li id="Q_24_3"><button class="FuncButton" id="Q_24_3_Btn" onclick="CheckMCAnswer(24,3,this)">?</button>&#160;&#160;Nulo</li></ol></li>
+<li class="QuizQuestion" id="Q_25" style="display: none;"><div class="QuestionText">Una corteza conductora esf&#x00E9;rica con radio interno a = 1.5 cm y radio externo b = 2.0 cm, tiene una carga neta q = &#x2212;5.0 &#x00D7; 10<sup>&#x2212;15</sup> C. La cavidad central est&#x00E1; vac&#x00ED;a. La magnitud del campo el&#x00E9;ctrico a una distancia r = 2.5 cm del centro de la esfera es:</div><ol class="MCAnswers"><li id="Q_25_0"><button class="FuncButton" id="Q_25_0_Btn" onclick="CheckMCAnswer(25,0,this)">?</button>&#160;&#160;Nula</li><li id="Q_25_1"><button class="FuncButton" id="Q_25_1_Btn" onclick="CheckMCAnswer(25,1,this)">?</button>&#160;&#160;&#x2212;3.6 &#x00D7; 10<sup>&#x2212;3</sup> N/C</li><li id="Q_25_2"><button class="FuncButton" id="Q_25_2_Btn" onclick="CheckMCAnswer(25,2,this)">?</button>&#160;&#160;&#x2212;7.2 &#x00D7; 10<sup>&#x2212;2</sup> N/C</li><li id="Q_25_3"><button class="FuncButton" id="Q_25_3_Btn" onclick="CheckMCAnswer(25,3,this)">?</button>&#160;&#160;Falta conocer la densidad de carga</li></ol></li>
+<li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText">Tenemos una carga puntual Q situada en el centro de la base de una superficie c&#x00F3;nica de altura h y radio r. &#x00BF;Cu&#x00E1;l ser&#x00E1; el flujo el&#x00E9;ctrico que atraviesa la superficie lateral del cono?:<br /><img src="https://umh1228.umh.es/files/2019/09/ConoGauss.jpg" alt="Sin t&#x00ED;tulo2.jpg" title="Sin t&#x00ED;tulo2" width="157" height="164" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_26_0"><button class="FuncButton" id="Q_26_0_Btn" onclick="CheckMCAnswer(26,0,this)">?</button>&#160;&#160;2Q/rh&#949<sub>0</sub></li><li id="Q_26_1"><button class="FuncButton" id="Q_26_1_Btn" onclick="CheckMCAnswer(26,1,this)">?</button>&#160;&#160;Q/&#960&#949<sub>0</sub>r(r<sup>2</sup>+h<sup>2</sup>)^(0.5)</li><li id="Q_26_2"><button class="FuncButton" id="Q_26_2_Btn" onclick="CheckMCAnswer(26,2,this)">?</button>&#160;&#160;Q/2&#949<sub>0</sub></li><li id="Q_26_3"><button class="FuncButton" id="Q_26_3_Btn" onclick="CheckMCAnswer(26,3,this)">?</button>&#160;&#160;Se necesita la densidad de carga &#x03C1; del cono.</li></ol></li>
+<li class="QuizQuestion" id="Q_27" style="display: none;"><div class="QuestionText">El valor del campo el&#x00E9;ctrico en cualquier punto de una superficie esf&#x00E9;rica de 0.7 m de radio es de 900 N/C y est&#x00E1; dirigido radialmente hacia el centro de la esfera. &#x00BF;Cu&#x00E1;l es el valor de una carga puntual que se encuentra dentro de la esfera?, &#x00BF;debe estar situada en el centro?:</div><ol class="MCAnswers"><li id="Q_27_0"><button class="FuncButton" id="Q_27_0_Btn" onclick="CheckMCAnswer(27,0,this)">?</button>&#160;&#160;-49 nC situada en cualquier punto</li><li id="Q_27_1"><button class="FuncButton" id="Q_27_1_Btn" onclick="CheckMCAnswer(27,1,this)">?</button>&#160;&#160;Cero</li><li id="Q_27_2"><button class="FuncButton" id="Q_27_2_Btn" onclick="CheckMCAnswer(27,2,this)">?</button>&#160;&#160;-98 nC situada en el centro.</li><li id="Q_27_3"><button class="FuncButton" id="Q_27_3_Btn" onclick="CheckMCAnswer(27,3,this)">?</button>&#160;&#160;-49 nC situada en el centro.</li></ol></li>
+<li class="QuizQuestion" id="Q_28" style="display: none;"><div class="QuestionText">Una carga puntual positiva de 1 nC se encuentra en el centro de una superficie esf&#x00E9;rica de 0.5 m de radio. A una distancia de 1 m del centro de la esfera, se encuentra otra carga de igual valor pero de signo opuesto. &#x00BF;Cu&#x00E1;l es el valor del flujo el&#x00E9;ctrico que atraviesa la esfera?:</div><ol class="MCAnswers"><li id="Q_28_0"><button class="FuncButton" id="Q_28_0_Btn" onclick="CheckMCAnswer(28,0,this)">?</button>&#160;&#160;113 Nm&#x00B2;/C saliente</li><li id="Q_28_1"><button class="FuncButton" id="Q_28_1_Btn" onclick="CheckMCAnswer(28,1,this)">?</button>&#160;&#160;Cero</li><li id="Q_28_2"><button class="FuncButton" id="Q_28_2_Btn" onclick="CheckMCAnswer(28,2,this)">?</button>&#160;&#160;113 Nm&#x00B2;/C entrante</li><li id="Q_28_3"><button class="FuncButton" id="Q_28_3_Btn" onclick="CheckMCAnswer(28,3,this)">?</button>&#160;&#160;226 Nm&#x00B2;/C saliente</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
