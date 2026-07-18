@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Ramon."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="Ramon" />
+<meta name="dc:creator" content="tron" />
+<meta name="dc:creator" content="Ram&#x00F3;n" />
+<meta name="dc:creator" content="Ramon2" />
+<meta name="dc:title" content="DIN&#x00C1;MICA DE LA ROTACI&#x00D3;N" />
+
+
+
+<title>
+DIN&#x00C1;MICA DE LA ROTACI&#x00D3;N
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       small;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #C0C0C0;
+	--strExBGColor:      #FFFFFF;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = ':-)';
+var IncorrectIndicator = ':-(';
+var YourScoreIs = 'Tu puntuaci&#x00F3;n es: ';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Preguntas contestadas hasta este punto:';
+var ExerciseCompleted = 'Ejercicio completado.';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Respuestas correctas a la primera: ';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = false;
+var ShuffleAs = true;
+var DefaultRight = '&#x00A1;Muy bien! Acertaste.';
+var DefaultWrong = '&#x00A1;Error! Esa no era la respuesta correcta. Int&#x00E9;ntalo de nuevo.';
+var QsToShow = 32;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Mostrar todas las preguntas';
+var ShowOneByOneCaption = 'Mostrar preguntas una a una';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('Para un s\u00F3lido r\u00EDgido existen al menos tres ejes perpendiculares entre s\u00ED para los cuales el momento angular es paralelo a la velocidad angular.','',0,0,1);
+I[0][3][1]=new Array('Todas son ciertas.','',1,100,1);
+I[0][3][2]=new Array('La relaci\u00F3n: L = I\u03C9 se cumple para los ejes principales del s\u00F3lido r\u00EDgido donde I es el momento de inercia y \u03C9 es la velocidad angular ambos para ese eje principal.','',0,0,1);
+I[0][3][3]=new Array('En un s\u00F3lido r\u00EDgido que rota en torno cualquier eje, la componente del momento angular L<sub>z</sub> sobre ese eje cumple L<sub>z</sub> = I\u03C9 donde I es el momento de inercia y \u03C9 es la velocidad angular ambos para ese eje.','',0,0,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('Para un s\u00F3lido r\u00EDgido el momento de inercia con respecto a un eje puede variar en el tiempo.','',0,0,1);
+I[1][3][1]=new Array('Las fuerzas internas puede producir el torque necesario para que un s\u00F3lido r\u00EDgido empiece a rotar.','',0,0,1);
+I[1][3][2]=new Array('Para un s\u00F3lido r\u00EDgido en el que no existen torques externos con alguna componente a lo largo del eje de giro, entonces el s\u00F3lido o no gira o mantiene su velocidad de giro constante.','',1,100,1);
+I[1][3][3]=new Array('Si la \u00FAnica fuerza externa es el peso del s\u00F3lido, entonces se produce un par que puede hacer girar el s\u00F3lido entorno a un eje que pase por el centro de masas.','',0,0,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('No puede cambiar la posici\u00F3n de su centro de masas pero s\u00ED cambiar su energ\u00EDa cin\u00E9tica.','',0,0,1);
+I[2][3][1]=new Array('Puede cambiar la posici\u00F3n de su centro de masas pero no cambiar su energ\u00EDa cin\u00E9tica.','',0,0,1);
+I[2][3][2]=new Array('Ni puede cambiar la posici\u00F3n de su centro de masas ni cambiar su energ\u00EDa cin\u00E9tica.','',1,100,1);
+I[2][3][3]=new Array('Puede cambiar la posici\u00F3n de su centro de masas pero no cambiar su energ\u00EDa cin\u00E9tica.','',0,0,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('depende del tipo de material.','',0,0,1);
+I[3][3][1]=new Array('depende de la velocidad de giro.','',0,0,1);
+I[3][3][2]=new Array('depende del volumen del cuerpo.','',0,0,1);
+I[3][3][3]=new Array('depende de la elecci\u00F3n del eje de rotaci\u00F3n','',1,100,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('\u03B1/4','',0,0,1);
+I[4][3][1]=new Array('\u03B1/2','',0,0,1);
+I[4][3][2]=new Array('2\u03B1','',1,100,1);
+I[4][3][3]=new Array('\u03B1','',0,0,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('a veces igual que el que pasa por el centro de masas.','',0,0,1);
+I[5][3][1]=new Array('siempre menor que el que pasa por el centro de masas','',0,0,1);
+I[5][3][2]=new Array('siempre mayor que el que pasa por el centro de masas','',1,100,1);
+I[5][3][3]=new Array('algunas veces menor que el que pasa por el centro de masas.','',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('el resultado depende de cual tenga m\u00E1s radio.','',0,0,1);
+I[6][3][1]=new Array('la esfera llegar\u00E1 antes a la base del plano.','',1,100,1);
+I[6][3][2]=new Array('el cilindro llegar\u00E1 antes a la base del plano.','',0,0,1);
+I[6][3][3]=new Array('el resultado depende de cual tenga m\u00E1s masa.','',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('Su energ\u00EDa cin\u00E9tica de rotaci\u00F3n es igual que la de traslaci\u00F3n.','',1,100,1);
+I[7][3][1]=new Array('Su energ\u00EDa cin\u00E9tica de rotaci\u00F3n es mayor que la de traslaci\u00F3n.','',0,0,1);
+I[7][3][2]=new Array('Su energ\u00EDa cin\u00E9tica de rotaci\u00F3n es menor que la de traslaci\u00F3n','',0,0,1);
+I[7][3][3]=new Array('El resultado depende de su radio.','',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('El bloque porque sube sin rozamiento','',0,0,1);
+I[8][3][1]=new Array('Igual ya que los dos tienen igual velocidad inicial','',0,0,1);
+I[8][3][2]=new Array('La rueda ya que tiene m\u00E1s energ\u00EDa inicial','',1,100,1);
+I[8][3][3]=new Array('Igual ya que los dos tienen igual masa','',0,0,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('Todas son ciertas.','',1,100,1);
+I[9][3][1]=new Array('la fuerza de rozamiento no ejerce trabajo ni disipa energ\u00EDa','',0,0,1);
+I[9][3][2]=new Array('no se necesita fuerza de rozamiento para mantener el giro.','',0,0,1);
+I[9][3][3]=new Array('el objeto no variar\u00E1 su velocidad angular ni su velocidad de traslaci\u00F3n.','',0,0,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('Las dos llegar\u00E1n igual porque tienen la misma energ\u00EDa inicial.','',0,0,1);
+I[10][3][1]=new Array('En el caso en que sube con fricci\u00F3n porque el rozamiento la ayuda a subir y a convertir su energ\u00EDa de rotaci\u00F3n en potencial.','',1,100,1);
+I[10][3][2]=new Array('En el caso en que sube sin fricci\u00F3n ya que no disipar\u00E1 energ\u00EDa.','',0,0,1);
+I[10][3][3]=new Array('Faltan datos para responder a la pregunta.','',0,0,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('La fuerza de rozamiento siempre ser\u00E1 mayor o igual que mg \u03BC<sub>e</sub> cos\u03B1','',0,0,1);
+I[11][3][1]=new Array('La fuerza de rozamiento siempre ser\u00E1 menor o igual que mg \u03BC<sub>e</sub> cos\u03B1','',1,100,1);
+I[11][3][2]=new Array('Faltan datos para responder la cuesti\u00F3n..','',0,0,1);
+I[11][3][3]=new Array('La fuerza de rozamiento siempre ser\u00E1 igual a mg \u03BC<sub>e</sub> cos\u03B1','',0,0,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('siempre apuntar\u00E1 hacia atr\u00E1s y la bola perder\u00E1 algo de velocidad de traslaci\u00F3n.','',0,0,1);
+I[12][3][1]=new Array('proporcionar\u00E1 un par que aumentar\u00E1 la velocidad angular de la bola.','',0,0,1);
+I[12][3][2]=new Array('apunta hacia delante haciendo que la bola gane velocidad de traslaci\u00F3n.','',1,100,1);
+I[12][3][3]=new Array('no act\u00FAa en este trayecto.','',0,0,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('Todas son ciertas.','',1,100,1);
+I[13][3][1]=new Array('estando dirigida hacia la izquierda cuando r < R/2','',0,0,1);
+I[13][3][2]=new Array('siendo nula cuando r = R/2','',0,0,1);
+I[13][3][3]=new Array('estando dirigida hacia la derecha cuando r > R/2','',0,0,1);
+I[14]=new Array();I[14][0]=100;
+I[14][1]='';
+I[14][2]='0';
+I[14][3]=new Array();
+I[14][3][0]=new Array('\u03C9 = 4\u03C9\'','',1,100,1);
+I[14][3][1]=new Array('\u03C9 = \u03C9\'','',0,0,1);
+I[14][3][2]=new Array('\u03C9 = 8\u03C9\'','',0,0,1);
+I[14][3][3]=new Array('\u03C9 = 2\u03C9\'','',0,0,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('para alg\u00FAn eje que pase por el centro de masas.','',1,100,1);
+I[15][3][1]=new Array('dependiendo del sistema de referencia.','',0,0,1);
+I[15][3][2]=new Array('sino es un eje principal.','',0,0,1);
+I[15][3][3]=new Array('para un eje indeterminado.','',0,0,1);
+I[16]=new Array();I[16][0]=100;
+I[16][1]='';
+I[16][2]='0';
+I[16][3]=new Array();
+I[16][3][0]=new Array('r/2<sup>1/2</sup>','',1,100,1);
+I[16][3][1]=new Array('h/2','',0,0,1);
+I[16][3][2]=new Array('r<sup>1/2</sup>/3','',0,0,1);
+I[16][3][3]=new Array('2<sup>1/2</sup>r','',0,0,1);
+I[17]=new Array();I[17][0]=100;
+I[17][1]='';
+I[17][2]='0';
+I[17][3]=new Array();
+I[17][3][0]=new Array('su momento angular y su velocidad angular permanecen constantes pero su momento de inercia disminuye','',0,0,1);
+I[17][3][1]=new Array('su energ\u00EDa cin\u00E9tica de rotaci\u00F3n aumenta','',0,0,1);
+I[17][3][2]=new Array('su energ\u00EDa cin\u00E9tica de rotaci\u00F3n disminuye','',0,0,1);
+I[17][3][3]=new Array('su momento angular permanece constante, su velocidad angular aumenta y su momento de inercia disminuye','',1,100,1);
+I[18]=new Array();I[18][0]=100;
+I[18][1]='';
+I[18][2]='0';
+I[18][3]=new Array();
+I[18][3][0]=new Array('\u03C9<sub>f</sub> = \u03C9<sub>0</sub>','',0,0,1);
+I[18][3][1]=new Array('\u03C9<sub>f</sub> = 0.6 \u03C9<sub>0</sub>','',1,100,1);
+I[18][3][2]=new Array('\u03C9<sub>f</sub> = 2 \u03C9<sub>0</sub>','',0,0,1);
+I[18][3][3]=new Array('\u03C9<sub>f</sub> = 4 \u03C9<sub>0</sub>','',0,0,1);
+I[19]=new Array();I[19][0]=100;
+I[19][1]='';
+I[19][2]='0';
+I[19][3]=new Array();
+I[19][3][0]=new Array('s\u00F3lo se conserva el momento angular.','',0,0,1);
+I[19][3][1]=new Array('s\u00F3lo se conserva el momento lineal.','',0,0,1);
+I[19][3][2]=new Array('se conserva el momento lineal, el momento angular y pero no la energ\u00EDa cin\u00E9tica.','',1,100,1);
+I[19][3][3]=new Array('se conserva el momento lineal, el momento angular y la energ\u00EDa cin\u00E9tica.','',0,0,1);
+I[20]=new Array();I[20][0]=100;
+I[20][1]='';
+I[20][2]='0';
+I[20][3]=new Array();
+I[20][3][0]=new Array('10<sup>\u22122</sup>','',0,0,1);
+I[20][3][1]=new Array('10<sup>\u22123</sup>','',1,100,1);
+I[20][3][2]=new Array('10<sup>\u22124</sup>','',0,0,1);
+I[20][3][3]=new Array('10<sup>\u22125</sup>','',0,0,1);
+I[21]=new Array();I[21][0]=100;
+I[21][1]='';
+I[21][2]='0';
+I[21][3]=new Array();
+I[21][3][0]=new Array('4 kg m\u00B2','',0,0,1);
+I[21][3][1]=new Array('9.6 kg m\u00B2','',0,0,1);
+I[21][3][2]=new Array('12 kg m\u00B2','',1,100,1);
+I[21][3][3]=new Array('Faltan datos para calcularlo','',0,0,1);
+I[22]=new Array();I[22][0]=100;
+I[22][1]='';
+I[22][2]='0';
+I[22][3]=new Array();
+I[22][3][0]=new Array('5\u03BCg / 2R','',1,100,1);
+I[22][3][1]=new Array('5\u03BCg / 2M','',0,0,1);
+I[22][3][2]=new Array('2\u03BCg / 5R','',0,0,1);
+I[22][3][3]=new Array('2\u03BCg / R','',0,0,1);
+I[23]=new Array();I[23][0]=100;
+I[23][1]='';
+I[23][2]='0';
+I[23][3]=new Array();
+I[23][3][0]=new Array('El cilindro siempre va a deslizar en cualquier superficie','',0,0,1);
+I[23][3][1]=new Array('2.25 rad/s\u00B2','',0,0,1);
+I[23][3][2]=new Array('3.33 rad/s\u00B2','',1,100,1);
+I[23][3][3]=new Array('Se necesita saber la masa del cilindro','',0,0,1);
+I[24]=new Array();I[24][0]=100;
+I[24][1]='';
+I[24][2]='0';
+I[24][3]=new Array();
+I[24][3][0]=new Array('(2mR\u00B2/5)','',0,0,1);
+I[24][3][1]=new Array('16mR\u00B2','',0,0,1);
+I[24][3][2]=new Array('(47mR\u00B2/5)','',0,0,1);
+I[24][3][3]=new Array('(82mR\u00B2/5)','',1,100,1);
+I[25]=new Array();I[25][0]=100;
+I[25][1]='';
+I[25][2]='0';
+I[25][3]=new Array();
+I[25][3][0]=new Array('Deja de rodar traslad\u00E1ndose a la misma velocidad.','',0,0,1);
+I[25][3][1]=new Array('Se trasladar\u00E1 m\u00E1s r\u00E1pido pero sin rodar','',0,0,1);
+I[25][3][2]=new Array('No le ocurre nada respecto a la situaci\u00F3n anterior','',1,100,1);
+I[25][3][3]=new Array('Se trasladar\u00E1 m\u00E1s r\u00E1pido rodando a la misma velocidad angular','',0,0,1);
+I[26]=new Array();I[26][0]=100;
+I[26][1]='';
+I[26][2]='0';
+I[26][3]=new Array();
+I[26][3][0]=new Array('es mayor en el caso de \u00B51','',0,0,1);
+I[26][3][1]=new Array('es mayor en el caso de \u00B52','',0,0,1);
+I[26][3][2]=new Array('es la misma','',1,100,1);
+I[26][3][3]=new Array('Se necesitar\u00EDa conocer el radio del cilindro','',0,0,1);
+I[27]=new Array();I[27][0]=100;
+I[27][1]='';
+I[27][2]='0';
+I[27][3]=new Array();
+I[27][3][0]=new Array('mv / I','',0,0,1);
+I[27][3][1]=new Array('2mRv / I','',0,0,1);
+I[27][3][2]=new Array('mRv / I','',0,0,1);
+I[27][3][3]=new Array('mRv / (mR\u00B2+I)','',1,100,1);
+I[28]=new Array();I[28][0]=100;
+I[28][1]='';
+I[28][2]='0';
+I[28][3]=new Array();
+I[28][3][0]=new Array('300 J','',1,100,1);
+I[28][3][1]=new Array('30 J','',0,0,1);
+I[28][3][2]=new Array('60 J','',0,0,1);
+I[28][3][3]=new Array('600 J','',0,0,1);
+I[29]=new Array();I[29][0]=100;
+I[29][1]='';
+I[29][2]='0';
+I[29][3]=new Array();
+I[29][3][0]=new Array('20 r.p.m','',0,0,1);
+I[29][3][1]=new Array('10 r.p.m','',0,0,1);
+I[29][3][2]=new Array('30 r.p.m','',1,100,1);
+I[29][3][3]=new Array('40 r.p.m','',0,0,1);
+I[30]=new Array();I[30][0]=100;
+I[30][1]='';
+I[30][2]='0';
+I[30][3]=new Array();
+I[30][3][0]=new Array('F = Mg \u221A(2hR) / R','',0,0,1);
+I[30][3][1]=new Array('F = 2Mg \u221A(h(R-2h)) / (R-h)','',0,0,1);
+I[30][3][2]=new Array('F = Mg \u221A(h(R-2h)) / (R-h)','',0,0,1);
+I[30][3][3]=new Array('F = Mg \u221A(h(2R-h)) / (R-h)','',1,100,1);
+I[31]=new Array();I[31][0]=100;
+I[31][1]='';
+I[31][2]='0';
+I[31][3]=new Array();
+I[31][3][0]=new Array('Hacia detr\u00E1s en la rueda delantera y hacia delante en la rueda trasera.','',1,100,1);
+I[31][3][1]=new Array('Hacia delante en la rueda delantera y hacia detr\u00E1s en la rueda trasera.','',0,0,1);
+I[31][3][2]=new Array('Hacia detr\u00E1s en ambas, la delantera y la trasera.','',0,0,1);
+I[31][3][3]=new Array('Hacia adelante en ambas, la trasera y la delantera.','',0,0,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	PreloadImages('https://lh4.googleusercontent.com/-SV2D9WugTaE/T0tjJCV8W0I/AAAAAAAAAH0/OSw_5vLerBI/s479/5D1.JPG?gl=ES','https://lh6.googleusercontent.com/-kbg3Un1_NYA/T0tF3zMzABI/AAAAAAAAAFA/mZfM1Ak0Fyg/s632/5D2.JPG?gl=ES','https://lh5.googleusercontent.com/-mV6unTJRitQ/T0tF4ixfdtI/AAAAAAAAAFM/vVSiQVOtD5I/s419/5D3.JPG?gl=ES','https://lh6.googleusercontent.com/-Aov8Kqz3Mus/T0tF4Zkpt0I/AAAAAAAAAFI/fHJU0NGtxKg/s632/5D4.JPG?gl=ES','https://umh1228.umh.es/files/2018/09/esferitas.jpg','https://umh1228.umh.es/files/2018/09/cruz.jpg','https://umh1228.umh.es/files/2022/05/cilindrocuerda.jpg','https://umh1228.umh.es/files/2026/07/RuedaBloque.png');
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">DIN&#x00C1;MICA DE LA ROTACI&#x00D3;N</h2>
+
+	<h3 class="ExerciseSubtitle">Si no acertases a la primera, podr&#x00E1;s intentarlo de nuevo, pero perder&#x00E1;s puntos.<br /></h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions">Escoge la respuesta correcta para cada pregunta, haciendo click sobre la letra correspondiente.<br /></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Mostrar todas las preguntas</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Elegir la frase correcta:</div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;Para un s&#x00F3;lido r&#x00ED;gido existen al menos tres ejes perpendiculares entre s&#x00ED; para los cuales el momento angular es paralelo a la velocidad angular.</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;Todas son ciertas.</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;La relaci&#x00F3;n: L = I&#x03C9; se cumple para los ejes principales del s&#x00F3;lido r&#x00ED;gido donde I es el momento de inercia y &#x03C9; es la velocidad angular ambos para ese eje principal.</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">?</button>&#160;&#160;En un s&#x00F3;lido r&#x00ED;gido que rota en torno cualquier eje, la componente del momento angular L<sub>z</sub> sobre ese eje cumple L<sub>z</sub> = I&#x03C9; donde I es el momento de inercia y &#x03C9; es la velocidad angular ambos para ese eje.</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">Elegir la frase correcta:</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;Para un s&#x00F3;lido r&#x00ED;gido el momento de inercia con respecto a un eje puede variar en el tiempo.</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;Las fuerzas internas puede producir el torque necesario para que un s&#x00F3;lido r&#x00ED;gido empiece a rotar.</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">?</button>&#160;&#160;Para un s&#x00F3;lido r&#x00ED;gido en el que no existen torques externos con alguna componente a lo largo del eje de giro, entonces el s&#x00F3;lido o no gira o mantiene su velocidad de giro constante.</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">?</button>&#160;&#160;Si la &#x00FA;nica fuerza externa es el peso del s&#x00F3;lido, entonces se produce un par que puede hacer girar el s&#x00F3;lido entorno a un eje que pase por el centro de masas.</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">Mediante s&#x00F3;lo la acci&#x00F3;n de fuerzas internas, un s&#x00F3;lido r&#x00ED;gido aislado:</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;No puede cambiar la posici&#x00F3;n de su centro de masas pero s&#x00ED; cambiar su energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;Puede cambiar la posici&#x00F3;n de su centro de masas pero no cambiar su energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;Ni puede cambiar la posici&#x00F3;n de su centro de masas ni cambiar su energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;Puede cambiar la posici&#x00F3;n de su centro de masas pero no cambiar su energ&#x00ED;a cin&#x00E9;tica.</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">El momento de inercia de un objeto de masa m:</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;depende del tipo de material.</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;depende de la velocidad de giro.</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;depende del volumen del cuerpo.</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;depende de la elecci&#x00F3;n del eje de rotaci&#x00F3;n</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">Un disco puede girar libremente alrededor de un eje. Si una fuerza aplicada a una distancia d del eje le ocasiona una aceleraci&#x00F3;n angular &#x03B1;, entonces la misma fuerza aplicada a una distancia 2d le ocasionar&#x00E1; una aceleraci&#x00F3;n angular:</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;&#x03B1;/4</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;&#x03B1;/2</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;2&#x03B1;</li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">?</button>&#160;&#160;&#x03B1;</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">El momento de inercia de un objeto alrededor de un eje que no pasa por el centro de masas pero es paralelo a &#x00E9;l es:</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;a veces igual que el que pasa por el centro de masas.</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;siempre menor que el que pasa por el centro de masas</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;siempre mayor que el que pasa por el centro de masas</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">?</button>&#160;&#160;algunas veces menor que el que pasa por el centro de masas.</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">Partiendo del reposo y al mismo tiempo, se sueltan una esfera y un cilindro desde la misma altura de un plano inclinado y comienzan a rodar:</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;el resultado depende de cual tenga m&#x00E1;s radio.</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;la esfera llegar&#x00E1; antes a la base del plano.</li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;el cilindro llegar&#x00E1; antes a la base del plano.</li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">?</button>&#160;&#160;el resultado depende de cual tenga m&#x00E1;s masa.</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">Si un aro de masa m y radio r rueda sin deslizamiento:</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;Su energ&#x00ED;a cin&#x00E9;tica de rotaci&#x00F3;n es igual que la de traslaci&#x00F3;n.</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;Su energ&#x00ED;a cin&#x00E9;tica de rotaci&#x00F3;n es mayor que la de traslaci&#x00F3;n.</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;Su energ&#x00ED;a cin&#x00E9;tica de rotaci&#x00F3;n es menor que la de traslaci&#x00F3;n</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">?</button>&#160;&#160;El resultado depende de su radio.</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">Supongamos una rueda de masa m que sube sin deslizar por un plano con velocidad inicial v<sub>o</sub>. Ahora, supongamos que un bloque con la misma masa sube deslizando sin fricci&#x00F3;n por el mismo plano y con la misma velocidad inicial. &#x00BF;Cu&#x00E1;l llegar&#x00E1; m&#x00E1;s arriba?<br /><br /><img src="https://lh4.googleusercontent.com/-SV2D9WugTaE/T0tjJCV8W0I/AAAAAAAAAH0/OSw_5vLerBI/s479/5D1.JPG?gl=ES" alt="graph9" title="graph9" width="500" height="85" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;El bloque porque sube sin rozamiento</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;Igual ya que los dos tienen igual velocidad inicial</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;La rueda ya que tiene m&#x00E1;s energ&#x00ED;a inicial</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;Igual ya que los dos tienen igual masa</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">Si un cilindro indeformable y aislado rueda sin deslizar por una superficie horizontal:</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;Todas son ciertas.</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;la fuerza de rozamiento no ejerce trabajo ni disipa energ&#x00ED;a</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;no se necesita fuerza de rozamiento para mantener el giro.</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;el objeto no variar&#x00E1; su velocidad angular ni su velocidad de traslaci&#x00F3;n.</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">Supongamos una rueda de masa m que sube sin deslizar por un plano con velocidad inicial v<sub>o</sub>. Ahora, supongamos que la misma rueda sube por el mismo plano con la misma velocidad inicial, tambi&#x00E9;n rodando, pero sin fricci&#x00F3;n.&#x00BF;En que caso llegar&#x00E1; m&#x00E1;s arriba?:</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;Las dos llegar&#x00E1;n igual porque tienen la misma energ&#x00ED;a inicial.</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;En el caso en que sube con fricci&#x00F3;n porque el rozamiento la ayuda a subir y a convertir su energ&#x00ED;a de rotaci&#x00F3;n en potencial.</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;En el caso en que sube sin fricci&#x00F3;n ya que no disipar&#x00E1; energ&#x00ED;a.</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;Faltan datos para responder a la pregunta.</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">Supongamos una rueda de masa m que rueda sin deslizar descendiendo por un plano inclinado de &#x00E1;ngulo &#xF020;&#x03B1; con la horizontal y con rozamiento est&#x00E1;tico &#x03BC;<sub>e</sub></div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;La fuerza de rozamiento siempre ser&#x00E1; mayor o igual que mg &#x03BC;<sub>e</sub> cos&#x03B1;</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;La fuerza de rozamiento siempre ser&#x00E1; menor o igual que mg &#x03BC;<sub>e</sub> cos&#x03B1;</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;Faltan datos para responder la cuesti&#x00F3;n..</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;La fuerza de rozamiento siempre ser&#x00E1; igual a mg &#x03BC;<sub>e</sub> cos&#x03B1;</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">Si golpeamos una bola de billar percutiendo con el taco en la parte superior de la bola, &#x00E9;sta empezar&#x00E1; a girar m&#x00E1;s r&#x00E1;pido de lo que se traslada hasta que est&#x00E9; en condici&#x00F3;n de rodadura. Durante ese tiempo la bola ha recorrido un trayecto en que la fuerza de rozamiento:</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;siempre apuntar&#x00E1; hacia atr&#x00E1;s y la bola perder&#x00E1; algo de velocidad de traslaci&#x00F3;n.</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;proporcionar&#x00E1; un par que aumentar&#x00E1; la velocidad angular de la bola.</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;apunta hacia delante haciendo que la bola gane velocidad de traslaci&#x00F3;n.</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;no act&#x00FA;a en este trayecto.</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">En el cilindro indeformable de la figura que es estirado por una cuerda con tensi&#x00F3;n T, la fuerza de rozamiento puede cambiar su direcci&#x00F3;n:<br /><br /><br /><img src="https://lh6.googleusercontent.com/-kbg3Un1_NYA/T0tF3zMzABI/AAAAAAAAAFA/mZfM1Ak0Fyg/s632/5D2.JPG?gl=ES" alt="graph14" title="graph14" width="450" height="228" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;Todas son ciertas.</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;estando dirigida hacia la izquierda cuando r &lt; R/2</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;siendo nula cuando r = R/2</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;estando dirigida hacia la derecha cuando r &gt; R/2</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">En el sistema de la figura A las dos masas M iguales est&#x00E1;n separadas una distancia r del centro de la barra cuya masa es despreciable. La barra y las masas giran con velocidad angular &#x03C9; entorno a un eje perpendicular a la barra y que pasa por su centro. S&#x00FA;bitamente, las masas se separan a una distancia 2r del centro (figura B). &#x00BF;Cu&#x00E1;l es la relaci&#x00F3;n entre la nueva velocidad angular &#x03C9;&#x2019; de giro y la anterior &#x03C9;?<br /><br /><img src="https://lh5.googleusercontent.com/-mV6unTJRitQ/T0tF4ixfdtI/AAAAAAAAAFM/vVSiQVOtD5I/s419/5D3.JPG?gl=ES" alt="graph15" title="graph15" width="450" height="178" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;&#x03C9; = 4&#x03C9;'</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;&#x03C9; = &#x03C9;'</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;&#x03C9; = 8&#x03C9;'</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">?</button>&#160;&#160;&#x03C9; = 2&#x03C9;'</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">El momento de inercia de un cuerpo ser&#x00E1; m&#x00ED;nimo:</div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;para alg&#x00FA;n eje que pase por el centro de masas.</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;dependiendo del sistema de referencia.</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;sino es un eje principal.</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">?</button>&#160;&#160;para un eje indeterminado.</li></ol></li>
+<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">Si el momento de inercia de un cilindro macizo, de masa m, radio r y altura h, respecto de su eje vale mr<sup>2</sup>/2, su radio de giro valdr&#x00E1;:</div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">?</button>&#160;&#160;r/2<sup>1/2</sup></li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">?</button>&#160;&#160;h/2</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">?</button>&#160;&#160;r<sup>1/2</sup>/3</li><li id="Q_16_3"><button class="FuncButton" id="Q_16_3_Btn" onclick="CheckMCAnswer(16,3,this)">?</button>&#160;&#160;2<sup>1/2</sup>r</li></ol></li>
+<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">Si una estrella giratoria empieza a colapsar por su fuerza gravitacional:</div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">?</button>&#160;&#160;su momento angular y su velocidad angular permanecen constantes pero su momento de inercia disminuye</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">?</button>&#160;&#160;su energ&#x00ED;a cin&#x00E9;tica de rotaci&#x00F3;n aumenta</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">?</button>&#160;&#160;su energ&#x00ED;a cin&#x00E9;tica de rotaci&#x00F3;n disminuye</li><li id="Q_17_3"><button class="FuncButton" id="Q_17_3_Btn" onclick="CheckMCAnswer(17,3,this)">?</button>&#160;&#160;su momento angular permanece constante, su velocidad angular aumenta y su momento de inercia disminuye</li></ol></li>
+<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText">Dos discos de masa id&#x00E9;ntica pero radios diferentes (r y 2r) giran sobre cojinetes sin rozamiento a la misma velocidad angular &#x03C9;<sub>0</sub> pero en sentidos contrarios. Lentamente los dos discos son impulsados el uno hacia el otro hasta que sus superficies entran en contacto. La fuerza de rozamiento hace que ambos discos tengan la misma velocidad angular &#x00BF;Cu&#x00E1;l es la magnitud de esa velocidad angular en funci&#x00F3;n de &#x03C9;<sub>0</sub>?<br /><br /><img src="https://lh6.googleusercontent.com/-Aov8Kqz3Mus/T0tF4Zkpt0I/AAAAAAAAAFI/fHJU0NGtxKg/s632/5D4.JPG?gl=ES" alt="graph19" title="graph19" width="450" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_18_0"><button class="FuncButton" id="Q_18_0_Btn" onclick="CheckMCAnswer(18,0,this)">?</button>&#160;&#160;&#x03C9;<sub>f</sub> = &#x03C9;<sub>0</sub></li><li id="Q_18_1"><button class="FuncButton" id="Q_18_1_Btn" onclick="CheckMCAnswer(18,1,this)">?</button>&#160;&#160;&#x03C9;<sub>f</sub> = 0.6 &#x03C9;<sub>0</sub></li><li id="Q_18_2"><button class="FuncButton" id="Q_18_2_Btn" onclick="CheckMCAnswer(18,2,this)">?</button>&#160;&#160;&#x03C9;<sub>f</sub> = 2 &#x03C9;<sub>0</sub></li><li id="Q_18_3"><button class="FuncButton" id="Q_18_3_Btn" onclick="CheckMCAnswer(18,3,this)">?</button>&#160;&#160;&#x03C9;<sub>f</sub> = 4 &#x03C9;<sub>0</sub></li></ol></li>
+<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText">En una colisi&#x00F3;n totalmente inel&#x00E1;stica en la que pueda haber rotaciones:</div><ol class="MCAnswers"><li id="Q_19_0"><button class="FuncButton" id="Q_19_0_Btn" onclick="CheckMCAnswer(19,0,this)">?</button>&#160;&#160;s&#x00F3;lo se conserva el momento angular.</li><li id="Q_19_1"><button class="FuncButton" id="Q_19_1_Btn" onclick="CheckMCAnswer(19,1,this)">?</button>&#160;&#160;s&#x00F3;lo se conserva el momento lineal.</li><li id="Q_19_2"><button class="FuncButton" id="Q_19_2_Btn" onclick="CheckMCAnswer(19,2,this)">?</button>&#160;&#160;se conserva el momento lineal, el momento angular y pero no la energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_19_3"><button class="FuncButton" id="Q_19_3_Btn" onclick="CheckMCAnswer(19,3,this)">?</button>&#160;&#160;se conserva el momento lineal, el momento angular y la energ&#x00ED;a cin&#x00E9;tica.</li></ol></li>
+<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText">Cuatro esferitas de masas m1 = 1 g, m2 = 2 g, m3 = 3 g y m4 = 4 g est&#x00E1;n engarzadas mediante un alambre de masa despreciable y longitud L = 0.9 m. Las masas m1 y m4 ocupan los extremos del alambre y m2 est&#x00E1; a una distancia L/4 de m1, mientras que m3 est&#x00E1; a la misma distancia de m4. Si al sistema se le dota de un eje que pase por el centro de masas y sea perpendicular al alambre resulta que el momento de inercia, expresado en kgm&#x00B2;, es:<br /><img src="https://umh1228.umh.es/files/2018/09/esferitas.jpg" alt="esferitas" title="esferitas" width="???" height="???" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">?</button>&#160;&#160;10<sup>&#x2212;2</sup></li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">?</button>&#160;&#160;10<sup>&#x2212;3</sup></li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">?</button>&#160;&#160;10<sup>&#x2212;4</sup></li><li id="Q_20_3"><button class="FuncButton" id="Q_20_3_Btn" onclick="CheckMCAnswer(20,3,this)">?</button>&#160;&#160;10<sup>&#x2212;5</sup></li></ol></li>
+<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText">Cuatro part&#x00ED;culas id&#x00E9;nticas puntuales, cada una con masa m, est&#x00E1;n situadas sobre el plano XY. Est&#x00E1;n unidas por varillas finas formando un cuerpo r&#x00ED;gido. Si m = 2.0 kg y a = 1.0 m, el momento de inercia I del conjunto respecto del eje Y es:<br /><img src="https://umh1228.umh.es/files/2018/09/cruz.jpg" alt="cruz" title="cruz" width="???" height="???" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_21_0"><button class="FuncButton" id="Q_21_0_Btn" onclick="CheckMCAnswer(21,0,this)">?</button>&#160;&#160;4 kg m&#x00B2;</li><li id="Q_21_1"><button class="FuncButton" id="Q_21_1_Btn" onclick="CheckMCAnswer(21,1,this)">?</button>&#160;&#160;9.6 kg m&#x00B2;</li><li id="Q_21_2"><button class="FuncButton" id="Q_21_2_Btn" onclick="CheckMCAnswer(21,2,this)">?</button>&#160;&#160;12 kg m&#x00B2;</li><li id="Q_21_3"><button class="FuncButton" id="Q_21_3_Btn" onclick="CheckMCAnswer(21,3,this)">?</button>&#160;&#160;Faltan datos para calcularlo</li></ol></li>
+<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText">En una bolera se lanza una bola de masa M y radio R de modo que justo cuando toca al suelo se est&#x00E1; trasladando sin girar. Si el coeficiente de rozamiento cin&#x00E9;tico con el suelo es &#x03BC;, la expresi&#x00F3;n para la aceleraci&#x00F3;n angular de la bola ser&#x00E1;:</div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">?</button>&#160;&#160;5&#x03BC;g / 2R</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">?</button>&#160;&#160;5&#x03BC;g / 2M</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">?</button>&#160;&#160;2&#x03BC;g / 5R</li><li id="Q_22_3"><button class="FuncButton" id="Q_22_3_Btn" onclick="CheckMCAnswer(22,3,this)">?</button>&#160;&#160;2&#x03BC;g / R</li></ol></li>
+<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText">Un cilindro de 0.1 m de radio y 0.2 m de longitud, tiene un momento de inercia de 0.02 kg m&#x00B2;. Se enrolla una cuerda alrededor del cilindro y se tira de ella con una fuerza de 1 N sobre una superficie horizontal que tiene suficiente rozamiento para que el cilindro no deslice. La aceleraci&#x00F3;n angular del cilindro es:<br /><img src="https://umh1228.umh.es/files/2022/05/cilindrocuerda.jpg" alt="cilindro" title="cilindro" width="???" height="???" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">?</button>&#160;&#160;El cilindro siempre va a deslizar en cualquier superficie</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">?</button>&#160;&#160;2.25 rad/s&#x00B2;</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">?</button>&#160;&#160;3.33 rad/s&#x00B2;</li><li id="Q_23_3"><button class="FuncButton" id="Q_23_3_Btn" onclick="CheckMCAnswer(23,3,this)">?</button>&#160;&#160;Se necesita saber la masa del cilindro</li></ol></li>
+<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText">Una esfera s&#x00F3;lida y uniforme de masa M y radio R tiene una momento de inercia (2mR&#x00B2;/5) respecto de un di&#x00E1;metro. Si se fija una fina cuerda de longitud 3R a la superficie y se suspende la esfera del techo, entonces su momento de inercia respecto del punto de uni&#x00F3;n al techo es:</div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">?</button>&#160;&#160;(2mR&#x00B2;/5)</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">?</button>&#160;&#160;16mR&#x00B2;</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">?</button>&#160;&#160;(47mR&#x00B2;/5)</li><li id="Q_24_3"><button class="FuncButton" id="Q_24_3_Btn" onclick="CheckMCAnswer(24,3,this)">?</button>&#160;&#160;(82mR&#x00B2;/5)</li></ol></li>
+<li class="QuizQuestion" id="Q_25" style="display: none;"><div class="QuestionText">Un objeto cil&#x00ED;ndrico rueda a velocidad constante sin deslizar por una superficie horizontal. De repente, el objeto entra en una zona de hielo (sin rozamiento). &#x00BF;Qu&#x00E9; le ocurre al cilindro?</div><ol class="MCAnswers"><li id="Q_25_0"><button class="FuncButton" id="Q_25_0_Btn" onclick="CheckMCAnswer(25,0,this)">?</button>&#160;&#160;Deja de rodar traslad&#x00E1;ndose a la misma velocidad.</li><li id="Q_25_1"><button class="FuncButton" id="Q_25_1_Btn" onclick="CheckMCAnswer(25,1,this)">?</button>&#160;&#160;Se trasladar&#x00E1; m&#x00E1;s r&#x00E1;pido pero sin rodar</li><li id="Q_25_2"><button class="FuncButton" id="Q_25_2_Btn" onclick="CheckMCAnswer(25,2,this)">?</button>&#160;&#160;No le ocurre nada respecto a la situaci&#x00F3;n anterior</li><li id="Q_25_3"><button class="FuncButton" id="Q_25_3_Btn" onclick="CheckMCAnswer(25,3,this)">?</button>&#160;&#160;Se trasladar&#x00E1; m&#x00E1;s r&#x00E1;pido rodando a la misma velocidad angular</li></ol></li>
+<li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText">Sobre una superficie horizontal, un cilindro de masa m rueda en condici&#x00F3;n de rodadura y llega con velocidad v a la base de un plano inclinado de &#x00E1;ngulo &#x03B8;. El coeficiente de rozamiento est&#x00E1;tico entre el cilindro y el plano es &#x00B5;1. Posteriormente se repite la misma experiencia con otro cilindro con la misma masa y misma velocidad pero cuyo coeficiente de rozamiento est&#x00E1;tico con el plano es &#x00B5;2 siendo &#x00B5;2 &gt; &#x00B5;1. La altura que se alcanza sobre el plano en cada caso, si se sube sin deslizamiento y las superficies se suponen indeformables:</div><ol class="MCAnswers"><li id="Q_26_0"><button class="FuncButton" id="Q_26_0_Btn" onclick="CheckMCAnswer(26,0,this)">?</button>&#160;&#160;es mayor en el caso de &#x00B5;1</li><li id="Q_26_1"><button class="FuncButton" id="Q_26_1_Btn" onclick="CheckMCAnswer(26,1,this)">?</button>&#160;&#160;es mayor en el caso de &#x00B5;2</li><li id="Q_26_2"><button class="FuncButton" id="Q_26_2_Btn" onclick="CheckMCAnswer(26,2,this)">?</button>&#160;&#160;es la misma</li><li id="Q_26_3"><button class="FuncButton" id="Q_26_3_Btn" onclick="CheckMCAnswer(26,3,this)">?</button>&#160;&#160;Se necesitar&#x00ED;a conocer el radio del cilindro</li></ol></li>
+<li class="QuizQuestion" id="Q_27" style="display: none;"><div class="QuestionText">Un tiovivo que est&#x00E1; en reposo tiene radio R y momento de inercia I. Un chico de masa m que corre con velocidad v en una l&#x00ED;nea tangente al borde, salta encima del tiovivo. La velocidad angular del tiovivo ser&#x00E1;:</div><ol class="MCAnswers"><li id="Q_27_0"><button class="FuncButton" id="Q_27_0_Btn" onclick="CheckMCAnswer(27,0,this)">?</button>&#160;&#160;mv / I</li><li id="Q_27_1"><button class="FuncButton" id="Q_27_1_Btn" onclick="CheckMCAnswer(27,1,this)">?</button>&#160;&#160;2mRv / I</li><li id="Q_27_2"><button class="FuncButton" id="Q_27_2_Btn" onclick="CheckMCAnswer(27,2,this)">?</button>&#160;&#160;mRv / I</li><li id="Q_27_3"><button class="FuncButton" id="Q_27_3_Btn" onclick="CheckMCAnswer(27,3,this)">?</button>&#160;&#160;mRv / (mR&#x00B2;+I)</li></ol></li>
+<li class="QuizQuestion" id="Q_28" style="display: none;"><div class="QuestionText">Un disco tiene momento de inercia de 6 kg&#x00B7;m&#x00B2; y se le aplica una fuerza en el borde que le proporciona una aceleraci&#x00F3;n angular de 2 rad&#x2044;s&#x00B2; . Si empieza a girar desde el reposo, el trabajo realizado por la fuerza en los primeros 5 s del movimiento es:</div><ol class="MCAnswers"><li id="Q_28_0"><button class="FuncButton" id="Q_28_0_Btn" onclick="CheckMCAnswer(28,0,this)">?</button>&#160;&#160;300 J</li><li id="Q_28_1"><button class="FuncButton" id="Q_28_1_Btn" onclick="CheckMCAnswer(28,1,this)">?</button>&#160;&#160;30 J</li><li id="Q_28_2"><button class="FuncButton" id="Q_28_2_Btn" onclick="CheckMCAnswer(28,2,this)">?</button>&#160;&#160;60 J</li><li id="Q_28_3"><button class="FuncButton" id="Q_28_3_Btn" onclick="CheckMCAnswer(28,3,this)">?</button>&#160;&#160;600 J</li></ol></li>
+<li class="QuizQuestion" id="Q_29" style="display: none;"><div class="QuestionText">Una rueda est&#x00E1; rotando inicialmente a 20 r.p.m. Repentinamente, se aplica a la rueda un par de 20 Nm durante 2 segundos. Entonces cu&#x00E1;l ser&#x00E1; la velocidad angular de la rueda si su momento de inercia es 4 kgm&#x00B2;</div><ol class="MCAnswers"><li id="Q_29_0"><button class="FuncButton" id="Q_29_0_Btn" onclick="CheckMCAnswer(29,0,this)">?</button>&#160;&#160;20 r.p.m</li><li id="Q_29_1"><button class="FuncButton" id="Q_29_1_Btn" onclick="CheckMCAnswer(29,1,this)">?</button>&#160;&#160;10 r.p.m</li><li id="Q_29_2"><button class="FuncButton" id="Q_29_2_Btn" onclick="CheckMCAnswer(29,2,this)">?</button>&#160;&#160;30 r.p.m</li><li id="Q_29_3"><button class="FuncButton" id="Q_29_3_Btn" onclick="CheckMCAnswer(29,3,this)">?</button>&#160;&#160;40 r.p.m</li></ol></li>
+<li class="QuizQuestion" id="Q_30" style="display: none;"><div class="QuestionText">Una rueda de masa M y radio R descansa sobre una superficie horizontal, apoyada contra un escal&#x00F3;n de altura h (h&lt;R). La rueda ha de subir el escal&#x00F3;n mediante una fuerza F horizontal aplicada al eje de la rueda. La expresi&#x00F3;n para la fuerza m&#x00ED;nima F aplicada es:<br /><img src="https://umh1228.umh.es/files/2026/07/RuedaBloque.png" alt="ruedabloc" title="ruebabloc" width="350" height="???" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_30_0"><button class="FuncButton" id="Q_30_0_Btn" onclick="CheckMCAnswer(30,0,this)">?</button>&#160;&#160;F = Mg &#x221A;(2hR) / R</li><li id="Q_30_1"><button class="FuncButton" id="Q_30_1_Btn" onclick="CheckMCAnswer(30,1,this)">?</button>&#160;&#160;F = 2Mg &#x221A;(h(R-2h)) / (R-h)</li><li id="Q_30_2"><button class="FuncButton" id="Q_30_2_Btn" onclick="CheckMCAnswer(30,2,this)">?</button>&#160;&#160;F = Mg &#x221A;(h(R-2h)) / (R-h)</li><li id="Q_30_3"><button class="FuncButton" id="Q_30_3_Btn" onclick="CheckMCAnswer(30,3,this)">?</button>&#160;&#160;F = Mg &#x221A;(h(2R-h)) / (R-h)</li></ol></li>
+<li class="QuizQuestion" id="Q_31" style="display: none;"><div class="QuestionText">En una bicicleta en la que se est&#x00E1; pedaleando, la fuerza de rozamiento de las ruedas con el suelo act&#x00FA;a:</div><ol class="MCAnswers"><li id="Q_31_0"><button class="FuncButton" id="Q_31_0_Btn" onclick="CheckMCAnswer(31,0,this)">?</button>&#160;&#160;Hacia detr&#x00E1;s en la rueda delantera y hacia delante en la rueda trasera.</li><li id="Q_31_1"><button class="FuncButton" id="Q_31_1_Btn" onclick="CheckMCAnswer(31,1,this)">?</button>&#160;&#160;Hacia delante en la rueda delantera y hacia detr&#x00E1;s en la rueda trasera.</li><li id="Q_31_2"><button class="FuncButton" id="Q_31_2_Btn" onclick="CheckMCAnswer(31,2,this)">?</button>&#160;&#160;Hacia detr&#x00E1;s en ambas, la delantera y la trasera.</li><li id="Q_31_3"><button class="FuncButton" id="Q_31_3_Btn" onclick="CheckMCAnswer(31,3,this)">?</button>&#160;&#160;Hacia adelante en ambas, la trasera y la delantera.</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>

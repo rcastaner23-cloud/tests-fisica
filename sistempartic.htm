@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Ramon."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="Ramon" />
+<meta name="dc:creator" content="tron" />
+<meta name="dc:creator" content="Ram&#x00F3;n" />
+<meta name="dc:creator" content="Ramon2" />
+<meta name="dc:title" content="SISTEMAS DE PART&#x00CD;CULAS" />
+
+
+
+<title>
+SISTEMAS DE PART&#x00CD;CULAS
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       small;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #C0C0C0;
+	--strExBGColor:      #FFFFFF;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = ':-)';
+var IncorrectIndicator = ':-(';
+var YourScoreIs = 'Tu puntuaci&#x00F3;n es: ';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Preguntas contestadas hasta este punto:';
+var ExerciseCompleted = 'Ejercicio completado.';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Respuestas correctas a la primera: ';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = false;
+var ShuffleAs = true;
+var DefaultRight = '&#x00A1;Muy bien! Acertaste.';
+var DefaultWrong = '&#x00A1;Error! Esa no era la respuesta correcta. Int&#x00E9;ntalo de nuevo.';
+var QsToShow = 25;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Mostrar todas las preguntas';
+var ShowOneByOneCaption = 'Mostrar preguntas una a una';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('Pl\u00E1sticas.','',0,0,1);
+I[0][3][1]=new Array('En cualquier tipo de colisi\u00F3n.','',1,100,1);
+I[0][3][2]=new Array('Inel\u00E1sticas.','',0,0,1);
+I[0][3][3]=new Array('El\u00E1sticas.','',0,0,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('El trozo peque\u00F1o tendr\u00E1 3 veces el momento lineal del grande.','',0,0,1);
+I[1][3][1]=new Array('Los dos trozos tienen la misma energ\u00EDa cin\u00E9tica.','',0,0,1);
+I[1][3][2]=new Array('El trozo grande tendr\u00E1 3 veces la energ\u00EDa cin\u00E9tica del peque\u00F1o.','',0,0,1);
+I[1][3][3]=new Array('El trozo peque\u00F1o tendr\u00E1 3 veces la energ\u00EDa cin\u00E9tica del grande.','',1,100,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('No puede cambiar la posici\u00F3n de su centro de masas pero s\u00ED cambiar su energ\u00EDa cin\u00E9tica.','',1,100,1);
+I[2][3][1]=new Array('Puede cambiar la posici\u00F3n de su centro de masas pero no cambiar su energ\u00EDa cin\u00E9tica.','',0,0,1);
+I[2][3][2]=new Array('Ni puede cambiar la posici\u00F3n de su centro de masas ni cambiar su energ\u00EDa cin\u00E9tica.','',0,0,1);
+I[2][3][3]=new Array('Puede cambiar la posici\u00F3n de su centro de masas y puede variar su energ\u00EDa cin\u00E9tica','',0,0,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('la velocidad del centro de masas siempre permanece constante.','',0,0,1);
+I[3][3][1]=new Array('el momento lineal total respecto al centro de masas es nulo','',0,0,1);
+I[3][3][2]=new Array('Todas son ciertas.','',1,100,1);
+I[3][3][3]=new Array('en el sistema de referencia centro de masas las dos part\u00EDculas se mueven con momentos lineales que son iguales y opuestos.','',0,0,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('se intercambiar\u00E1n sus velocidades dependiendo de su velocidad relativa.','',0,0,1);
+I[4][3][1]=new Array('salen en \u00E1ngulo recto','',0,0,1);
+I[4][3][2]=new Array('se intercambian sus velocidades si una de ellas est\u00E1 parada antes del choque.','',0,0,1);
+I[4][3][3]=new Array('siempre se intercambian sus velocidades aunque ninguna est\u00E9 parada antes del choque.','',1,100,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('salen en \u00E1ngulo recto siempre.','',0,0,1);
+I[5][3][1]=new Array('no se conserva la energ\u00EDa cin\u00E9tica.','',0,0,1);
+I[5][3][2]=new Array('no se conserva el momento lineal.','',0,0,1);
+I[5][3][3]=new Array('salen en \u00E1ngulo recto si una de ellas est\u00E1 parada antes del choque.','',1,100,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('F<sub>1</sub>/(m<sub>1</sub> + m<sub>2</sub>)','',1,100,1);
+I[6][3][1]=new Array('(m<sub>1</sub> + m<sub>2</sub>)F<sub>1</sub>/m<sub>1</sub>m<sub>2</sub>','',0,0,1);
+I[6][3][2]=new Array('F<sub>1</sub>/m<sub>1</sub>','',0,0,1);
+I[6][3][3]=new Array('F<sub>1</sub>/m<sub>2</sub>','',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('(F<sub>1</sub> + kx)/m<sub>1</sub>m<sub>2</sub> donde x es el estiramiento del muelle','',1,100,1);
+I[7][3][1]=new Array('F<sub>1</sub>/(m<sub>1</sub> + m<sub>2</sub>)','',0,0,1);
+I[7][3][2]=new Array('F<sub>1</sub>/m<sub>1</sub>','',0,0,1);
+I[7][3][3]=new Array('(m<sub>1</sub> + m<sub>2</sub>)F<sub>1</sub>/m<sub>1</sub>m<sub>2</sub>','',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('La velocidad del centro de masas de un sistema es igual al momento lineal total del sistema dividido por su masa total','',0,0,1);
+I[8][3][1]=new Array('El momento lineal de un cuerpo pesado es mayor que el de un objeto ligero que se mueve con igual velocidad.','',0,0,1);
+I[8][3][2]=new Array('La cantidad de movimiento del sistema puede conservarse aunque no suceda lo mismo con la energ\u00EDa cin\u00E9tica','',0,0,1);
+I[8][3][3]=new Array('Existen cuerpos sin centro de masas','',1,100,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('En un choque perfectamente inel\u00E1stico se pierde toda la energ\u00EDa cin\u00E9tica s\u00F3lo cuando la velocidad del centro de masas es nula.','',0,0,1);
+I[9][3][1]=new Array('En un choque perfectamente inel\u00E1stico se pierde siempre toda la energ\u00EDa cin\u00E9tica.','',1,100,1);
+I[9][3][2]=new Array('La velocidad del centro de masas siempre permanece constante en cualquier choque.','',0,0,1);
+I[9][3][3]=new Array('En un choque el\u00E1stico frontal la velocidad relativa de retroceso despu\u00E9s del choque es igual a la velocidad relativa de aproximaci\u00F3n antes del mismo.','',0,0,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('Ninguna de las respuestas','',0,0,1);
+I[10][3][1]=new Array('m<sub>2</sub> = m<sub>1</sub>','',1,100,1);
+I[10][3][2]=new Array('m<sub>2</sub> << m<sub>1</sub>','',0,0,1);
+I[10][3][3]=new Array('m<sub>2</sub> >> m<sub>1</sub>','',0,0,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('La magnitud de las aceleraciones que adquieren A y B son iguales','',1,100,1);
+I[11][3][1]=new Array('La magnitud de la fuerza ejercida por el muelle en A y B es la misma.','',0,0,1);
+I[11][3][2]=new Array('La magnitud de los momentos lineales que adquieren A y B son iguales.','',0,0,1);
+I[11][3][3]=new Array('El centro de masas del sistema no se mueve.','',0,0,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('La velocidad del centro de masas de un sistema de part\u00EDculas es igual a la velocidad de la part\u00EDcula m\u00E1s r\u00E1pida en el sistema.','',1,100,1);
+I[12][3][1]=new Array('El centro de masas de un sistema de part\u00EDculas se mueve como si toda su masa estuviera concentrada en ese punto.','',0,0,1);
+I[12][3][2]=new Array('El centro de masas de un objeto sim\u00E9trico est\u00E1 en alg\u00FAn punto de su eje de simetr\u00EDa.','',0,0,1);
+I[12][3][3]=new Array('La fuerza neta en un sistema de part\u00EDculas es igual a la masa total del sistema multiplicada por la aceleraci\u00F3n del centro de masas.','',0,0,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('r<sup>1/2</sup>','',0,0,1);
+I[13][3][1]=new Array('7r/6','',1,100,1);
+I[13][3][2]=new Array('r.','',0,0,1);
+I[13][3][3]=new Array('6r/7','',0,0,1);
+I[14]=new Array();I[14][0]=100;
+I[14][1]='';
+I[14][2]='0';
+I[14][3]=new Array();
+I[14][3][0]=new Array('el tocadiscos se parar\u00E1 porque no hay fuerzas externas y el momento angular total debe seguir siendo nulo','',1,100,1);
+I[14][3][1]=new Array('el tocadiscos adquirir\u00E1 mayor velocidad de rotaci\u00F3n','',0,0,1);
+I[14][3][2]=new Array('la energ\u00EDa cin\u00E9tica permanecer\u00E1 constante','',0,0,1);
+I[14][3][3]=new Array('el momento angular que ha adquirido el tocadiscos ya no se desvanecer\u00E1.','',0,0,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('en realidad lo que ha girado es la Tierra y no el gato.','',0,0,1);
+I[15][3][1]=new Array('en el \u00FAltimo momento el gato, que es muy listo y sabe que lo vamos a soltar, hace fuerza con las patas sobre nuestras manos para impulsarse.','',0,0,1);
+I[15][3][2]=new Array('gracias al rabo que el gato gira instintivamente (reflejo de enderezamiento) en sentido contrario por fuerzas internas (las suyas) es capaz de mantener nulo el momento angular del sistema gato.','',1,100,1);
+I[15][3][3]=new Array('se quiere comer al rat\u00F3n de la cuesti\u00F3n anterior.','',0,0,1);
+I[16]=new Array();I[16][0]=100;
+I[16][1]='';
+I[16][2]='0';
+I[16][3]=new Array();
+I[16][3][0]=new Array('el conjunto se pondr\u00E1 a girar ya que al disminuir la corriente I disminuye el campo magn\u00E9tico y, por la ley de Faraday-Lenz, debe aparecer un campo el\u00E9ctrico tangencial que empujar\u00E1 a las cargas en el disco. El momento angular no se conservar\u00E1.','',0,0,1);
+I[16][3][1]=new Array('el conjunto se pondr\u00E1 a girar por la ley de Faraday-Lenz, pero el momento angular cuando hab\u00EDa corriente I no era nulo ya que estaba inmerso en el campo magn\u00E9tico del solenoide. El momento angular total se conserva.','',0,0,1);
+I[16][3][2]=new Array('el conjunto no girar\u00E1 ya que su momento angular es nulo antes y debe serlo despu\u00E9s. El momento angular se debe conservar.','',1,100,1);
+I[17]=new Array();I[17][0]=100;
+I[17][1]='';
+I[17][2]='0';
+I[17][3]=new Array();
+I[17][3][0]=new Array('3.5 m','',0,0,1);
+I[17][3][1]=new Array('2.5 m','',0,0,1);
+I[17][3][2]=new Array('2 m','',0,0,1);
+I[17][3][3]=new Array('3 m','',1,100,1);
+I[18]=new Array();I[18][0]=100;
+I[18][1]='';
+I[18][2]='0';
+I[18][3]=new Array();
+I[18][3][0]=new Array('x<sub>cm</sub> = (b + h)/2;  y<sub>cm</sub> = a/2','',0,0,1);
+I[18][3][1]=new Array('x<sub>cm</sub> = (a + b)/2;  y<sub>cm</sub> = h/2','',0,0,1);
+I[18][3][2]=new Array('x<sub>cm</sub> = (a + h)/2;  y<sub>cm</sub> = b/2','',0,0,1);
+I[18][3][3]=new Array('x<sub>cm</sub> = (a + b)/3;  y<sub>cm</sub> = h/3','',1,100,1);
+I[19]=new Array();I[19][0]=100;
+I[19][1]='';
+I[19][2]='0';
+I[19][3]=new Array();
+I[19][3][0]=new Array('r<sub>cm</sub> = (0,0); v<sub>cm</sub> = (0,2); L = (0, 0, 0); L<sub>cm</sub> = (0,0,0), E<sub>k</sub> = 4, E<sub>k cm</sub>= 4','',0,0,1);
+I[19][3][1]=new Array('r<sub>cm</sub> = (0,0); v<sub>cm</sub> = (0,0); L = (0, 0, 2); L<sub>cm</sub> = (0,0,2), E<sub>k cm</sub> = 0, E<sub>k</sub>= 0','',1,100,1);
+I[19][3][2]=new Array('r<sub>cm</sub> = (0,0); v<sub>cm</sub> = (0,2); L = (0, 0, 4); L<sub>cm</sub> = (0,0,2), E<sub>k</sub> = 4, E<sub>k cm</sub>= 0','',0,0,1);
+I[19][3][3]=new Array('r<sub>cm</sub> = (0,0); v<sub>cm</sub> = (0,0); L = (0, 0, 0); L<sub>cm</sub> = (0,0,0), E<sub>k</sub> = 0, E<sub>k cm</sub>= 0','',0,0,1);
+I[20]=new Array();I[20][0]=100;
+I[20][1]='';
+I[20][2]='0';
+I[20][3]=new Array();
+I[20][3][0]=new Array('v = m\u00B7(g\u00B7l)^0.5 / M','',0,0,1);
+I[20][3][1]=new Array('v = 2M\u00B7(g\u00B7l)^0.5 / m','',0,0,1);
+I[20][3][2]=new Array('v = 4M\u00B7(g\u00B7l)^0.5 / m','',1,100,1);
+I[20][3][3]=new Array('Se necesita m\u00E1s informaci\u00F3n para responder','',0,0,1);
+I[21]=new Array();I[21][0]=100;
+I[21][1]='';
+I[21][2]='0';
+I[21][3]=new Array();
+I[21][3][0]=new Array('90\u00BA','',0,0,1);
+I[21][3][1]=new Array('120\u00BA','',1,100,1);
+I[21][3][2]=new Array('30\u00BA','',0,0,1);
+I[21][3][3]=new Array('75\u00BA','',0,0,1);
+I[22]=new Array();I[22][0]=100;
+I[22][1]='';
+I[22][2]='0';
+I[22][3]=new Array();
+I[22][3][0]=new Array('v<sub>4</sub> = 4.2 m/s;  v<sub>2</sub> = 6.6 m/s','',1,100,1);
+I[22][3][1]=new Array('v<sub>4</sub> = 4 m/s;  v<sub>2</sub> = 7 m/s','',0,0,1);
+I[22][3][2]=new Array('v<sub>4</sub> = 3.8 m/s;  v<sub>2</sub> = 7.4 m/s','',0,0,1);
+I[22][3][3]=new Array('Faltan datos para responder','',0,0,1);
+I[23]=new Array();I[23][0]=100;
+I[23][1]='';
+I[23][2]='0';
+I[23][3]=new Array();
+I[23][3][0]=new Array('Ninguna','',0,0,1);
+I[23][3][1]=new Array('Toda','',0,0,1);
+I[23][3][2]=new Array('La mitad','',1,100,1);
+I[23][3][3]=new Array('La cuarta parte','',0,0,1);
+I[24]=new Array();I[24][0]=100;
+I[24][1]='';
+I[24][2]='0';
+I[24][3]=new Array();
+I[24][3][0]=new Array('0.5','',1,100,1);
+I[24][3][1]=new Array('1','',0,0,1);
+I[24][3][2]=new Array('0.25','',0,0,1);
+I[24][3][3]=new Array('No es posible','',0,0,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	PreloadImages('https://lh6.googleusercontent.com/-EEwPYx6aj4w/T0tepR6dEeI/AAAAAAAAAGg/uaObX4yDXdA/s406/4D1.jpg?gl=ES','https://lh3.googleusercontent.com/-gMTgU_yT5qE/T0thCRbutQI/AAAAAAAAAHg/bBpOHRSwvHs/s169/4D2.jpg?gl=ES','https://lh4.googleusercontent.com/-kng2MWIzNHE/T0tFmItAvWI/AAAAAAAAADE/19rey2TbllU/s571/raton.JPG?gl=ES','https://lh6.googleusercontent.com/-OV96a7e9Lsg/T0tFkRNFSeI/AAAAAAAAACk/pO2KkPP6yyM/s512/4D3.jpg?gl=ES','https://lh3.googleusercontent.com/-kHhYkk4iO5w/T0tFkuFRyII/AAAAAAAAACw/4Tu3LhAs9FQ/s628/4D4.JPG?gl=ES','https://lh6.googleusercontent.com/-mMheGAAtWDc/T0tfxd0N-nI/AAAAAAAAAHI/JutEpSJlyv4/s272/4D5.JPG?gl=ES','https://lh5.googleusercontent.com/-B5v4DSslW74/T0tFlWDcNXI/AAAAAAAAAC4/lv_faVy9meg/s238/4D6.JPG?gl=ES','https://lh6.googleusercontent.com/-jfDMDjR3yXE/T0tFlzsDWKI/AAAAAAAAAC8/3FTsRumpBig/s248/4D7.JPG?gl=ES','https://umh1228.umh.es/files/2018/09/bala.jpg','https://umh1228.umh.es/files/2018/09/choque.jpg','https://umh1228.umh.es/files/2023/02/masas.jpg');
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">SISTEMAS DE PART&#x00CD;CULAS</h2>
+
+	<h3 class="ExerciseSubtitle">Si no acertases a la primera, podr&#x00E1;s intentarlo de nuevo, pero perder&#x00E1;s puntos.<br /></h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions">Escoge la respuesta correcta para cada pregunta, haciendo click sobre la letra correspondiente.<br /></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Mostrar todas las preguntas</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">El momento lineal se conserva en colisiones si &#x00E9;stas son:</div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;Pl&#x00E1;sticas.</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;En cualquier tipo de colisi&#x00F3;n.</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;Inel&#x00E1;sticas.</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">?</button>&#160;&#160;El&#x00E1;sticas.</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">Un bloque explota en dos trozos uno de los cuales tiene el triple de masa que el otro. Despu&#x00E9;s de la explosi&#x00F3;n:</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;El trozo peque&#x00F1;o tendr&#x00E1; 3 veces el momento lineal del grande.</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;Los dos trozos tienen la misma energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">?</button>&#160;&#160;El trozo grande tendr&#x00E1; 3 veces la energ&#x00ED;a cin&#x00E9;tica del peque&#x00F1;o.</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">?</button>&#160;&#160;El trozo peque&#x00F1;o tendr&#x00E1; 3 veces la energ&#x00ED;a cin&#x00E9;tica del grande.</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">Mediante s&#x00F3;lo la acci&#x00F3;n de fuerzas internas, un sistema de part&#x00ED;culas aislado:</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;No puede cambiar la posici&#x00F3;n de su centro de masas pero s&#x00ED; cambiar su energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;Puede cambiar la posici&#x00F3;n de su centro de masas pero no cambiar su energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;Ni puede cambiar la posici&#x00F3;n de su centro de masas ni cambiar su energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;Puede cambiar la posici&#x00F3;n de su centro de masas y puede variar su energ&#x00ED;a cin&#x00E9;tica</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">En cualquier colisi&#x00F3;n de dos part&#x00ED;culas:</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;la velocidad del centro de masas siempre permanece constante.</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;el momento lineal total respecto al centro de masas es nulo</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;Todas son ciertas.</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;en el sistema de referencia centro de masas las dos part&#x00ED;culas se mueven con momentos lineales que son iguales y opuestos.</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">En una colisi&#x00F3;n frontal el&#x00E1;stica entre dos part&#x00ED;culas de igual masa:</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;se intercambiar&#x00E1;n sus velocidades dependiendo de su velocidad relativa.</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;salen en &#x00E1;ngulo recto</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;se intercambian sus velocidades si una de ellas est&#x00E1; parada antes del choque.</li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">?</button>&#160;&#160;siempre se intercambian sus velocidades aunque ninguna est&#x00E9; parada antes del choque.</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">En una colisi&#x00F3;n no frontal el&#x00E1;stica entre dos part&#x00ED;culas de igual masa:</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;salen en &#x00E1;ngulo recto siempre.</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;no se conserva la energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;no se conserva el momento lineal.</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">?</button>&#160;&#160;salen en &#x00E1;ngulo recto si una de ellas est&#x00E1; parada antes del choque.</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">Dos discos de masa m<sub>1</sub> y m<sub>2</sub> reposan desconectados sobre una mesa sin rozamiento. Una fuerza horizontal F<sub>1</sub> se aplica sobre m<sub>1</sub> solamente. &#x00BF;Cu&#x00E1;l es la magnitud de la aceleraci&#x00F3;n del centro de masas de los dos discos?:</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;F<sub>1</sub>/(m<sub>1</sub> + m<sub>2</sub>)</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;(m<sub>1</sub> + m<sub>2</sub>)F<sub>1</sub>/m<sub>1</sub>m<sub>2</sub></li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;F<sub>1</sub>/m<sub>1</sub></li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">?</button>&#160;&#160;F<sub>1</sub>/m<sub>2</sub></li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">Los dos discos de la cuesti&#x00F3;n anterior reposan sobre una mesa sin rozamiento y est&#x00E1;n conectados por un muelle de constante el&#x00E1;stica k. Una fuerza horizontal F<sub>1</sub> se ejerce de nuevo sobre m<sub>1</sub> a lo largo del muelle alej&#x00E1;ndose de m<sub>2</sub>. &#x00BF;Cu&#x00E1;l es la magnitud de le aceleraci&#x00F3;n del centro de masas?</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;(F<sub>1</sub> + kx)/m<sub>1</sub>m<sub>2</sub> donde x es el estiramiento del muelle</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;F<sub>1</sub>/(m<sub>1</sub> + m<sub>2</sub>)</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;F<sub>1</sub>/m<sub>1</sub></li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">?</button>&#160;&#160;(m<sub>1</sub> + m<sub>2</sub>)F<sub>1</sub>/m<sub>1</sub>m<sub>2</sub></li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">Indicar la frase falsa:</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;La velocidad del centro de masas de un sistema es igual al momento lineal total del sistema dividido por su masa total</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;El momento lineal de un cuerpo pesado es mayor que el de un objeto ligero que se mueve con igual velocidad.</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;La cantidad de movimiento del sistema puede conservarse aunque no suceda lo mismo con la energ&#x00ED;a cin&#x00E9;tica</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;Existen cuerpos sin centro de masas</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">Indicar la frase falsa</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;En un choque perfectamente inel&#x00E1;stico se pierde toda la energ&#x00ED;a cin&#x00E9;tica s&#x00F3;lo cuando la velocidad del centro de masas es nula.</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;En un choque perfectamente inel&#x00E1;stico se pierde siempre toda la energ&#x00ED;a cin&#x00E9;tica.</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;La velocidad del centro de masas siempre permanece constante en cualquier choque.</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;En un choque el&#x00E1;stico frontal la velocidad relativa de retroceso despu&#x00E9;s del choque es igual a la velocidad relativa de aproximaci&#x00F3;n antes del mismo.</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">Una masa m<sub>1</sub> que se mueve con velocidad v realiza un choque el&#x00E1;stico frontal con una masa estacionaria m<sub>2</sub>. &#x00BF;En qu&#x00E9; condiciones ser&#x00E1; mayor la energ&#x00ED;a impartida a m<sub>2</sub>?</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;Ninguna de las respuestas</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;m<sub>2</sub> = m<sub>1</sub></li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;m<sub>2</sub> &lt;&lt; m<sub>1</sub></li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;m<sub>2</sub> &gt;&gt; m<sub>1</sub></li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">Dos bloques A y B de masa distintas se colocan unidos por un muelle encima de una mesa sin rozamiento<br /><br /><img src="https://lh6.googleusercontent.com/-EEwPYx6aj4w/T0tepR6dEeI/AAAAAAAAAGg/uaObX4yDXdA/s406/4D1.jpg?gl=ES" alt="graph12" title="graph12" width="406" height="77" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img><br /><br />Con el bloque A sujeto, se estira del bloque B separ&#x00E1;ndolo hacia la derecha y entonces, se sueltan ambos bloques a la vez. Despu&#x00E9;s de soltar ambos bloques, de las siguientes afirmaciones cual es la falsa:</div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;La magnitud de las aceleraciones que adquieren A y B son iguales</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;La magnitud de la fuerza ejercida por el muelle en A y B es la misma.</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;La magnitud de los momentos lineales que adquieren A y B son iguales.</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;El centro de masas del sistema no se mueve.</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">Cual de las siguientes afirmaciones respecto al centro de masas es falsa:</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;La velocidad del centro de masas de un sistema de part&#x00ED;culas es igual a la velocidad de la part&#x00ED;cula m&#x00E1;s r&#x00E1;pida en el sistema.</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;El centro de masas de un sistema de part&#x00ED;culas se mueve como si toda su masa estuviera concentrada en ese punto.</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;El centro de masas de un objeto sim&#x00E9;trico est&#x00E1; en alg&#x00FA;n punto de su eje de simetr&#x00ED;a.</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;La fuerza neta en un sistema de part&#x00ED;culas es igual a la masa total del sistema multiplicada por la aceleraci&#x00F3;n del centro de masas.</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">En el objeto plano de la figura el c&#x00ED;rculo interior hueco tiene la mitad de radio que el externo que tiene radio r. Ambos son tangentes por el lado izquierdo. El centro de masas del objeto estar&#x00E1; la l&#x00ED;nea horizontal de la figura a una distancia de la izquierda de<br /><br /><img src="https://lh3.googleusercontent.com/-gMTgU_yT5qE/T0thCRbutQI/AAAAAAAAAHg/bBpOHRSwvHs/s169/4D2.jpg?gl=ES" alt="graph14" title="graph14" width="250" height="238" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;r<sup>1/2</sup></li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;7r/6</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;r.</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;6r/7</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">Si un rat&#x00F3;n se pone a correr encima de un tocadiscos sin rozamiento, el tocadiscos empezar&#x00E1; a girar en el sentido contrario al que corre el rat&#x00F3;n pero cuando el rat&#x00F3;n se pare<br /><br /><img src="https://lh4.googleusercontent.com/-kng2MWIzNHE/T0tFmItAvWI/AAAAAAAAADE/19rey2TbllU/s571/raton.JPG?gl=ES" alt="graph15" title="graph15" width="350" height="254" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;el tocadiscos se parar&#x00E1; porque no hay fuerzas externas y el momento angular total debe seguir siendo nulo</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;el tocadiscos adquirir&#x00E1; mayor velocidad de rotaci&#x00F3;n</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;la energ&#x00ED;a cin&#x00E9;tica permanecer&#x00E1; constante</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">?</button>&#160;&#160;el momento angular que ha adquirido el tocadiscos ya no se desvanecer&#x00E1;.</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">Cuando cogemos un gato por la patas y lo ponemos bocabajo , al soltarlo es capaz de darse la vuelta y caer de pie aunque no existan fuerzas externas porque<br /><br /><img src="https://lh6.googleusercontent.com/-OV96a7e9Lsg/T0tFkRNFSeI/AAAAAAAAACk/pO2KkPP6yyM/s512/4D3.jpg?gl=ES" alt="graph16" title="graph16" width="400" height="485" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;en realidad lo que ha girado es la Tierra y no el gato.</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;en el &#x00FA;ltimo momento el gato, que es muy listo y sabe que lo vamos a soltar, hace fuerza con las patas sobre nuestras manos para impulsarse.</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;gracias al rabo que el gato gira instintivamente (reflejo de enderezamiento) en sentido contrario por fuerzas internas (las suyas) es capaz de mantener nulo el momento angular del sistema gato.</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">?</button>&#160;&#160;se quiere comer al rat&#x00F3;n de la cuesti&#x00F3;n anterior.</li></ol></li>
+<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">En su famoso libro Lecturas de F&#x00ED;sica (Vol 2, Cap. 17), Richard Feynman plantea el siguiente experimento. Se dispone de un disco de pl&#x00E1;stico que lleva insertas unas bolitas esf&#x00E9;ricas cargadas. En el centro del disco se encuentra un solenoide alimentado por una pila. El conjunto est&#x00E1; sujeto a unos rodamientos por un eje perpendicular y puede girar libremente sin rozamiento. Supongamos que por el solenoide circula una corriente constante I y que el conjunto parte del reposo. Si por alg&#x00FA;n motivo la corriente I disminuye (se acaba la pila o se corta la corriente por control remoto) entonces:<br /><br /><img src="https://lh3.googleusercontent.com/-kHhYkk4iO5w/T0tFkuFRyII/AAAAAAAAACw/4Tu3LhAs9FQ/s628/4D4.JPG?gl=ES" alt="graph17" title="graph17" width="500" height="351" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">?</button>&#160;&#160;el conjunto se pondr&#x00E1; a girar ya que al disminuir la corriente I disminuye el campo magn&#x00E9;tico y, por la ley de Faraday-Lenz, debe aparecer un campo el&#x00E9;ctrico tangencial que empujar&#x00E1; a las cargas en el disco. El momento angular no se conservar&#x00E1;.</li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">?</button>&#160;&#160;el conjunto se pondr&#x00E1; a girar por la ley de Faraday-Lenz, pero el momento angular cuando hab&#x00ED;a corriente I no era nulo ya que estaba inmerso en el campo magn&#x00E9;tico del solenoide. El momento angular total se conserva.</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">?</button>&#160;&#160;el conjunto no girar&#x00E1; ya que su momento angular es nulo antes y debe serlo despu&#x00E9;s. El momento angular se debe conservar.</li></ol></li>
+<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">Consid&#x00E9;nrese las 4 masas localizadas conforme a la figura. &#x00BF;Cu&#x00E1;l es la coordina x del centro de grave<br />dad de este sistema?<br /><img src="https://lh6.googleusercontent.com/-mMheGAAtWDc/T0tfxd0N-nI/AAAAAAAAAHI/JutEpSJlyv4/s272/4D5.JPG?gl=ES" alt="graph18" title="graph18" width="450" height="87" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img><br /></div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">?</button>&#160;&#160;3.5 m</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">?</button>&#160;&#160;2.5 m</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">?</button>&#160;&#160;2 m</li><li id="Q_17_3"><button class="FuncButton" id="Q_17_3_Btn" onclick="CheckMCAnswer(17,3,this)">?</button>&#160;&#160;3 m</li></ol></li>
+<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText">Seg&#x00FA;n las definiciones de a, b y h en la figura &#x00BF;Cu&#x00E1;les son las coordenadas del baricentro del tri&#x00E1;ngulo? (nota: es v&#x00E1;lido consultar una tabla de centros de masa)<br /><br /><img src="https://lh5.googleusercontent.com/-B5v4DSslW74/T0tFlWDcNXI/AAAAAAAAAC4/lv_faVy9meg/s238/4D6.JPG?gl=ES" alt="graph19" title="graph19" width="300" height="290" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_18_0"><button class="FuncButton" id="Q_18_0_Btn" onclick="CheckMCAnswer(18,0,this)">?</button>&#160;&#160;x<sub>cm</sub> = (b + h)/2; y<sub>cm</sub> = a/2</li><li id="Q_18_1"><button class="FuncButton" id="Q_18_1_Btn" onclick="CheckMCAnswer(18,1,this)">?</button>&#160;&#160;x<sub>cm</sub> = (a + b)/2; y<sub>cm</sub> = h/2</li><li id="Q_18_2"><button class="FuncButton" id="Q_18_2_Btn" onclick="CheckMCAnswer(18,2,this)">?</button>&#160;&#160;x<sub>cm</sub> = (a + h)/2; y<sub>cm</sub> = b/2</li><li id="Q_18_3"><button class="FuncButton" id="Q_18_3_Btn" onclick="CheckMCAnswer(18,3,this)">?</button>&#160;&#160;x<sub>cm</sub> = (a + b)/3; y<sub>cm</sub> = h/3</li></ol></li>
+<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText">Dos puntos materiales de masa m<sub>1</sub> = 1 kg y m<sub>2</sub> = 1 kg se encuentran en (1,0) y (-1,0) respectivamente (coordenadas en metros), siendo sus velocidades v<sub>1</sub> = (0,1) y v<sub>2</sub> = (0,-1). Dar los valores de la posici&#x00F3;n del CM, velocidad del CM, momento angular total respecto del origen, momento angular total respecto al CM, energ&#x00ED;a total respecto al origen y energ&#x00ED;a total respecto al CM<br /><br /><br /><img src="https://lh6.googleusercontent.com/-jfDMDjR3yXE/T0tFlzsDWKI/AAAAAAAAAC8/3FTsRumpBig/s248/4D7.JPG?gl=ES" alt="graph20" title="graph20" width="300" height="220" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_19_0"><button class="FuncButton" id="Q_19_0_Btn" onclick="CheckMCAnswer(19,0,this)">?</button>&#160;&#160;r<sub>cm</sub> = (0,0); v<sub>cm</sub> = (0,2); L = (0, 0, 0); L<sub>cm</sub> = (0,0,0), E<sub>k</sub> = 4, E<sub>k cm</sub>= 4</li><li id="Q_19_1"><button class="FuncButton" id="Q_19_1_Btn" onclick="CheckMCAnswer(19,1,this)">?</button>&#160;&#160;r<sub>cm</sub> = (0,0); v<sub>cm</sub> = (0,0); L = (0, 0, 2); L<sub>cm</sub> = (0,0,2), E<sub>k cm</sub> = 0, E<sub>k</sub>= 0</li><li id="Q_19_2"><button class="FuncButton" id="Q_19_2_Btn" onclick="CheckMCAnswer(19,2,this)">?</button>&#160;&#160;r<sub>cm</sub> = (0,0); v<sub>cm</sub> = (0,2); L = (0, 0, 4); L<sub>cm</sub> = (0,0,2), E<sub>k</sub> = 4, E<sub>k cm</sub>= 0</li><li id="Q_19_3"><button class="FuncButton" id="Q_19_3_Btn" onclick="CheckMCAnswer(19,3,this)">?</button>&#160;&#160;r<sub>cm</sub> = (0,0); v<sub>cm</sub> = (0,0); L = (0, 0, 0); L<sub>cm</sub> = (0,0,0), E<sub>k</sub> = 0, E<sub>k cm</sub>= 0</li></ol></li>
+<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText">Una bala de masa m y velocidad v golpea un p&#x00E9;ndulo de masa M. Lo atraviesa y emerge de &#x00E9;l con velocidad v/2. Si el p&#x00E9;ndulo consta de una barra r&#x00ED;gida de longitud l y masa despreciable, entonces la velocidad m&#x00ED;nima v de la bala para que el p&#x00E9;ndulo d&#x00E9; una vuelta completa vendr&#x00E1; dada por la expresi&#x00F3;n:<br /><img src="https://umh1228.umh.es/files/2018/09/bala.jpg" alt="bala" title="bala" width="???" height="???" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">?</button>&#160;&#160;v = m&#x00B7;(g&#x00B7;l)^0.5 / M</li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">?</button>&#160;&#160;v = 2M&#x00B7;(g&#x00B7;l)^0.5 / m</li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">?</button>&#160;&#160;v = 4M&#x00B7;(g&#x00B7;l)^0.5 / m</li><li id="Q_20_3"><button class="FuncButton" id="Q_20_3_Btn" onclick="CheckMCAnswer(20,3,this)">?</button>&#160;&#160;Se necesita m&#x00E1;s informaci&#x00F3;n para responder</li></ol></li>
+<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText">Dos masas m iguales se mueven por el plano XY con direcciones distintas pero con igual m&#x00F3;dulo de velocidad v. En cierto instante, ambas chocan y se quedan pegadas (choque perfectamente inel&#x00E1;stico), movi&#x00E9;ndose juntas en direcci&#x00F3;n del eje X positivo con velocidad <b>v</b> = (v/2) <b>i</b>. El &#x00E1;ngulo formado por ambas direcciones antes del choque es:</div><ol class="MCAnswers"><li id="Q_21_0"><button class="FuncButton" id="Q_21_0_Btn" onclick="CheckMCAnswer(21,0,this)">?</button>&#160;&#160;90&#x00BA;</li><li id="Q_21_1"><button class="FuncButton" id="Q_21_1_Btn" onclick="CheckMCAnswer(21,1,this)">?</button>&#160;&#160;120&#x00BA;</li><li id="Q_21_2"><button class="FuncButton" id="Q_21_2_Btn" onclick="CheckMCAnswer(21,2,this)">?</button>&#160;&#160;30&#x00BA;</li><li id="Q_21_3"><button class="FuncButton" id="Q_21_3_Btn" onclick="CheckMCAnswer(21,3,this)">?</button>&#160;&#160;75&#x00BA;</li></ol></li>
+<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText">Un bloque de 4 kg que se mueve hacia la derecha con una velocidad de 6 m/s choca con un bloque de 2 kg que tambi&#x00E9;n se mueve hacia la derecha y cuya velocidad es de 3 m/s. Si el choque tiene un coeficiente de restituci&#x00F3;n e=0.8, las velocidades de los bloques despu&#x00E9;s del choque son:<br /><img src="https://umh1228.umh.es/files/2018/09/choque.jpg" alt="choque" title="choque" width="???" height="???" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">?</button>&#160;&#160;v<sub>4</sub> = 4.2 m/s; v<sub>2</sub> = 6.6 m/s</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">?</button>&#160;&#160;v<sub>4</sub> = 4 m/s; v<sub>2</sub> = 7 m/s</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">?</button>&#160;&#160;v<sub>4</sub> = 3.8 m/s; v<sub>2</sub> = 7.4 m/s</li><li id="Q_22_3"><button class="FuncButton" id="Q_22_3_Btn" onclick="CheckMCAnswer(22,3,this)">?</button>&#160;&#160;Faltan datos para responder</li></ol></li>
+<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText">Una masa en movimiento realiza un choque completamente inel&#x00E1;stico con un cuerpo estacionario de igual masa que est&#x00E1; en reposo. &#x00BF;Qu&#x00E9; parte de la energ&#x00ED;a cin&#x00E9;tica inicial se pierde en el choque?:</div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">?</button>&#160;&#160;Ninguna</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">?</button>&#160;&#160;Toda</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">?</button>&#160;&#160;La mitad</li><li id="Q_23_3"><button class="FuncButton" id="Q_23_3_Btn" onclick="CheckMCAnswer(23,3,this)">?</button>&#160;&#160;La cuarta parte</li></ol></li>
+<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText">Seg&#x00FA;n la figura, el bloque A colisiona frontalmente con otro bloque B en reposo. La masa del bloque B es el doble de la masa de A. El bloque A se detiene tras la colisi&#x00F3;n. El coeficiente de restituci&#x00F3;n es:<br /><img src="https://umh1228.umh.es/files/2023/02/masas.jpg" alt="choque" title="masas" width="300" height="130" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">?</button>&#160;&#160;0.5</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">?</button>&#160;&#160;1</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">?</button>&#160;&#160;0.25</li><li id="Q_24_3"><button class="FuncButton" id="Q_24_3_Btn" onclick="CheckMCAnswer(24,3,this)">?</button>&#160;&#160;No es posible</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>

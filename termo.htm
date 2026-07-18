@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Ramon."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="Ramon" />
+<meta name="dc:creator" content="tron" />
+<meta name="dc:creator" content="Ram&#x00F3;n" />
+<meta name="dc:creator" content="Ramon2" />
+<meta name="dc:title" content="TERMODIN&#x00C1;MICA" />
+
+
+
+<title>
+TERMODIN&#x00C1;MICA
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       small;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #C0C0C0;
+	--strExBGColor:      #FFFFFF;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = ':-)';
+var IncorrectIndicator = ':-(';
+var YourScoreIs = 'Tu puntuaci&#x00F3;n es: ';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Preguntas contestadas hasta este punto:';
+var ExerciseCompleted = 'Ejercicio completado.';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Respuestas correctas a la primera: ';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = false;
+var ShuffleAs = true;
+var DefaultRight = '&#x00A1;Muy bien! Acertaste.';
+var DefaultWrong = '&#x00A1;Error! Esa no era la respuesta correcta. Int&#x00E9;ntalo de nuevo.';
+var QsToShow = 34;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Mostrar todas las preguntas';
+var ShowOneByOneCaption = 'Mostrar preguntas una a una';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('Si dos objetos est\u00E1n en equilibrio t\u00E9rmico con un tercero entonces est\u00E1n en equilibrio t\u00E9rmico entre s\u00ED.','',0,0,1);
+I[0][3][1]=new Array('Si dos objetos est\u00E1n en equilibrio t\u00E9rmico entre s\u00ED entonces est\u00E1n en equilibrio t\u00E9rmico con un tercero.','',1,100,1);
+I[0][3][2]=new Array('Si dos objetos est\u00E1n en equilibrio t\u00E9rmico tienen la misma temperatura.','',0,0,1);
+I[0][3][3]=new Array('El Kelvin tiene el mismo tama\u00F1o que el grado Celsius.','',0,0,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('la velocidad de las mol\u00E9culas del gas es la misma en ambas vasijas.','',0,0,1);
+I[1][3][1]=new Array('la masa total del gas es la misma en ambas vasijas.','',0,0,1);
+I[1][3][2]=new Array('ninguna de las afirmaciones es correcta.','',0,0,1);
+I[1][3][3]=new Array('el n\u00FAmero de mol\u00E9culas gaseosas es el mismo en ambas vasijas.','',1,100,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('Falta informaci\u00F3n para responder a la cuesti\u00F3n.','',0,0,1);
+I[2][3][1]=new Array('Disminuye.','',0,0,1);
+I[2][3][2]=new Array('Se mantiene constante.','',0,0,1);
+I[2][3][3]=new Array('Se incrementa.','',1,100,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('Se mantiene constante.','',0,0,1);
+I[3][3][1]=new Array('Disminuye.','',1,100,1);
+I[3][3][2]=new Array('Falta informaci\u00F3n para responder a la cuesti\u00F3n.','',0,0,1);
+I[3][3][3]=new Array('Se incrementa.','',0,0,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('Se reducir\u00E1 a la mitad.','',0,0,1);
+I[4][3][1]=new Array('Se duplicar\u00E1.','',1,100,1);
+I[4][3][2]=new Array('Se cuadruplicar\u00E1.','',0,0,1);
+I[4][3][3]=new Array('Se mantendr\u00E1 constante.','',0,0,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('iguales energ\u00EDas cin\u00E9ticas medias, pero las mol\u00E9culas de ox\u00EDgeno son m\u00E1s lentas.','',1,100,1);
+I[5][3][1]=new Array('iguales energ\u00EDas cin\u00E9ticas y velocidades.','',0,0,1);
+I[5][3][2]=new Array('iguales energ\u00EDas cin\u00E9ticas medias, pero las mol\u00E9culas de ox\u00EDgeno son m\u00E1s r\u00E1pidas.','',0,0,1);
+I[5][3][3]=new Array('Ninguna de las otras afirmaciones es cierta.','',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('No variar\u00E1','',0,0,1);
+I[6][3][1]=new Array('2.66 \u00D7 10<sup>3</sup> kg/m<sup>3</sup>','',1,100,1);
+I[6][3][2]=new Array('2.74 \u00D7 10<sup>3</sup> kg/m<sup>3</sup>','',0,0,1);
+I[6][3][3]=new Array('2.55 \u00D7 10<sup>3</sup> kg/m<sup>3</sup> .','',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('W/mK.','',1,100,1);
+I[7][3][1]=new Array('K/W','',0,0,1);
+I[7][3][2]=new Array('mW/K','',0,0,1);
+I[7][3][3]=new Array('mK/W','',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('se incrementa en un factor 27','',0,0,1);
+I[8][3][1]=new Array('se incrementa en un factor 9','',0,0,1);
+I[8][3][2]=new Array('se incrementa en un factor 81','',1,100,1);
+I[8][3][3]=new Array('se triplica','',0,0,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('\u0394T<sub>A</sub> = 4\u0394T<sub>B</sub>','',0,0,1);
+I[9][3][1]=new Array('\u0394T<sub>A</sub> = 2\u0394T<sub>B</sub>','',0,0,1);
+I[9][3][2]=new Array('\u0394T<sub>A</sub> = \u0394T<sub>B</sub>/4','',1,100,1);
+I[9][3][3]=new Array('\u0394T<sub>A</sub> = \u0394T<sub>B</sub>/2','',0,0,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('el aluminio ha absorbido m\u00E1s energ\u00EDa y est\u00E1 a mayor temperatura que el cobre.','',0,0,1);
+I[10][3][1]=new Array('el aluminio ha absorbido m\u00E1s energ\u00EDa que el cobre.','',1,100,1);
+I[10][3][2]=new Array('el aluminio ha absorbido menos energ\u00EDa que el cobre.','',0,0,1);
+I[10][3][3]=new Array('el aluminio est\u00E1 a mayor temperatura que el cobre.','',0,0,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('Cuando un sistema evoluciona del estado 1 al estado 2, el calor suministrado al sistema es el mismo para todos los procesos posibles.','',0,0,1);
+I[11][3][1]=new Array('Cuando un sistema evoluciona del estado 1 al estado 2, el trabajo realizado sobre el sistema es el mismo para todos los procesos posibles.','',0,0,1);
+I[11][3][2]=new Array('La capacidad calor\u00EDfica de un cuerpo es la cantidad de calor que puede almacenar a una temperatura determinada.','',0,0,1);
+I[11][3][3]=new Array('Cuando un sistema evoluciona del estado 1 al estado 2, la variaci\u00F3n de energ\u00EDa interna del sistema es la misma para todos los procesos posibles.','',1,100,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('el gas est\u00E1 siendo comprimido isot\u00E9rmicamente.','',0,0,1);
+I[12][3][1]=new Array('la energ\u00EDa interna aumenta.','',1,100,1);
+I[12][3][2]=new Array('el calor cedido es igual al trabajo realizado sobre el sistema.','',0,0,1);
+I[12][3][3]=new Array('la energ\u00EDa interna no var\u00EDa.','',0,0,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('el aumento de energ\u00EDa interna del sistema es igual al calor absorbido por el sistema.','',0,0,1);
+I[13][3][1]=new Array('la energ\u00EDa interna no var\u00EDa.','',1,100,1);
+I[13][3][2]=new Array('el sistema no realiza trabajo.','',0,0,1);
+I[13][3][3]=new Array('el sistema absorbe calor.','',0,0,1);
+I[14]=new Array();I[14][0]=100;
+I[14][1]='';
+I[14][2]='0';
+I[14][3]=new Array();
+I[14][3][0]=new Array('se cumple la ley de Boyle.','',1,100,1);
+I[14][3][1]=new Array('el sistema no cede ni absorbe calor.','',0,0,1);
+I[14][3][2]=new Array('el aumento de energ\u00EDa interna es igual al trabajo realizado sobre el sistema.','',0,0,1);
+I[14][3][3]=new Array('la variaci\u00F3n de entrop\u00EDa es nula.','',0,0,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('Stirling','',0,0,1);
+I[15][3][1]=new Array('Otto','',0,0,1);
+I[15][3][2]=new Array('Diesel','',0,0,1);
+I[15][3][3]=new Array('Carnot','',1,100,1);
+I[16]=new Array();I[16][0]=100;
+I[16][1]='';
+I[16][2]='0';
+I[16][3]=new Array();
+I[16][3][0]=new Array('nR/(T<sub>h</sub>-T<sub>c</sub>) ln(V<sub>2</sub>/V<sub>1</sub>)','',0,0,1);
+I[16][3][1]=new Array('nR(T<sub>h</sub>-T<sub>c</sub>) ln(V<sub>2</sub>/V<sub>1</sub>)','',1,100,1);
+I[16][3][2]=new Array('(T<sub>h</sub>-T<sub>c</sub>)/nR ln(V<sub>4</sub>/V<sub>3</sub>)','',0,0,1);
+I[16][3][3]=new Array('nR(T<sub>h</sub>-T<sub>c</sub>)/T<sub>c</sub>','',0,0,1);
+I[17]=new Array();I[17][0]=100;
+I[17][1]='';
+I[17][2]='0';
+I[17][3]=new Array();
+I[17][3][0]=new Array('El enunciado de Clausius.','',0,0,1);
+I[17][3][1]=new Array('Las m\u00E1quinas de movimiento perpetuo de 2\u00AA especie.','',0,0,1);
+I[17][3][2]=new Array('El enunciado de Kelvin.','',0,0,1);
+I[17][3][3]=new Array('Todas est\u00E1n relacionadas.','',1,100,1);
+I[18]=new Array();I[18][0]=100;
+I[18][1]='';
+I[18][2]='0';
+I[18][3]=new Array();
+I[18][3][0]=new Array('Aumentar la temperatura del foco caliente en un \u0394T.','',0,0,1);
+I[18][3][1]=new Array('El incremento del rendimiento es el mismo en ambos casos.','',0,0,1);
+I[18][3][2]=new Array('No se tiene suficiente informaci\u00F3n para responder esta cuesti\u00F3n.','',0,0,1);
+I[18][3][3]=new Array('Disminuir la temperatura del foco fr\u00EDo en un \u0394T.','',1,100,1);
+I[19]=new Array();I[19][0]=100;
+I[19][1]='';
+I[19][2]='0';
+I[19][3]=new Array();
+I[19][3][0]=new Array('El rendimiento de Carnot es el m\u00E1ximo alcanzable.','',0,0,1);
+I[19][3][1]=new Array('Todas son ciertas.','',1,100,1);
+I[19][3][2]=new Array('En un proceso de Carnot la variaci\u00F3n de entrop\u00EDa es nula.','',0,0,1);
+I[19][3][3]=new Array('Una m\u00E1quina de Carnot es una m\u00E1quina t\u00E9rmica reversible.','',0,0,1);
+I[20]=new Array();I[20][0]=100;
+I[20][1]='';
+I[20][2]='0';
+I[20][3]=new Array();
+I[20][3][0]=new Array('L<sub>1</sub> =  31.52 cm y L<sub>2</sub> = 26.52 cm','',0,0,1);
+I[20][3][1]=new Array('L<sub>1</sub> =  29.25 cm y L<sub>2</sub> = 24.25 cm','',1,100,1);
+I[20][3][2]=new Array('Es imposible','',0,0,1);
+I[20][3][3]=new Array('Faltan datos para responder la cuesti\u00F3n','',0,0,1);
+I[21]=new Array();I[21][0]=100;
+I[21][1]='';
+I[21][2]='0';
+I[21][3]=new Array();
+I[21][3][0]=new Array('Q = (5/2)nR\u00B7\u0394T;  \u0394U = 0;  W = 0','',0,0,1);
+I[21][3][1]=new Array('Q = (3/2)nR\u00B7\u0394T;  \u0394U = (3/2)nR\u00B7\u0394;  W = 0','',1,100,1);
+I[21][3][2]=new Array('Q = (3/2)nR\u00B7\u0394T;  \u0394U = (1/2)nR\u00B7\u0394;  W = \u2212nR\u00B7\u0394T','',0,0,1);
+I[21][3][3]=new Array('Q = (3/2)nR\u00B7\u0394T;  \u0394U = 0;  W = \u2212(3/2)nR\u00B7\u0394T','',0,0,1);
+I[22]=new Array();I[22][0]=100;
+I[22][1]='';
+I[22][2]='0';
+I[22][3]=new Array();
+I[22][3][0]=new Array('0','',1,100,1);
+I[22][3][1]=new Array('\u22128','',0,0,1);
+I[22][3][2]=new Array('8','',0,0,1);
+I[22][3][3]=new Array('2','',0,0,1);
+I[23]=new Array();I[23][0]=100;
+I[23][1]='';
+I[23][2]='0';
+I[23][3]=new Array();
+I[23][3][0]=new Array('No se llegan a tocar nunca','',0,0,1);
+I[23][3][1]=new Array('70.05 \u00BAC','',0,0,1);
+I[23][3][2]=new Array('40.20 \u00BAC','',1,100,1);
+I[23][3][3]=new Array('30.30 \u00BAC','',0,0,1);
+I[24]=new Array();I[24][0]=100;
+I[24][1]='';
+I[24][2]='0';
+I[24][3]=new Array();
+I[24][3][0]=new Array('Viola la primera y tambi\u00E9n la segunda ley de la termodin\u00E1mica','',0,0,1);
+I[24][3][1]=new Array('Viola la primera ley de la termodin\u00E1mica pero no la segunda','',0,0,1);
+I[24][3][2]=new Array('Viola la segunda ley de la termodin\u00E1mica pero no la primera','',1,100,1);
+I[24][3][3]=new Array('No viola ninguna ley','',0,0,1);
+I[25]=new Array();I[25][0]=100;
+I[25][1]='';
+I[25][2]='0';
+I[25][3]=new Array();
+I[25][3][0]=new Array('5 \u00BAC','',0,0,1);
+I[25][3][1]=new Array('100 \u00BAC','',0,0,1);
+I[25][3][2]=new Array('10 \u00BAC','',1,100,1);
+I[25][3][3]=new Array('Necesitamos el peso molecular del aluminio','',0,0,1);
+I[26]=new Array();I[26][0]=100;
+I[26][1]='';
+I[26][2]='0';
+I[26][3]=new Array();
+I[26][3][0]=new Array('se incrementa','',1,100,1);
+I[26][3][1]=new Array('disminuye','',0,0,1);
+I[26][3][2]=new Array('se mantiene constante','',0,0,1);
+I[26][3][3]=new Array('no podemos afirmar nada sobre su variaci\u00F3n','',0,0,1);
+I[27]=new Array();I[27][0]=100;
+I[27][1]='';
+I[27][2]='0';
+I[27][3]=new Array();
+I[27][3][0]=new Array('200 K','',0,0,1);
+I[27][3][1]=new Array('250 K','',0,0,1);
+I[27][3][2]=new Array('380 K','',0,0,1);
+I[27][3][3]=new Array('400 K','',1,100,1);
+I[28]=new Array();I[28][0]=100;
+I[28][1]='';
+I[28][2]='0';
+I[28][3]=new Array();
+I[28][3][0]=new Array('Depende la temperatura del foco fr\u00EDo.','',0,0,1);
+I[28][3][1]=new Array('636.13 \u00BAC','',0,0,1);
+I[28][3][2]=new Array('662.55 \u00BAC','',1,100,1);
+I[28][3][3]=new Array('935.55 \u00BAC','',0,0,1);
+I[29]=new Array();I[29][0]=100;
+I[29][1]='';
+I[29][2]='0';
+I[29][3]=new Array();
+I[29][3][0]=new Array('\u0394U es mayor en el caso isob\u00E1rico','',0,0,1);
+I[29][3][1]=new Array('Q es mayor en el caso isob\u00E1rico','',0,0,1);
+I[29][3][2]=new Array('W es mayor en el caso isob\u00E1rico','',0,0,1);
+I[29][3][3]=new Array('Todas son ciertas','',1,100,1);
+I[30]=new Array();I[30][0]=100;
+I[30][1]='';
+I[30][2]='0';
+I[30][3]=new Array();
+I[30][3][0]=new Array('T<sub>h</sub> = 99 \u00BAC;  T<sub>c</sub> = 37 \u00BAC','',1,100,1);
+I[30][3][1]=new Array('T<sub>h</sub> = 645 \u00BAC;  T<sub>c</sub> = 583 \u00BAC','',0,0,1);
+I[30][3][2]=new Array('T<sub>h</sub> = 199 \u00BAC;  T<sub>c</sub> = 97 \u00BAC','',0,0,1);
+I[30][3][3]=new Array('T<sub>h</sub> = 327 \u00BAC;  T<sub>c</sub> = 310 \u00BAC','',0,0,1);
+I[31]=new Array();I[31][0]=100;
+I[31][1]='';
+I[31][2]='0';
+I[31][3]=new Array();
+I[31][3][0]=new Array('Falta conocer la masa de l\u00EDquido','',0,0,1);
+I[31][3][1]=new Array('22.67 \u00BAC','',1,100,1);
+I[31][3][2]=new Array('Falta el dato de alg\u00FAn calor espec\u00EDfico','',0,0,1);
+I[31][3][3]=new Array('20.32 \u00BAC','',0,0,1);
+I[32]=new Array();I[32][0]=100;
+I[32][1]='';
+I[32][2]='0';
+I[32][3]=new Array();
+I[32][3][0]=new Array('T<sub>2</sub> = (T<sub>1</sub> T<sub>4</sub>)<sup>1/2</sup>;&nbsp;&nbsp;T<sub>3</sub> = (T<sub>1</sub><sup>2</sup> T<sub>4</sub>)<sup>1/3</sup>','',0,0,1);
+I[32][3][1]=new Array('T<sub>2</sub> = (T<sub>1</sub> T<sub>4</sub>)<sup>1/3</sup>;&nbsp;&nbsp;T<sub>3</sub> = (T<sub>1</sub><sup>2</sup> T<sub>4</sub>)<sup>1/3</sup>','',0,0,1);
+I[32][3][2]=new Array('T<sub>2</sub> = (T<sub>1</sub><sup>2</sup> T<sub>4</sub>)<sup>1/3</sup>;&nbsp;&nbsp;T<sub>3</sub> = (T<sub>1</sub> T<sub>4</sub><sup>2</sup>)<sup>1/3</sup>','',1,100,1);
+I[32][3][3]=new Array('T<sub>2</sub> = (T<sub>1</sub><sup>3</sup> T<sub>4</sub>)<sup>1/4</sup>;&nbsp;&nbsp;T<sub>3</sub> = (T<sub>1</sub> T<sub>4</sub><sup>3</sup>)<sup>1/4</sup>','',0,0,1);
+I[33]=new Array();I[33][0]=100;
+I[33][1]='';
+I[33][2]='0';
+I[33][3]=new Array();
+I[33][3][0]=new Array('T<sub>2</sub>=600 K.','',0,0,1);
+I[33][3][1]=new Array('T<sub>2</sub>=500 K.','',1,100,1);
+I[33][3][2]=new Array('T<sub>2</sub>=400 K.','',0,0,1);
+I[33][3][3]=new Array('T<sub>2</sub>=300 K.','',0,0,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	PreloadImages('https://lh3.googleusercontent.com/-q1plMR82FnQ/T0tF_I8rg5I/AAAAAAAAAFg/tJRHJJUGUJY/s540/10D1.JPG?gl=ES','https://lh6.googleusercontent.com/-er88VNvJWQU/T0tF_t98VII/AAAAAAAAAFk/Ng4VV1C9_Bc/s480/10D2.JPG?gl=ES','https://lh3.googleusercontent.com/-dm9yLbA-7Ro/T0tGAssRk5I/AAAAAAAAAFw/x6sWeYnygHA/s420/10D3.JPG?gl=ES','https://lh4.googleusercontent.com/-kLvZOgxjoXs/T0tGAMQM4AI/AAAAAAAAAFs/NWVF5zxqL6k/s420/10D4.JPG?gl=ES','https://umh1228.umh.es/files/2018/09/barras.jpg','https://umh1228.umh.es/files/2018/09/gas.jpg','https://umh1228.umh.es/files/2026/07/MaqsCarnot.jpg','https://umh1228.umh.es/files/2026/07/SeriCarnots.png');
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">TERMODIN&#x00C1;MICA</h2>
+
+	<h3 class="ExerciseSubtitle">Si no acertases a la primera, podr&#x00E1;s intentarlo de nuevo, pero perder&#x00E1;s puntos.<br /></h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions">Escoge la respuesta correcta para cada pregunta, haciendo click sobre la letra correspondiente.<br /></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Mostrar todas las preguntas</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Determinar la frase err&#x00F3;nea:</div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;Si dos objetos est&#x00E1;n en equilibrio t&#x00E9;rmico con un tercero entonces est&#x00E1;n en equilibrio t&#x00E9;rmico entre s&#x00ED;.</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;Si dos objetos est&#x00E1;n en equilibrio t&#x00E9;rmico entre s&#x00ED; entonces est&#x00E1;n en equilibrio t&#x00E9;rmico con un tercero.</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;Si dos objetos est&#x00E1;n en equilibrio t&#x00E9;rmico tienen la misma temperatura.</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">?</button>&#160;&#160;El Kelvin tiene el mismo tama&#x00F1;o que el grado Celsius.</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">Dos vasijas id&#x00E9;nticas contienen gases ideales distintos a igual presi&#x00F3;n y temperatura. As&#x00ED; resulta que:</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;la velocidad de las mol&#x00E9;culas del gas es la misma en ambas vasijas.</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;la masa total del gas es la misma en ambas vasijas.</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">?</button>&#160;&#160;ninguna de las afirmaciones es correcta.</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">?</button>&#160;&#160;el n&#x00FA;mero de mol&#x00E9;culas gaseosas es el mismo en ambas vasijas.</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">En la figura se representa un gr&#x00E1;fico del volumen en funci&#x00F3;n de la temperatura para un proceso seguido por un gas ideal desde el punto A al punto B &#x00BF;Qu&#x00E9; ocurre con la presi&#x00F3;n del gas?<br /><br /><img src="https://lh3.googleusercontent.com/-q1plMR82FnQ/T0tF_I8rg5I/AAAAAAAAAFg/tJRHJJUGUJY/s540/10D1.JPG?gl=ES" alt="graph3" title="graph3" width="350" height="265" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;Falta informaci&#x00F3;n para responder a la cuesti&#x00F3;n.</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;Disminuye.</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;Se mantiene constante.</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;Se incrementa.</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">En la figura se representa un gr&#x00E1;fico de la presi&#x00F3;n en funci&#x00F3;n de la temperatura para un proceso seguido por un gas ideal desde el punto A al punto B &#x00BF;Qu&#x00E9; ocurre con el volumen del gas?:<br /><br /><img src="https://lh6.googleusercontent.com/-er88VNvJWQU/T0tF_t98VII/AAAAAAAAAFk/Ng4VV1C9_Bc/s480/10D2.JPG?gl=ES" alt="graph4" title="graph4" width="350" height="265" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;Se mantiene constante.</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;Disminuye.</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;Falta informaci&#x00F3;n para responder a la cuesti&#x00F3;n.</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;Se incrementa.</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">Si la temperatura de un gas ideal se cuadruplica &#x00BF;Por qu&#x00E9; factor variar&#x00E1; la velocidad media de las part&#x00ED;culas del gas?:</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;Se reducir&#x00E1; a la mitad.</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;Se duplicar&#x00E1;.</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;Se cuadruplicar&#x00E1;.</li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">?</button>&#160;&#160;Se mantendr&#x00E1; constante.</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">El ox&#x00ED;geno tiene una masa molar de 32 g/mol y el nitr&#x00F3;geno de 28 g/mol. Las mol&#x00E9;culas de ox&#x00ED;geno y nitr&#x00F3;geno en una habitaci&#x00F3;n tienen:</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;iguales energ&#x00ED;as cin&#x00E9;ticas medias, pero las mol&#x00E9;culas de ox&#x00ED;geno son m&#x00E1;s lentas.</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;iguales energ&#x00ED;as cin&#x00E9;ticas y velocidades.</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;iguales energ&#x00ED;as cin&#x00E9;ticas medias, pero las mol&#x00E9;culas de ox&#x00ED;geno son m&#x00E1;s r&#x00E1;pidas.</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">?</button>&#160;&#160;Ninguna de las otras afirmaciones es cierta.</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">La densidad del aluminio es 2.70 &#x00D7; 10<sup>3</sup> kg/m<sup>3</sup> a 0 &#x00BA;C &#x00BF;Cu&#x00E1;l es la densidad de aluminio a 200 &#x00BA;C? (Coef. dilataci&#x00F3;n lineal del aluminio 24 &#x00D7; 10<sup>-6</sup> K<sup>-1</sup>):</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;No variar&#x00E1;</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;2.66 &#x00D7; 10<sup>3</sup> kg/m<sup>3</sup></li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;2.74 &#x00D7; 10<sup>3</sup> kg/m<sup>3</sup></li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">?</button>&#160;&#160;2.55 &#x00D7; 10<sup>3</sup> kg/m<sup>3</sup> .</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">&#x00BF;En qu&#x00E9; unidades se mide la conductividad t&#x00E9;rmica en el sistema internacional?:</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;W/mK.</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;K/W</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;mW/K</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">?</button>&#160;&#160;mK/W</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">Si la temperatura absoluta de un cuerpo se triplica, la energ&#x00ED;a t&#x00E9;rmica que irradia por unidad de tiempo</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;se incrementa en un factor 27</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;se incrementa en un factor 9</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;se incrementa en un factor 81</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;se triplica</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">Un cuerpo A posee una masa doble que la de otro cuerpo B. Su calor espec&#x00ED;fico es tambi&#x00E9;n el doble. Si a ambos se les suministra la misma cantidad de calor, &#x00BF;qu&#x00E9; relaci&#x00F3;n existe entre los cambios experimentados por sus respectivas temperaturas?:</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;&#x0394;T<sub>A</sub> = 4&#x0394;T<sub>B</sub></li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;&#x0394;T<sub>A</sub> = 2&#x0394;T<sub>B</sub></li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;&#x0394;T<sub>A</sub> = &#x0394;T<sub>B</sub>/4</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;&#x0394;T<sub>A</sub> = &#x0394;T<sub>B</sub>/2</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">El calor espec&#x00ED;fico del aluminio es m&#x00E1;s del doble que el del cobre. En un calor&#x00ED;metro que contiene agua a 40 &#x00BA;C se introducen masas id&#x00E9;nticas de cobre y aluminio, ambas a 20 &#x00BA;C. Cuando se alcanza el equilibrio t&#x00E9;rmico:</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;el aluminio ha absorbido m&#x00E1;s energ&#x00ED;a y est&#x00E1; a mayor temperatura que el cobre.</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;el aluminio ha absorbido m&#x00E1;s energ&#x00ED;a que el cobre.</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;el aluminio ha absorbido menos energ&#x00ED;a que el cobre.</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;el aluminio est&#x00E1; a mayor temperatura que el cobre.</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">Elegir la afirmaci&#x00F3;n correcta:</div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;Cuando un sistema evoluciona del estado 1 al estado 2, el calor suministrado al sistema es el mismo para todos los procesos posibles.</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;Cuando un sistema evoluciona del estado 1 al estado 2, el trabajo realizado sobre el sistema es el mismo para todos los procesos posibles.</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;La capacidad calor&#x00ED;fica de un cuerpo es la cantidad de calor que puede almacenar a una temperatura determinada.</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;Cuando un sistema evoluciona del estado 1 al estado 2, la variaci&#x00F3;n de energ&#x00ED;a interna del sistema es la misma para todos los procesos posibles.</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">Encontrar la afirmaci&#x00F3;n err&#x00F3;nea. En un proceso isot&#x00E9;rmico en un gas ideal en el que la presi&#x00F3;n aumenta:</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;el gas est&#x00E1; siendo comprimido isot&#x00E9;rmicamente.</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;la energ&#x00ED;a interna aumenta.</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;el calor cedido es igual al trabajo realizado sobre el sistema.</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;la energ&#x00ED;a interna no var&#x00ED;a.</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">Encontrar la afirmaci&#x00F3;n err&#x00F3;nea. En un proceso isoc&#x00F3;rico en un gas ideal en el que la temperatura y la presi&#x00F3;n aumentan:</div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;el aumento de energ&#x00ED;a interna del sistema es igual al calor absorbido por el sistema.</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;la energ&#x00ED;a interna no var&#x00ED;a.</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;el sistema no realiza trabajo.</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;el sistema absorbe calor.</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">Encontrar la afirmaci&#x00F3;n err&#x00F3;nea. En un proceso adiab&#x00E1;tico en un gas ideal en el que la temperatura y la presi&#x00F3;n aumentan:</div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;se cumple la ley de Boyle.</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;el sistema no cede ni absorbe calor.</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;el aumento de energ&#x00ED;a interna es igual al trabajo realizado sobre el sistema.</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">?</button>&#160;&#160;la variaci&#x00F3;n de entrop&#x00ED;a es nula.</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">La figura muestra un ciclo termodin&#x00E1;mico en un diagrama ST. &#x00BF;De qu&#x00E9; ciclo se trata?:<br /><br /><img src="https://lh3.googleusercontent.com/-dm9yLbA-7Ro/T0tGAssRk5I/AAAAAAAAAFw/x6sWeYnygHA/s420/10D3.JPG?gl=ES" alt="graph16" title="graph16" width="250" height="270" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;Stirling</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;Otto</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;Diesel</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">?</button>&#160;&#160;Carnot</li></ol></li>
+<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">El &#x00E1;rea del ciclo de la figura para n moles de un gas ideal es:<br /><br /><img src="https://lh4.googleusercontent.com/-kLvZOgxjoXs/T0tGAMQM4AI/AAAAAAAAAFs/NWVF5zxqL6k/s420/10D4.JPG?gl=ES" alt="graph17" title="graph17" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img><br /></div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">?</button>&#160;&#160;nR/(T<sub>h</sub>-T<sub>c</sub>) ln(V<sub>2</sub>/V<sub>1</sub>)</li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">?</button>&#160;&#160;nR(T<sub>h</sub>-T<sub>c</sub>) ln(V<sub>2</sub>/V<sub>1</sub>)</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">?</button>&#160;&#160;(T<sub>h</sub>-T<sub>c</sub>)/nR ln(V<sub>4</sub>/V<sub>3</sub>)</li><li id="Q_16_3"><button class="FuncButton" id="Q_16_3_Btn" onclick="CheckMCAnswer(16,3,this)">?</button>&#160;&#160;nR(T<sub>h</sub>-T<sub>c</sub>)/T<sub>c</sub></li></ol></li>
+<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;l de las siguientes afirmaciones no est&#x00E1; relacionada con el 2&#x00BA; principio de la Termodin&#x00E1;mica?:</div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">?</button>&#160;&#160;El enunciado de Clausius.</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">?</button>&#160;&#160;Las m&#x00E1;quinas de movimiento perpetuo de 2&#x00AA; especie.</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">?</button>&#160;&#160;El enunciado de Kelvin.</li><li id="Q_17_3"><button class="FuncButton" id="Q_17_3_Btn" onclick="CheckMCAnswer(17,3,this)">?</button>&#160;&#160;Todas est&#x00E1;n relacionadas.</li></ol></li>
+<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText">&#x00BF;Qu&#x00E9; es lo que produce mayor incremento en el rendimiento de una m&#x00E1;quina de Carnot, disminuir la temperatura del foco fr&#x00ED;o en un &#x0394;T &#x00F3; aumentar la temperatura del foco caliente en el mismo &#x0394;T?</div><ol class="MCAnswers"><li id="Q_18_0"><button class="FuncButton" id="Q_18_0_Btn" onclick="CheckMCAnswer(18,0,this)">?</button>&#160;&#160;Aumentar la temperatura del foco caliente en un &#x0394;T.</li><li id="Q_18_1"><button class="FuncButton" id="Q_18_1_Btn" onclick="CheckMCAnswer(18,1,this)">?</button>&#160;&#160;El incremento del rendimiento es el mismo en ambos casos.</li><li id="Q_18_2"><button class="FuncButton" id="Q_18_2_Btn" onclick="CheckMCAnswer(18,2,this)">?</button>&#160;&#160;No se tiene suficiente informaci&#x00F3;n para responder esta cuesti&#x00F3;n.</li><li id="Q_18_3"><button class="FuncButton" id="Q_18_3_Btn" onclick="CheckMCAnswer(18,3,this)">?</button>&#160;&#160;Disminuir la temperatura del foco fr&#x00ED;o en un &#x0394;T.</li></ol></li>
+<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText">Elegir la respuesta correcta:</div><ol class="MCAnswers"><li id="Q_19_0"><button class="FuncButton" id="Q_19_0_Btn" onclick="CheckMCAnswer(19,0,this)">?</button>&#160;&#160;El rendimiento de Carnot es el m&#x00E1;ximo alcanzable.</li><li id="Q_19_1"><button class="FuncButton" id="Q_19_1_Btn" onclick="CheckMCAnswer(19,1,this)">?</button>&#160;&#160;Todas son ciertas.</li><li id="Q_19_2"><button class="FuncButton" id="Q_19_2_Btn" onclick="CheckMCAnswer(19,2,this)">?</button>&#160;&#160;En un proceso de Carnot la variaci&#x00F3;n de entrop&#x00ED;a es nula.</li><li id="Q_19_3"><button class="FuncButton" id="Q_19_3_Btn" onclick="CheckMCAnswer(19,3,this)">?</button>&#160;&#160;Una m&#x00E1;quina de Carnot es una m&#x00E1;quina t&#x00E9;rmica reversible.</li></ol></li>
+<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText">&#x00BF;Cu&#x00E1;les son las longitudes de dos varillas cuyos coeficientes de dilataci&#x00F3;n son de 9.7 &#x00B7; 10<sup>&#x2212;6</sup> &#x00B0;C<sup>-1</sup> y 1.17 &#x00B7; 10<sup>&#x2212;5</sup> &#x00B0;C<sup>-1</sup> respectivamente, para que a cualquier temperatura su diferencia sea siempre de 5 cm?</div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">?</button>&#160;&#160;L<sub>1</sub> = 31.52 cm y L<sub>2</sub> = 26.52 cm</li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">?</button>&#160;&#160;L<sub>1</sub> = 29.25 cm y L<sub>2</sub> = 24.25 cm</li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">?</button>&#160;&#160;Es imposible</li><li id="Q_20_3"><button class="FuncButton" id="Q_20_3_Btn" onclick="CheckMCAnswer(20,3,this)">?</button>&#160;&#160;Faltan datos para responder la cuesti&#x00F3;n</li></ol></li>
+<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText">Si la temperatura de n moles de un gas ideal monoat&#x00F3;mico se incrementa por &#x0394;T a volumen constante entonces la energ&#x00ED;a absorbida como calor Q, el cambio &#x0394;U en energ&#x00ED;a interna y el trabajo W hecho el entorno vienen dados por:</div><ol class="MCAnswers"><li id="Q_21_0"><button class="FuncButton" id="Q_21_0_Btn" onclick="CheckMCAnswer(21,0,this)">?</button>&#160;&#160;Q = (5/2)nR&#x00B7;&#x0394;T; &#x0394;U = 0; W = 0</li><li id="Q_21_1"><button class="FuncButton" id="Q_21_1_Btn" onclick="CheckMCAnswer(21,1,this)">?</button>&#160;&#160;Q = (3/2)nR&#x00B7;&#x0394;T; &#x0394;U = (3/2)nR&#x00B7;&#x0394;; W = 0</li><li id="Q_21_2"><button class="FuncButton" id="Q_21_2_Btn" onclick="CheckMCAnswer(21,2,this)">?</button>&#160;&#160;Q = (3/2)nR&#x00B7;&#x0394;T; &#x0394;U = (1/2)nR&#x00B7;&#x0394;; W = &#x2212;nR&#x00B7;&#x0394;T</li><li id="Q_21_3"><button class="FuncButton" id="Q_21_3_Btn" onclick="CheckMCAnswer(21,3,this)">?</button>&#160;&#160;Q = (3/2)nR&#x00B7;&#x0394;T; &#x0394;U = 0; W = &#x2212;(3/2)nR&#x00B7;&#x0394;T</li></ol></li>
+<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText">Un trozo de hielo 200 g a 0 &#x00BA;C se introduce en 500 g de agua a 20 &#x00BA;C. El sistema se encuentra a un recinto de capacidad calor&#x00ED;fica despreciable y t&#x00E9;rmicamente aislado. &#x00BF;Cu&#x00E1;l es la temperatura final en &#x00BA;C de equilibrio del sistema?</div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">?</button>&#160;&#160;0</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">?</button>&#160;&#160;&#x2212;8</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">?</button>&#160;&#160;8</li><li id="Q_22_3"><button class="FuncButton" id="Q_22_3_Btn" onclick="CheckMCAnswer(22,3,this)">?</button>&#160;&#160;2</li></ol></li>
+<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText">Dos barras, una de acero de 1 m y otra de aluminio de 1.5 m est&#x00E1;n fijas en uno de sus extremos y se encuentran separadas 1 mm cuando sus temperaturas son de 20&#x00BA; C. &#x00BF;A qu&#x00E9; temperatura se tocaran entre s&#x00ED;? Coefs. dilataci&#x00F3;n lineal: Acero: 1.5x10<sup>&#x2212;5</sup>, Aluminio: 2.3x10<sup>&#x2212;5</sup><br /><img src="https://umh1228.umh.es/files/2018/09/barras.jpg" alt="barras" title="barras" width="???" height="???" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">?</button>&#160;&#160;No se llegan a tocar nunca</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">?</button>&#160;&#160;70.05 &#x00BA;C</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">?</button>&#160;&#160;40.20 &#x00BA;C</li><li id="Q_23_3"><button class="FuncButton" id="Q_23_3_Btn" onclick="CheckMCAnswer(23,3,this)">?</button>&#160;&#160;30.30 &#x00BA;C</li></ol></li>
+<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText">Una m&#x00E1;quina t&#x00E9;rmica opera entre 27 &#x00BA;C y 327 &#x00BA;C. En cada ciclo toma 100 J del foco caliente, desprende 25 J al foco fr&#x00ED;o y realiza 75 J de trabajo. Esta m&#x00E1;quina t&#x00E9;rmica:</div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">?</button>&#160;&#160;Viola la primera y tambi&#x00E9;n la segunda ley de la termodin&#x00E1;mica</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">?</button>&#160;&#160;Viola la primera ley de la termodin&#x00E1;mica pero no la segunda</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">?</button>&#160;&#160;Viola la segunda ley de la termodin&#x00E1;mica pero no la primera</li><li id="Q_24_3"><button class="FuncButton" id="Q_24_3_Btn" onclick="CheckMCAnswer(24,3,this)">?</button>&#160;&#160;No viola ninguna ley</li></ol></li>
+<li class="QuizQuestion" id="Q_25" style="display: none;"><div class="QuestionText">Un cubo de aluminio tiene una arista de 20 cm. El aluminio tiene una densidad 2.7 veces la del agua y un calor espec&#x00ED;fico 0.217 veces el del agua. Cuando calentamos el cubo con 47000 cal su temperatura se incrementa en:</div><ol class="MCAnswers"><li id="Q_25_0"><button class="FuncButton" id="Q_25_0_Btn" onclick="CheckMCAnswer(25,0,this)">?</button>&#160;&#160;5 &#x00BA;C</li><li id="Q_25_1"><button class="FuncButton" id="Q_25_1_Btn" onclick="CheckMCAnswer(25,1,this)">?</button>&#160;&#160;100 &#x00BA;C</li><li id="Q_25_2"><button class="FuncButton" id="Q_25_2_Btn" onclick="CheckMCAnswer(25,2,this)">?</button>&#160;&#160;10 &#x00BA;C</li><li id="Q_25_3"><button class="FuncButton" id="Q_25_3_Btn" onclick="CheckMCAnswer(25,3,this)">?</button>&#160;&#160;Necesitamos el peso molecular del aluminio</li></ol></li>
+<li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText">Si el volumen de un gas ideal aumenta mientras se mantiene constante su presi&#x00F3;n, entonces la velocidad media de sus mol&#x00E9;culas:</div><ol class="MCAnswers"><li id="Q_26_0"><button class="FuncButton" id="Q_26_0_Btn" onclick="CheckMCAnswer(26,0,this)">?</button>&#160;&#160;se incrementa</li><li id="Q_26_1"><button class="FuncButton" id="Q_26_1_Btn" onclick="CheckMCAnswer(26,1,this)">?</button>&#160;&#160;disminuye</li><li id="Q_26_2"><button class="FuncButton" id="Q_26_2_Btn" onclick="CheckMCAnswer(26,2,this)">?</button>&#160;&#160;se mantiene constante</li><li id="Q_26_3"><button class="FuncButton" id="Q_26_3_Btn" onclick="CheckMCAnswer(26,3,this)">?</button>&#160;&#160;no podemos afirmar nada sobre su variaci&#x00F3;n</li></ol></li>
+<li class="QuizQuestion" id="Q_27" style="display: none;"><div class="QuestionText">La capacidad calor&#x00ED;fica de un objeto B es dos veces la de un objeto A. Inicialmente A est&#x00E1; a 300 K y B a 450 K. Estos objetos se sit&#x00FA;an en contacto t&#x00E9;rmico entre s&#x00ED; y asilados del exterior. La temperatura final de ambos objetos ser&#x00E1;:</div><ol class="MCAnswers"><li id="Q_27_0"><button class="FuncButton" id="Q_27_0_Btn" onclick="CheckMCAnswer(27,0,this)">?</button>&#160;&#160;200 K</li><li id="Q_27_1"><button class="FuncButton" id="Q_27_1_Btn" onclick="CheckMCAnswer(27,1,this)">?</button>&#160;&#160;250 K</li><li id="Q_27_2"><button class="FuncButton" id="Q_27_2_Btn" onclick="CheckMCAnswer(27,2,this)">?</button>&#160;&#160;380 K</li><li id="Q_27_3"><button class="FuncButton" id="Q_27_3_Btn" onclick="CheckMCAnswer(27,3,this)">?</button>&#160;&#160;400 K</li></ol></li>
+<li class="QuizQuestion" id="Q_28" style="display: none;"><div class="QuestionText">Una m&#x00E1;quina t&#x00E9;rmica utiliza una fuente de calor a 580 &#x00BA;C y tiene una eficiencia de Carnot del 32%. Para aumentar la eficiencia al 38%, la temperatura de la fuente de calor debe ser:</div><ol class="MCAnswers"><li id="Q_28_0"><button class="FuncButton" id="Q_28_0_Btn" onclick="CheckMCAnswer(28,0,this)">?</button>&#160;&#160;Depende la temperatura del foco fr&#x00ED;o.</li><li id="Q_28_1"><button class="FuncButton" id="Q_28_1_Btn" onclick="CheckMCAnswer(28,1,this)">?</button>&#160;&#160;636.13 &#x00BA;C</li><li id="Q_28_2"><button class="FuncButton" id="Q_28_2_Btn" onclick="CheckMCAnswer(28,2,this)">?</button>&#160;&#160;662.55 &#x00BA;C</li><li id="Q_28_3"><button class="FuncButton" id="Q_28_3_Btn" onclick="CheckMCAnswer(28,3,this)">?</button>&#160;&#160;935.55 &#x00BA;C</li></ol></li>
+<li class="QuizQuestion" id="Q_29" style="display: none;"><div class="QuestionText">Supongamos un gas monoat&#x00F3;mico ideal que se puede expandir lentamente desde un volumen V<sub>1</sub> hasta un volumen mayor V<sub>2</sub>. De los tres posibles procesos: isob&#x00E1;ricamente, isot&#x00E9;rmicamente o adiab&#x00E1;ticamente, elegir la respuesta correcta y explicar:<br /><img src="https://umh1228.umh.es/files/2018/09/gas.jpg" alt="gas" title="gas" width="???" height="???" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img></div><ol class="MCAnswers"><li id="Q_29_0"><button class="FuncButton" id="Q_29_0_Btn" onclick="CheckMCAnswer(29,0,this)">?</button>&#160;&#160;&#x0394;U es mayor en el caso isob&#x00E1;rico</li><li id="Q_29_1"><button class="FuncButton" id="Q_29_1_Btn" onclick="CheckMCAnswer(29,1,this)">?</button>&#160;&#160;Q es mayor en el caso isob&#x00E1;rico</li><li id="Q_29_2"><button class="FuncButton" id="Q_29_2_Btn" onclick="CheckMCAnswer(29,2,this)">?</button>&#160;&#160;W es mayor en el caso isob&#x00E1;rico</li><li id="Q_29_3"><button class="FuncButton" id="Q_29_3_Btn" onclick="CheckMCAnswer(29,3,this)">?</button>&#160;&#160;Todas son ciertas</li></ol></li>
+<li class="QuizQuestion" id="Q_30" style="display: none;"><div class="QuestionText">Una m&#x00E1;quina de Carnot, que trabaja entre dos focos t&#x00E9;rmicos con temperaturas T<sub>h</sub> y T<sub>c</sub>, tiene un rendimiento de 1/6. Si la temperatura del foco fr&#x00ED;o se reduce en 62 &#x00BA;C, el rendimiento pasa a ser 1/3. Entonces, las temperaturas T<sub>h</sub> y T<sub>c</sub> del caso inical son:</div><ol class="MCAnswers"><li id="Q_30_0"><button class="FuncButton" id="Q_30_0_Btn" onclick="CheckMCAnswer(30,0,this)">?</button>&#160;&#160;T<sub>h</sub> = 99 &#x00BA;C; T<sub>c</sub> = 37 &#x00BA;C</li><li id="Q_30_1"><button class="FuncButton" id="Q_30_1_Btn" onclick="CheckMCAnswer(30,1,this)">?</button>&#160;&#160;T<sub>h</sub> = 645 &#x00BA;C; T<sub>c</sub> = 583 &#x00BA;C</li><li id="Q_30_2"><button class="FuncButton" id="Q_30_2_Btn" onclick="CheckMCAnswer(30,2,this)">?</button>&#160;&#160;T<sub>h</sub> = 199 &#x00BA;C; T<sub>c</sub> = 97 &#x00BA;C</li><li id="Q_30_3"><button class="FuncButton" id="Q_30_3_Btn" onclick="CheckMCAnswer(30,3,this)">?</button>&#160;&#160;T<sub>h</sub> = 327 &#x00BA;C; T<sub>c</sub> = 310 &#x00BA;C</li></ol></li>
+<li class="QuizQuestion" id="Q_31" style="display: none;"><div class="QuestionText">La temperatura de tres masas iguales de tres l&#x00ED;quidos diferentes A, B y C es 12,18 y 28 &#x00BA;C, respectivamente. Cuando A y B se mezclan la temperatura es 16 &#x00BA;C. Cuando B y C se mezclan, es 23 &#x00BA;C. &#x00BF;Cu&#x00E1;l ser&#x00ED;a la temperatura cuando A y C se mezclan?</div><ol class="MCAnswers"><li id="Q_31_0"><button class="FuncButton" id="Q_31_0_Btn" onclick="CheckMCAnswer(31,0,this)">?</button>&#160;&#160;Falta conocer la masa de l&#x00ED;quido</li><li id="Q_31_1"><button class="FuncButton" id="Q_31_1_Btn" onclick="CheckMCAnswer(31,1,this)">?</button>&#160;&#160;22.67 &#x00BA;C</li><li id="Q_31_2"><button class="FuncButton" id="Q_31_2_Btn" onclick="CheckMCAnswer(31,2,this)">?</button>&#160;&#160;Falta el dato de alg&#x00FA;n calor espec&#x00ED;fico</li><li id="Q_31_3"><button class="FuncButton" id="Q_31_3_Btn" onclick="CheckMCAnswer(31,3,this)">?</button>&#160;&#160;20.32 &#x00BA;C</li></ol></li>
+<li class="QuizQuestion" id="Q_32" style="display: none;"><div class="QuestionText">Tres m&#x00E1;quinas de Carnot operan en serie entre un foco caliente a temperatura 
+T<sub>1</sub> y un foco fr&#x00ED;o a temperatura T<sub>4</sub>. En medio hay otros dos 
+focos a temperatura T<sub>2</sub> y T<sub>3</sub> con 
+T<sub>1</sub> &gt; T<sub>2</sub> &gt; T<sub>3</sub> &gt; T<sub>4</sub>.<br /><img src="https://umh1228.umh.es/files/2026/07/MaqsCarnot.jpg" alt="carnots" title="carnots" width="???" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img><br />Para que las tres m&#x00E1;quinas t&#x00E9;rmicas tengan la misma eficiencia, se debe cumplir:</div><ol class="MCAnswers"><li id="Q_32_0"><button class="FuncButton" id="Q_32_0_Btn" onclick="CheckMCAnswer(32,0,this)">?</button>&#160;&#160;T<sub>2</sub> = (T<sub>1</sub> T<sub>4</sub>)<sup>1/2</sup>;
+&nbsp;&nbsp;
+T<sub>3</sub> = (T<sub>1</sub><sup>2</sup> T<sub>4</sub>)<sup>1/3</sup></li><li id="Q_32_1"><button class="FuncButton" id="Q_32_1_Btn" onclick="CheckMCAnswer(32,1,this)">?</button>&#160;&#160;T<sub>2</sub> = (T<sub>1</sub> T<sub>4</sub>)<sup>1/3</sup>;
+&nbsp;&nbsp;
+T<sub>3</sub> = (T<sub>1</sub><sup>2</sup> T<sub>4</sub>)<sup>1/3</sup></li><li id="Q_32_2"><button class="FuncButton" id="Q_32_2_Btn" onclick="CheckMCAnswer(32,2,this)">?</button>&#160;&#160;T<sub>2</sub> = (T<sub>1</sub><sup>2</sup> T<sub>4</sub>)<sup>1/3</sup>;
+&nbsp;&nbsp;
+T<sub>3</sub> = (T<sub>1</sub> T<sub>4</sub><sup>2</sup>)<sup>1/3</sup></li><li id="Q_32_3"><button class="FuncButton" id="Q_32_3_Btn" onclick="CheckMCAnswer(32,3,this)">?</button>&#160;&#160;T<sub>2</sub> = (T<sub>1</sub><sup>3</sup> T<sub>4</sub>)<sup>1/4</sup>;
+&nbsp;&nbsp;
+T<sub>3</sub> = (T<sub>1</sub> T<sub>4</sub><sup>3</sup>)<sup>1/4</sup></li></ol></li>
+<li class="QuizQuestion" id="Q_33" style="display: none;"><div class="QuestionText">Dos m&#x00E1;quinas de Carnot A y B operan en serie. La primera, A, recibe un calor 
+Q<sub>1</sub> de un foco t&#x00E9;rmico a temperatura T<sub>1</sub>=600 K. La segunda, 
+B, recibe el calor Q<sub>2</sub> rechazado por la primera y, a su vez, lo rechaza 
+a un foco a temperatura T<sub>3</sub>=400 K.<br /><img src="https://umh1228.umh.es/files/2026/07/SeriCarnots.png" alt="carnots2" title="carnots2" width="???" height="200" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"></img><br />Calcular la temperatura T<sub>2</sub> del foco intermedio suponiendo que los 
+trabajos que realiza cada m&#x00E1;quina son iguales W<sub>A</sub>=W<sub>B</sub>.</div><ol class="MCAnswers"><li id="Q_33_0"><button class="FuncButton" id="Q_33_0_Btn" onclick="CheckMCAnswer(33,0,this)">?</button>&#160;&#160;T<sub>2</sub>=600 K.</li><li id="Q_33_1"><button class="FuncButton" id="Q_33_1_Btn" onclick="CheckMCAnswer(33,1,this)">?</button>&#160;&#160;T<sub>2</sub>=500 K.</li><li id="Q_33_2"><button class="FuncButton" id="Q_33_2_Btn" onclick="CheckMCAnswer(33,2,this)">?</button>&#160;&#160;T<sub>2</sub>=400 K.</li><li id="Q_33_3"><button class="FuncButton" id="Q_33_3_Btn" onclick="CheckMCAnswer(33,3,this)">?</button>&#160;&#160;T<sub>2</sub>=300 K.</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
