@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agres 3 - Webcam Live</title>
+  <style>
+    body { background: #111; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+    .status { margin-top: 15px; font-size: 14px; color: #aaa; }
+  </style>
+</head>
+<body>
+
+  <img id="webcam" src="https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg" alt="Webcam Agres">
+  <div class="status" id="clock">Cargando...</div>
+
+  <script>
+    // CAMBIA ESTE NÚMERO PARA AJUSTAR LOS SEGUNDOS DE RECARGA:
+    const SEGUNDOS_REFRESCO = 150; 
+
+    function recargar() {
+      const img = document.getElementById('webcam');
+      const clock = document.getElementById('clock');
+      const ahora = new Date();
+      
+      // Timestamp para evitar caché
+      img.src = 'https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg?t=' + ahora.getTime();
+      
+      clock.innerText = 'Última actualización: ' + ahora.toLocaleTimeString() + ' (Refresco cada ' + SEGUNDOS_REFRESCO + 's)';
+    }
+
+    // Primera recarga e intervalo
+    recargar();
+    setInterval(recargar, SEGUNDOS_REFRESCO * 1000);
+  </script>
+</body>
+</html>
