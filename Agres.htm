@@ -30,6 +30,7 @@
       font-size: 14px; 
       color: #00ffcc; 
       text-align: center;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -39,28 +40,33 @@
   <div class="status" id="clock">Iniciando conexión...</div>
 
   <script>
-    // Tiempo de refresco exacto: 150 segundos
+    // Tiempo de refresco en segundos (150s = 2m 30s)
     const SEGUNDOS_REFRESCO = 150; 
 
     function recargar() {
       const img = document.getElementById('webcam');
       const clock = document.getElementById('clock');
+      
       const ahora = new Date();
       
-      // Creamos una nueva URL con timestamp para saltarnos la caché del navegador
-      const nuevaUrl = 'https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg?t=' + ahora.getTime();
+      // Calculamos la hora de la próxima recarga sumando los milisegundos de refresco
+      const proxima = new Date(ahora.getTime() + (SEGUNDOS_REFRESCO * 1000));
       
-      // Asignamos la nueva ruta
-      img.src = nuevaUrl;
+      // Forzamos la descarga de la imagen más reciente mediante timestamp
+      img.src = 'https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg?t=' + ahora.getTime();
       
-      // Actualizamos el mensaje de texto informativo
-      clock.innerText = 'Última recarga: ' + ahora.toLocaleTimeString() + ' | Próximo refresco en ' + SEGUNDOS_REFRESCO + 's';
+      // Formateamos las horas con minutos y segundos (hh:mm:ss)
+      const horaActualStr = ahora.toLocaleTimeString();
+      const horaProximaStr = proxima.toLocaleTimeString();
+      
+      // Mostramos la hora exacta en pantalla
+      clock.innerText = 'Última recarga: ' + horaActualStr + ' | Próximo refresco: ' + horaProximaStr;
     }
 
-    // Ejecuta la recarga nada más cargar la página
+    // Primera ejecución
     recargar();
 
-    // Activa el intervalo continuo cada 150.000 milisegundos
+    // Activa el intervalo continuo de 150.000 ms
     setInterval(recargar, SEGUNDOS_REFRESCO * 1000);
   </script>
 </body>
