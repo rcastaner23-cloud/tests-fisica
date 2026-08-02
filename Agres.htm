@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <!-- Permite el zoom nativo con los dedos en toda la página desde el móvil -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Agres 3 - Webcam Live</title>
   <style>
@@ -22,6 +21,7 @@
       justify-content: center; 
       min-height: 100vh; 
       padding: 10px;
+      overflow-x: hidden; /* Evita desplazamientos horizontales no deseados */
     }
 
     .cam-wrapper {
@@ -30,7 +30,8 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      max-width: 100vw;
+      max-width: 100%;
+      margin: 0 auto; /* Centrado horizontal estricto */
     }
 
     .img-container {
@@ -38,30 +39,34 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: visible; /* Permite ampliar la imagen en PC sin recortar */
+      margin: 0 auto;
     }
 
     img { 
-      width: 100%;
+      width: auto;
+      max-width: 100%;
       height: auto;
       max-height: 82vh; 
       object-fit: contain; 
       display: block; 
+      margin: 0 auto; /* Fuerza la imagen a estar exactamente en el centro */
       border-radius: 4px;
-      /* Animación suave para el zoom de ratón en PC */
-      transition: transform 0.1s ease-out;
+      
+      /* Mantiene el zoom perfectamente centrado en PC */
       transform-origin: center center;
+      transition: transform 0.1s ease-out;
     }
 
     .status { 
       width: 100%;
+      max-width: 800px; /* Limita el ancho del texto en monitores muy grandes */
       background: rgba(0, 0, 0, 0.9);
       padding: 8px 12px;
       font-size: 13px; 
       color: #00ffcc; 
       text-align: center;
       line-height: 1.4;
-      margin-top: 8px;
+      margin: 8px auto 0 auto;
       border-radius: 4px;
     }
   </style>
@@ -108,25 +113,23 @@
     const img = document.getElementById('webcam');
     let scale = 1;
 
-    // Solo se activa si el dispositivo NO es táctil (PC)
     window.addEventListener('wheel', function(e) {
-      // Si se detecta interacción táctil reciente, no hace nada (lo maneja Android)
+      // Ignora eventos táctiles en móviles
       if ('ontouchstart' in window && e.pointerType === 'touch') return;
 
-      e.preventDefault(); // Evita el scroll global del PC
+      e.preventDefault();
 
       if (e.deltaY < 0) {
-        scale += 0.15; // Zoom in
+        scale += 0.15;
       } else {
-        scale -= 0.15; // Zoom out
+        scale -= 0.15;
       }
 
-      // Restricciones de tamaño (1x a 4x)
       scale = Math.min(Math.max(1, scale), 4);
       img.style.transform = `scale(${scale})`;
     }, { passive: false });
 
-    // Doble clic en PC para restablecer el zoom
+    // Doble clic en PC para resetear
     img.addEventListener('dblclick', function() {
       scale = 1;
       img.style.transform = `scale(1)`;
