@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agres 3 - Webcam Live</title>
+  <title>Agres 3 - Webcam Fullscreen Smart</title>
   <style>
     /* Estilos globales */
     body { 
@@ -18,43 +18,71 @@
       margin: 0; 
       padding: 0; 
       box-sizing: border-box;
+      overflow: hidden; /* Evita scrolls accidentales */
     }
 
     /* Contenedor principal: alinea imagen y texto juntos */
     .cam-wrapper {
-      width: 100vw;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      /* Ocupa todo el espacio disponible */
+      width: 100vw;
+      height: 100vh;
+      max-height: 100vh;
     }
 
-    /* Imagen responsive a ancho completo */
+    /* Contenedor específico de la imagen para centrado perfecto */
+    .img-box {
+      flex: 1; /* Ocupa el espacio disponible sobre el texto */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Imagen inteligente y responsive total */
     img { 
-      width: 100vw; 
-      max-width: 100vw; 
+      /* Intenta ocupar todo el ancho disponible */
+      width: 100%;
+      max-width: 100vw;
+      
+      /* Mantiene la proporción original sin deformar */
       height: auto; 
+      
+      /* CLAVE: No puede superar el alto de su contenedor (pantalla - texto) */
+      max-height: 100%;
+      
+      /* Ajuste inteligente para centrar si sobran franjas negras */
+      object-fit: contain; 
+      
       display: block; 
     }
 
-    /* Leyenda pegada a la imagen */
+    /* Leyenda pegada justo debajo de la imagen */
     .status { 
       width: 100vw;
-      background: rgba(0, 0, 0, 0.85);
-      padding: 8px 0;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 10px 0;
       font-size: 13px; 
       color: #00ffcc; 
       text-align: center;
       line-height: 1.4;
       box-sizing: border-box;
-      /* Margen mínimo superior para separarla un toque fino de la foto */
-      margin-top: 4px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      /* Asegura que el texto no flote si la imagen es pequeña */
+      margin-top: auto; 
     }
   </style>
 </head>
 <body>
 
   <div class="cam-wrapper">
-    <img id="webcam" src="https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg" alt="Webcam Agres">
+    <div class="img-box">
+      <img id="webcam" src="https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg" alt="Webcam Agres">
+    </div>
     <div class="status" id="clock">Iniciando conexión...</div>
   </div>
 
