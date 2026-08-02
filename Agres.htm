@@ -3,74 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agres 3 - Webcam Full Responsive</title>
+  <title>Agres 3 - Webcam Live</title>
   <style>
-    /* Estilos globales para fondo negro y centrado vertical */
+    /* Estilos globales */
     body { 
       background: #000; 
       color: #fff; 
       font-family: system-ui, -apple-system, sans-serif; 
       display: flex; 
       flex-direction: column; 
-      justify-content: center; /* Centra la imagen verticalmente si sobra espacio arriba/abajo */
+      align-items: center; 
+      justify-content: center; 
       min-height: 100vh; 
       margin: 0; 
       padding: 0; 
       box-sizing: border-box;
-      /* overflow: auto;  Permite scroll vertical si la imagen es grande */
     }
 
-    /* Contenedor principal que ocupa todo el ancho */
-    .img-container {
-      width: 100%;
-      height: auto; /* El alto lo define la imagen al estirarse */
+    /* Contenedor principal: alinea imagen y texto juntos */
+    .cam-wrapper {
+      width: 100vw;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      margin-bottom: 50px; /* Espacio para que el texto de estado no pise la foto */
     }
 
-    /* Estilos de la imagen para que sea RESPONSIVE TOTAL */
+    /* Imagen responsive a ancho completo */
     img { 
-      /* FUERZA el ancho al 100% de la pantalla, tocando los extremos */
-      width: 100vw; /* 'vw' significa viewport width, 100% del ancho visible */
-      max-width: 100vw; /* Asegura que no se pase */
-      
-      /* Mantiene la proporción de aspecto original para no deformar */
+      width: 100vw; 
+      max-width: 100vw; 
       height: auto; 
-      
-      /* Elimina object-fit para que se comporte como una imagen responsive tradicional */
-      object-fit: fill; /* O 'cover' si quieres que recorte un poco pero llene siempre */
-      
-      border-radius: 0; /* Sin bordes redondeados para que toque los extremos perfectamente */
-      display: block; /* Elimina espacios vacíos debajo de la imagen */
+      display: block; 
     }
 
-    /* Estilo para el texto de estado en la parte inferior fixed */
+    /* Leyenda pegada a la imagen */
     .status { 
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+      width: 100vw;
       background: rgba(0, 0, 0, 0.85);
-      padding: 12px 0;
-      font-size: 14px; 
+      padding: 8px 0;
+      font-size: 13px; 
       color: #00ffcc; 
       text-align: center;
       line-height: 1.4;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      z-index: 10;
       box-sizing: border-box;
+      /* Margen mínimo superior para separarla un toque fino de la foto */
+      margin-top: 4px;
     }
   </style>
 </head>
 <body>
 
-  <div class="img-container">
+  <div class="cam-wrapper">
     <img id="webcam" src="https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg" alt="Webcam Agres">
+    <div class="status" id="clock">Iniciando conexión...</div>
   </div>
-  
-  <div class="status" id="clock">Iniciando conexión...</div>
 
   <script>
     const SEGUNDOS_REFRESCO = 150; 
