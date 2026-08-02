@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agres 3 - Webcam Live</title>
+  <!-- Librería externa para zoom fluido y arrastre -->
+  <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -21,7 +23,7 @@
       justify-content: center; 
       min-height: 100vh; 
       padding: 10px;
-      overflow: hidden; /* Evita barras de scroll al ampliar en PC */
+      overflow: hidden;
     }
 
     .cam-wrapper {
@@ -33,25 +35,25 @@
       max-width: 100vw;
     }
 
-    /* Área que permite el zoom interactivo */
     .img-container {
-      overflow: hidden;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      cursor: zoom-in;
+      cursor: grab;
+    }
+
+    .img-container:active {
+      cursor: grabbing;
     }
 
     img { 
       width: 100%;
       height: auto;
-      max-height: 82vh; 
+      max-height: 80vh; 
       object-fit: contain; 
       display: block; 
       border-radius: 4px;
-      /* Transición suave para el zoom */
-      transform-origin: center center;
-      transition: transform 0.1s ease-out;
     }
 
     .status { 
@@ -62,7 +64,7 @@
       color: #00ffcc; 
       text-align: center;
       line-height: 1.4;
-      margin-top: 6px;
+      margin-top: 8px;
       border-radius: 4px;
       z-index: 10;
     }
@@ -71,7 +73,7 @@
 <body>
 
   <div class="cam-wrapper">
-    <div class="img-container" id="zoomContainer">
+    <div class="img-container">
       <img id="webcam" src="https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg" alt="Webcam Agres">
     </div>
     <div class="status" id="clock">Iniciando conexión...</div>
@@ -81,7 +83,7 @@
     const SEGUNDOS_REFRESCO = 150; 
     const URL_BASE = 'https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg';
 
-    // --- LÓGICA DE RECARGA AUTOMÁTICA ---
+    // --- RECARGA AUTOMÁTICA ---
     function recargar() {
       const imgVisible = document.getElementById('webcam');
       const clock = document.getElementById('clock');
@@ -106,37 +108,17 @@
     recargar();
     setInterval(recargar, SEGUNDOS_REFRESCO * 1000);
 
-    // --- LÓGICA DE ZOOM CON RUEDA DEL RATÓN (PC) ---
-    const img = document.getElementById('webcam');
-    const container = document.getElementById('zoomContainer');
-    let scale = 1;
-
-    container.addEventListener('wheel', function(e) {
-      e.preventDefault(); // Evita el scroll normal de la página
-
-      // Determina la dirección del zoom (arriba = ampliar, abajo = reducir)
-      if (e.deltaY < 0) {
-        scale += 0.15; // Mueve la rueda hacia arriba (zoom in)
-      } else {
-        scale -= 0.15; // Mueve la rueda hacia abajo (zoom out)
-      }
-
-      // Límites del zoom: mínimo 1x (tamaño normal), máximo 4x
-      scale = Math.min(Math.max(1, scale), 4);
-
-      // Cambia el cursor según el nivel de zoom
-      container.style.cursor = scale > 1 ? 'zoom-out' : 'zoom-in';
-
-      // Aplica el escalado
-      img.style.transform = `scale(${scale})`;
-    }, { passive: false });
-
-    // Hacer doble clic para reiniciar el zoom en PC
-    container.addEventListener('dblclick', function() {
-      scale = 1;
-      img.style.transform = `scale(1)`;
-      container.style.cursor = 'zoom-in';
+    // --- ACTIVAR ZOOM Y PANZOOM EN PC Y MÓVIL ---
+    const elem = document.getElementById('webcam');
+    const panzoom = Panzoom(elem, {
+      maxScale: 5,
+      minScale: 1,
+      contain: 'outside'
     });
+
+    // Activar zoom con la rueda del ratón
+    const parent = elem.parentElement;
+    parent.addEventListener('wheel', panzoom.zoomWithWheel);
   </script>
 </body>
 </html>
