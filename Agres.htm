@@ -2,50 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <!-- El viewport es clave para el control del zoom nativo y el giro -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agres 3 - Webcam Fullscreen Live</title>
+  <title>Agres 3 - Webcam Full Responsive</title>
   <style>
+    /* Estilos globales para fondo negro y centrado vertical */
     body { 
       background: #000; 
       color: #fff; 
       font-family: system-ui, -apple-system, sans-serif; 
       display: flex; 
       flex-direction: column; 
-      /* Centrado vertical y horizontal */
-      align-items: center; 
-      justify-content: center; 
+      justify-content: center; /* Centra la imagen verticalmente si sobra espacio arriba/abajo */
       min-height: 100vh; 
       margin: 0; 
-      /* Espacio para el texto de estado abajo */
-      padding: 0 0 45px 0; 
+      padding: 0; 
       box-sizing: border-box;
-      overflow: hidden; /* Evita scrolls raros al hacer zoom */
+      /* overflow: auto;  Permite scroll vertical si la imagen es grande */
     }
 
-    /* Contenedor para controlar el aspecto y centrado */
+    /* Contenedor principal que ocupa todo el ancho */
     .img-container {
       width: 100%;
-      height: 100%;
+      height: auto; /* El alto lo define la imagen al estirarse */
       display: flex;
       justify-content: center;
       align-items: center;
-      /* Mantiene la proporción y centra si la imagen es más alta que la pantalla */
-      overflow: hidden; 
+      margin-bottom: 50px; /* Espacio para que el texto de estado no pise la foto */
     }
 
+    /* Estilos de la imagen para que sea RESPONSIVE TOTAL */
     img { 
-      /* Ocupa el ancho máximo de la pantalla */
-      width: 100%;
-      /* Pero no se estira más allá de su tamaño real si la pantalla es enorme */
-      max-width: 100%; 
-      /* Si la pantalla es más baja que la foto (horizontal), la ajusta */
-      height: auto;
-      max-height: calc(100vh - 45px); /* Resta el espacio del texto */
-      /* Ajuste suave para que no 'baile' al rotar */
-      object-fit: contain; 
-      border-radius: 4px; 
-      transition: max-height 0.2s ease;
+      /* FUERZA el ancho al 100% de la pantalla, tocando los extremos */
+      width: 100vw; /* 'vw' significa viewport width, 100% del ancho visible */
+      max-width: 100vw; /* Asegura que no se pase */
+      
+      /* Mantiene la proporción de aspecto original para no deformar */
+      height: auto; 
+      
+      /* Elimina object-fit para que se comporte como una imagen responsive tradicional */
+      object-fit: fill; /* O 'cover' si quieres que recorte un poco pero llene siempre */
+      
+      border-radius: 0; /* Sin bordes redondeados para que toque los extremos perfectamente */
+      display: block; /* Elimina espacios vacíos debajo de la imagen */
     }
 
     /* Estilo para el texto de estado en la parte inferior fixed */
@@ -54,14 +52,15 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 12px 0;
       font-size: 14px; 
       color: #00ffcc; 
       text-align: center;
       line-height: 1.4;
       border-top: 1px solid rgba(255,255,255,0.1);
       z-index: 10;
+      box-sizing: border-box;
     }
   </style>
 </head>
@@ -74,7 +73,6 @@
   <div class="status" id="clock">Iniciando conexión...</div>
 
   <script>
-    // Tiempo de refresco en segundos (150s = 2m 30s)
     const SEGUNDOS_REFRESCO = 150; 
     const URL_BASE = 'https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg';
 
@@ -83,35 +81,23 @@
       const clock = document.getElementById('clock');
       
       const ahora = new Date();
-      // Calculamos la hora de la próxima recarga
       const proxima = new Date(ahora.getTime() + (SEGUNDOS_REFRESCO * 1000));
       
-      // *** TÉCNICA PARA ZOOM SUAVE ***
-      // Creamos una imagen oculta en memoria para cargar la nueva foto
       const imgOculta = new Image();
-      // Generamos la URL con timestamp para saltarnos la caché
       const nuevaUrl = URL_BASE + '?t=' + ahora.getTime();
 
-      // Cuando la imagen oculta se haya descargado por completo...
       imgOculta.onload = function() {
-        // ...sustituimos la fuente de la imagen visible.
-        // Esto es instantáneo y no interrumpe el gesto de zoom táctil.
         imgVisible.src = nuevaUrl;
         
-        // Formateamos y mostramos las horas
         const horaActualStr = ahora.toLocaleTimeString();
         const horaProximaStr = proxima.toLocaleTimeString();
         clock.innerText = 'Última recarga: ' + horaActualStr + ' | Próximo refresco: ' + horaProximaStr;
       };
 
-      // Iniciamos la descarga en segundo plano
       imgOculta.src = nuevaUrl;
     }
 
-    // Primera ejecución
     recargar();
-
-    // Activa el intervalo continuo de 150.000 ms
     setInterval(recargar, SEGUNDOS_REFRESCO * 1000);
   </script>
 </body>
