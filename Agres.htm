@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agres 3 - Webcam Fullscreen Smart</title>
+  <title>Agres 3 - Webcam Live</title>
   <style>
-    /* Estilos globales */
+    /* Reset básico y fondo negro */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body { 
       background: #000; 
       color: #fff; 
@@ -15,74 +21,48 @@
       align-items: center; 
       justify-content: center; 
       min-height: 100vh; 
-      margin: 0; 
-      padding: 0; 
-      box-sizing: border-box;
-      overflow: hidden; /* Evita scrolls accidentales */
+      padding: 10px;
     }
 
-    /* Contenedor principal: alinea imagen y texto juntos */
+    /* Contenedor fluido que se ajusta a la imagen */
     .cam-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      /* Ocupa todo el espacio disponible */
-      width: 100vw;
-      height: 100vh;
-      max-height: 100vh;
-    }
-
-    /* Contenedor específico de la imagen para centrado perfecto */
-    .img-box {
-      flex: 1; /* Ocupa el espacio disponible sobre el texto */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    /* Imagen inteligente y responsive total */
-    img { 
-      /* Intenta ocupar todo el ancho disponible */
       width: 100%;
       max-width: 100vw;
-      
-      /* Mantiene la proporción original sin deformar */
-      height: auto; 
-      
-      /* CLAVE: No puede superar el alto de su contenedor (pantalla - texto) */
-      max-height: 100%;
-      
-      /* Ajuste inteligente para centrar si sobran franjas negras */
-      object-fit: contain; 
-      
-      display: block; 
     }
 
-    /* Leyenda pegada justo debajo de la imagen */
+    /* La imagen NUNCA se cortará: se ajusta proporcionalmente */
+    img { 
+      width: 100%;
+      height: auto;
+      /* Garantiza que la imagen + el texto quepan enteros en pantalla sin scroll */
+      max-height: 82vh; 
+      object-fit: contain; 
+      display: block; 
+      border-radius: 4px;
+    }
+
+    /* Leyenda pegada inmediatamente debajo de la foto */
     .status { 
-      width: 100vw;
+      width: 100%;
       background: rgba(0, 0, 0, 0.9);
-      padding: 10px 0;
+      padding: 8px 12px;
       font-size: 13px; 
       color: #00ffcc; 
       text-align: center;
       line-height: 1.4;
-      box-sizing: border-box;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      /* Asegura que el texto no flote si la imagen es pequeña */
-      margin-top: auto; 
+      margin-top: 6px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
 
   <div class="cam-wrapper">
-    <div class="img-box">
-      <img id="webcam" src="https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg" alt="Webcam Agres">
-    </div>
+    <img id="webcam" src="https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg" alt="Webcam Agres">
     <div class="status" id="clock">Iniciando conexión...</div>
   </div>
 
