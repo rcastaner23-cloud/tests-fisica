@@ -2,14 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Agres 3 - Webcam Full PC Zoom</title>
-  
-  <!-- Librería externa Panzoom (CDN) -->
-  <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
-  
+  <!-- Permite el zoom nativo con los dedos en toda la página desde el móvil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Agres 3 - Webcam Live</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body { 
       background: #000; 
@@ -21,7 +22,6 @@
       justify-content: center; 
       min-height: 100vh; 
       padding: 10px;
-      overflow: hidden; /* Evita scrolls accidentales en la página */
     }
 
     .cam-wrapper {
@@ -30,38 +30,27 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 100%;
       max-width: 100vw;
-      max-height: 100vh;
     }
 
-    /* Área interactiva del zoom */
     .img-container {
-      flex: 1; /* Ocupa el espacio disponible */
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden; /* Importante para que la imagen no salga de aquí al ampliar */
-      cursor: grab;
+      overflow: visible; /* Permite ampliar la imagen en PC sin recortar */
     }
 
-    .img-container:active { cursor: grabbing; }
-
-    /* Imagen inteligente */
     img { 
-      /* ESTADO INICIAL: cabe entera en pantalla */
-      width: auto;
+      width: 100%;
       height: auto;
-      max-width: 100%;
-      max-height: 82vh; /* Deja espacio para el texto de abajo */
-      
+      max-height: 82vh; 
       object-fit: contain; 
       display: block; 
       border-radius: 4px;
-      
-      /* Permite que el JavaScript cambie el tamaño libremente */
-      transform-origin: 50% 50%;
+      /* Animación suave para el zoom de ratón en PC */
+      transition: transform 0.1s ease-out;
+      transform-origin: center center;
     }
 
     .status { 
@@ -74,24 +63,23 @@
       line-height: 1.4;
       margin-top: 8px;
       border-radius: 4px;
-      z-index: 10; /* Asegura que se vea sobre la imagen ampliada */
     }
   </style>
 </head>
 <body>
 
   <div class="cam-wrapper">
-    <div class="img-container" id="panzoom-parent">
+    <div class="img-container">
       <img id="webcam" src="https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg" alt="Webcam Agres">
     </div>
     <div class="status" id="clock">Iniciando conexión...</div>
   </div>
 
   <script>
-    // --- LÓGICA DE RECARGA AUTOMÁTICA (MANTIENE ZOOM) ---
     const SEGUNDOS_REFRESCO = 150; 
     const URL_BASE = 'https://www.avametnuvol.es/estacions/c26m003e04/agres3.jpg';
 
+    // --- RECARGA AUTOMÁTICA ---
     function recargar() {
       const imgVisible = document.getElementById('webcam');
       const clock = document.getElementById('clock');
@@ -103,48 +91,46 @@
       const nuevaUrl = URL_BASE + '?t=' + ahora.getTime();
 
       imgOculta.onload = function() {
-        // Obtenemos el estado actual del zoom antes de cambiar la foto
-        const currentScale = panzoom.getScale();
-        const currentPan = panzoom.getPan();
-
-        // Sustituimos la foto
         imgVisible.src = nuevaUrl;
         
-        // RESTAURAMOS el zoom y posición instantáneamente
-        // (Nota:contain:'outside' requiere que hagamos esto con cuidado)
-        setTimeout(() => {
-            panzoom.zoom(currentScale, { animate: false });
-            panzoom.pan(currentPan.x, currentPan.y, { animate: false });
-        }, 10);
-        
-        // Actualizamos el texto
-        clock.innerText = 'Última recarga: ' + ahora.toLocaleTimeString() + ' | Próximo: ' + proxima.toLocaleTimeString();
+        const horaActualStr = ahora.toLocaleTimeString();
+        const horaProximaStr = proxima.toLocaleTimeString();
+        clock.innerText = 'Última recarga: ' + horaActualStr + ' | Próximo refresco: ' + horaProximaStr;
       };
 
       imgOculta.src = nuevaUrl;
     }
 
-    // --- ACTIVAR PANZOOM INTELIGENTE ---
-    const elem = document.getElementById('webcam');
-    const parent = document.getElementById('panzoom-parent');
-
-    // Configuración de Panzoom
-    const panzoom = Panzoom(elem, {
-      maxScale: 6, // Permite ampliar mucho (6x)
-      minScale: 1, // No permite empequeñecer más del 100%
-      contain: 'outside', // No deja franjas negras al arrastrar
-      cursor: 'grab'
-    });
-
-    // CLAVE PARA PC: Secuestrar la rueda del ratón e interpretarla como zoom
-    parent.addEventListener('wheel', panzoom.zoomWithWheel);
-
-    // COMODIDAD: Doble clic para resetear el zoom
-    parent.addEventListener('dblclick', () => panzoom.reset());
-
-    // Iniciar bucle
     recargar();
     setInterval(recargar, SEGUNDOS_REFRESCO * 1000);
+
+    // --- ZOOM EXCLUSIVO PARA PC CON LA RUEDA DEL RATÓN ---
+    const img = document.getElementById('webcam');
+    let scale = 1;
+
+    // Solo se activa si el dispositivo NO es táctil (PC)
+    window.addEventListener('wheel', function(e) {
+      // Si se detecta interacción táctil reciente, no hace nada (lo maneja Android)
+      if ('ontouchstart' in window && e.pointerType === 'touch') return;
+
+      e.preventDefault(); // Evita el scroll global del PC
+
+      if (e.deltaY < 0) {
+        scale += 0.15; // Zoom in
+      } else {
+        scale -= 0.15; // Zoom out
+      }
+
+      // Restricciones de tamaño (1x a 4x)
+      scale = Math.min(Math.max(1, scale), 4);
+      img.style.transform = `scale(${scale})`;
+    }, { passive: false });
+
+    // Doble clic en PC para restablecer el zoom
+    img.addEventListener('dblclick', function() {
+      scale = 1;
+      img.style.transform = `scale(1)`;
+    });
   </script>
 </body>
 </html>
