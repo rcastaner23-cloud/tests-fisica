@@ -21,7 +21,8 @@
       justify-content: center; 
       min-height: 100vh; 
       padding: 10px;
-      overflow-x: hidden; /* Evita desplazamientos horizontales no deseados */
+      /* CLAVE 1: 'auto' permite scroll horizontal y vertical si la imagen ampliada supera la pantalla */
+      overflow: auto;
     }
 
     .cam-wrapper {
