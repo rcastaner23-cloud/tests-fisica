@@ -18,11 +18,10 @@
       display: flex; 
       flex-direction: column; 
       align-items: center; 
-      justify-content: center; 
+      justify-content: flex-start; 
       min-height: 100vh; 
       padding: 10px;
-      /* CLAVE 1: 'auto' permite scroll horizontal y vertical si la imagen ampliada supera la pantalla */
-      overflow: auto; 
+      overflow: auto; /* Permite scroll horizontal y vertical */
     }
 
     .cam-wrapper {
@@ -41,9 +40,8 @@
       justify-content: center;
       align-items: center;
       margin: 0 auto;
-      /* CLAVE 2: Permite que la foto sobredimensionada se salga de los límites para activar los scrolls */
-      overflow: visible; 
-      padding: 20px 0; /* Espacio de seguridad para que la imagen no se corte arriba/abajo al escalar */
+      overflow: visible;
+      padding: 10px 0;
     }
 
     img { 
@@ -56,7 +54,8 @@
       margin: 0 auto;
       border-radius: 4px;
       
-      transform-origin: center center;
+      /* CLAVE: Cambiamos el origen para que al ampliar no se pierda nada por la izquierda */
+      transform-origin: top center;
       transition: transform 0.1s ease-out;
     }
 
@@ -128,12 +127,24 @@
       }
 
       scale = Math.min(Math.max(1, scale), 4);
+      
+      // Ajustamos el origen del transform según si hay zoom o no para mantener el centrado inicial
+      if (scale > 1) {
+        img.style.transformOrigin = 'top left';
+        img.style.margin = '0';
+      } else {
+        img.style.transformOrigin = 'top center';
+        img.style.margin = '0 auto';
+      }
+
       img.style.transform = `scale(${scale})`;
     }, { passive: false });
 
     // Doble clic en PC para resetear
     img.addEventListener('dblclick', function() {
       scale = 1;
+      img.style.transformOrigin = 'top center';
+      img.style.margin = '0 auto';
       img.style.transform = `scale(1)`;
     });
   </script>
